@@ -35,10 +35,15 @@ DATA_DIR = Path(__file__).parent / "data"
 HISTORY_DIR = DATA_DIR / "history"
 
 # ---------------------------------------------------------------------------
-# Curated watchlist — Tier 2 (midcap) + Tier 3 (small-cap).
-# Tier 1 (blue-chip) is NOT hardcoded here — it's pulled live from DS30 below,
-# so it never goes stale. Edit this list directly as your conviction changes.
+# Curated watchlist — Tier 1 (Large Cap supplements), Tier 2 (Midcap), Tier 3 (Small-cap).
+# Most Tier 1 (blue-chip) stocks are pulled live from the official DS30 index below, 
+# but you can forcefully include other large caps here if they are missing from the index.
 # ---------------------------------------------------------------------------
+WATCHLIST_TIER1_LARGECAP = [
+    "BERGERPBL",   # Berger Paints BD
+    "MARICO",      # Marico Bangladesh
+]
+
 WATCHLIST_TIER2_MIDCAP = [
     "IPDC",        # IPDC Finance
     "GENEXIL",     # Genex Infosys
@@ -248,10 +253,11 @@ def main():
     write_json("index-ds30.json", {"updated_at": now_iso(), "constituents": ds30})
     write_json("index-dses.json", {"updated_at": now_iso(), "constituents": dses})
 
-    watchlist = sorted(set(ds30) | set(WATCHLIST_TIER2_MIDCAP) | set(WATCHLIST_TIER3_SMALLCAP))
+    tier1_combined = sorted(set(ds30) | set(WATCHLIST_TIER1_LARGECAP))
+    watchlist = sorted(set(tier1_combined) | set(WATCHLIST_TIER2_MIDCAP) | set(WATCHLIST_TIER3_SMALLCAP))
     write_json("watchlist.json", {
         "updated_at": now_iso(),
-        "tier1_ds30": ds30,
+        "tier1_ds30": tier1_combined,
         "tier2_midcap": WATCHLIST_TIER2_MIDCAP,
         "tier3_smallcap": WATCHLIST_TIER3_SMALLCAP,
         "combined": watchlist,
