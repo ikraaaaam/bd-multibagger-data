@@ -1,0 +1,54 @@
+name: BD Multibagger AI — Data Pipeline
+
+# DSE trading hours: 10:00–14:30 BDT (UTC+6), Sunday–Thursday
+# BDT is UTC+6, so 10:00–14:30 BDT = 04:00–08:30 UTC
+# Cron day-of-week: 0=Sunday ... 4=Thursday (GitHub Actions cron is UTC, standard 5-field)
+
+on:
+  schedule:
+    # Live price snapshot — every 10 minutes during market hours, Sun–Thu
+    - cron: '*/10 4-8 * * 0-4'
+    # EOD history append — once daily at 15:30 BDT (09:30 UTC), after official close settles
+    - cron: '30 9 * * 0-4'
+  workflow_dispatch: {}   # allows manual "Run workflow" trigger from the Actions tab
+
+permissions:
+  contents: write   # needed to commit updated JSON back to the repo
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine mode (live vs eod) from trigger time
+        id: mode
+        run: |
+          HOUR=$(date -u +%H)
+          MIN=$(date -u +%M)
+          if [ "$HOUR" = "09" ] && [ "$MIN" -ge "25" ]; then
+            echo "mode=eod" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=live" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run scraper
+        run: python scraper.py --mode ${{ steps.mode.outputs.mode }}
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "bd-multibagger-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "data: scrape update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push

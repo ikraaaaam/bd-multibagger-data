@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD Multibagger AI — Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0f0c;
+    --bg-raised:#0f1613;
+    --bg-card:#121a16;
+    --line:#22302a;
+    --line-soft:#1a2420;
+    --text:#e9ede8;
+    --text-dim:#9aa6a0;
+    --text-faint:#5f6b65;
+    --green:#1fae6b;
+    --green-bright:#2fd888;
+    --gold:#c9a24b;
+    --red:#e5555a;
+    --mono:'IBM Plex Mono',monospace;
+    --sans:'IBM Plex Sans',sans-serif;
+    --serif:'Instrument Serif',serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--green);color:#04120b;}
+
+  /* ---------- Ticker tape ---------- */
+  .ticker-wrap{
+    background:#04100a;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    white-space:nowrap;
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .ticker{
+    display:inline-block;
+    padding:9px 0;
+    animation:scroll 38s linear infinite;
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.02em;
+  }
+  .ticker span{padding:0 22px;color:var(--text-dim);}
+  .ticker span b{color:var(--text);font-weight:600;}
+  .up{color:var(--green-bright);}
+  .down{color:var(--red);}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---------- Layout ---------- */
+  .shell{max-width:1180px;margin:0 auto;padding:0 32px;}
+  header.hero{padding:96px 0 70px;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:26px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green-bright);box-shadow:0 0 8px var(--green-bright);}
+  h1.title{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(40px,6vw,74px);
+    line-height:1.03;
+    color:var(--text);
+    max-width:900px;
+  }
+  h1.title em{color:var(--green-bright);font-style:italic;}
+  .subhead{
+    margin-top:26px;
+    max-width:640px;
+    color:var(--text-dim);
+    font-size:16.5px;
+  }
+  .hero-meta{
+    display:flex;
+    gap:40px;
+    margin-top:48px;
+    flex-wrap:wrap;
+  }
+  .hero-meta div{font-family:var(--mono);font-size:12px;color:var(--text-faint);}
+  .hero-meta div b{display:block;color:var(--text);font-size:14px;margin-top:4px;font-weight:600;}
+
+  section{padding:78px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-label{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--green-bright);
+    margin-bottom:16px;
+  }
+  h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(28px,3.4vw,40px);
+    max-width:760px;
+    margin-bottom:18px;
+  }
+  .lede{color:var(--text-dim);max-width:680px;font-size:15.5px;margin-bottom:44px;}
+
+  /* ---------- Comparison table ---------- */
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line-soft);}
+  th{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text-faint);
+    font-weight:500;
+  }
+  td{color:var(--text-dim);}
+  td.hl{color:var(--green-bright);font-family:var(--mono);}
+  tr:hover td{background:var(--bg-raised);}
+
+  /* ---------- Index/gate diagram ---------- */
+  .gate-row{display:flex;gap:18px;margin-top:36px;flex-wrap:wrap;}
+  .gate-card{
+    flex:1;min-width:220px;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px;
+  }
+  .gate-card .idx{
+    font-family:var(--mono);
+    font-size:20px;
+    font-weight:700;
+    color:var(--gold);
+  }
+  .gate-card p{color:var(--text-dim);font-size:13.5px;margin-top:8px;}
+  .arrow{
+    display:flex;align-items:center;justify-content:center;
+    color:var(--text-faint);font-family:var(--mono);font-size:18px;
+    padding:0 4px;
+  }
+
+  /* ---------- Architecture flow ---------- */
+  .flow{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:36px;
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--text-dim);
+    overflow-x:auto;
+    white-space:pre;
+    line-height:1.7;
+  }
+  .flow .lyr{color:var(--green-bright);font-weight:600;}
+  .flow .dat{color:var(--gold);}
+
+  /* ---------- Phases ---------- */
+  .phase{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:36px;
+    padding:44px 0;
+    border-top:1px solid var(--line-soft);
+  }
+  .phase:first-of-type{border-top:none;}
+  .phase-num{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:56px;
+    color:var(--line);
+    line-height:1;
+  }
+  .phase-body h3{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:20px;
+    color:var(--text);
+    margin-bottom:6px;
+  }
+  .phase-goal{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--green-bright);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:16px;
+  }
+  .phase-body p.desc{color:var(--text-dim);font-size:14.5px;margin-bottom:20px;max-width:640px;}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+  .chip{
+    font-family:var(--mono);
+    font-size:11.5px;
+    padding:5px 10px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--text-dim);
+    background:var(--bg-raised);
+  }
+  .deliv{
+    list-style:none;
+    display:grid;
+    gap:9px;
+  }
+  .deliv li{
+    font-size:14px;
+    color:var(--text-dim);
+    padding-left:20px;
+    position:relative;
+  }
+  .deliv li::before{
+    content:'—';
+    position:absolute;left:0;top:0;
+    color:var(--green-bright);
+  }
+
+  /* ---------- Stack grid ---------- */
+  .stack-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    margin-top:36px;
+  }
+  .stack-cell{background:var(--bg-card);padding:26px;}
+  .stack-cell .lbl{
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--text-faint);
+    margin-bottom:10px;
+  }
+  .stack-cell .val{font-size:15px;color:var(--text);font-weight:500;margin-bottom:4px;}
+  .stack-cell .note{font-size:12.5px;color:var(--text-dim);}
+
+  /* ---------- Data schema code block ---------- */
+  pre.schema{
+    background:#070c09;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:26px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--text-dim);
+    overflow-x:auto;
+    line-height:1.8;
+  }
+  pre.schema .k{color:var(--green-bright);}
+  pre.schema .s{color:var(--gold);}
+  pre.schema .c{color:var(--text-faint);}
+
+  /* ---------- Footer / decisions ---------- */
+  .decision{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    border-radius:4px;
+    padding:20px 24px;
+    margin-bottom:14px;
+  }
+  .decision .q{font-weight:600;font-size:14.5px;margin-bottom:4px;}
+  .decision .a{font-size:13.5px;color:var(--text-dim);}
+
+  footer{padding:60px 0 90px;}
+  footer .sig{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--text-dim);}
+
+  @media(max-width:720px){
+    .phase{grid-template-columns:1fr;gap:12px;}
+    .phase-num{font-size:36px;}
+    .shell{padding:0 20px;}
+    header.hero{padding:64px 0 48px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span><b>DSEX</b> 5,612.40 <span class="up">▲ 0.82%</span></span>
+    <span><b>DSES</b> 1,340.15 <span class="up">▲ 0.61%</span></span>
+    <span><b>SQURPHARMA</b> 218.30 <span class="up">▲ 1.2%</span></span>
+    <span><b>GP</b> 268.90 <span class="down">▼ 0.4%</span></span>
+    <span><b>BEXIMCO</b> 142.10 <span class="down">▼ 0.9%</span></span>
+    <span><b>BSRM</b> 96.70 <span class="up">▲ 2.1%</span></span>
+    <span><b>MPETROLEUM</b> 184.00 <span class="up">▲ 0.3%</span></span>
+    <span><b>BERGERPBL</b> 2,410.50 <span class="down">▼ 0.2%</span></span>
+    <!-- duplicate for seamless loop -->
+    <span><b>DSEX</b> 5,612.40 <span class="up">▲ 0.82%</span></span>
+    <span><b>DSES</b> 1,340.15 <span class="up">▲ 0.61%</span></span>
+    <span><b>SQURPHARMA</b> 218.30 <span class="up">▲ 1.2%</span></span>
+    <span><b>GP</b> 268.90 <span class="down">▼ 0.4%</span></span>
+    <span><b>BEXIMCO</b> 142.10 <span class="down">▼ 0.9%</span></span>
+    <span><b>BSRM</b> 96.70 <span class="up">▲ 2.1%</span></span>
+    <span><b>MPETROLEUM</b> 184.00 <span class="up">▲ 0.3%</span></span>
+    <span><b>BERGERPBL</b> 2,410.50 <span class="down">▼ 0.2%</span></span>
+  </div>
+</div>
+
+<div class="shell">
+
+  <header class="hero">
+    <div class="eyebrow"><span class="dot"></span> ARCHITECTURE &amp; BUILD PLAN — V2</div>
+    <h1 class="title">BD Multibagger AI —<br>screener, reasoning, <em>and a memory of the market.</em></h1>
+    <p class="subhead">A Shariah-aware, index-driven stock research platform for the Dhaka Stock Exchange. Built for a solo founder, zero data-license budget, and DSEX/DSES as the backbone instead of a hand-curated compliance list.</p>
+    <div class="hero-meta">
+      <div>MARKET<b>DSE — Dhaka</b></div>
+      <div>INDICES<b>DSEX · DSES · DS30</b></div>
+      <div>AI COVERAGE<b>~55–60 stocks</b></div>
+      <div>PHASES<b>7 — incl. paper trading</b></div>
+      <div>COST TARGET<b>$0 infra + $0 tokens</b></div>
+    </div>
+  </header>
+
+  <!-- ================= WHAT CHANGED ================= -->
+  <section>
+    <div class="section-label">Revision note</div>
+    <h2>The index does the compliance work now.</h2>
+    <p class="lede">The earlier version of this plan proposed a manually-curated IBSL Shariah list as a hard gate. That's now replaced with something simpler and more reliable: DSE already publishes <b style="color:var(--text)">DSEX</b> (broad market index — every listed company) and <b style="color:var(--text)">DSES</b> (the Shariah index — pre-filtered by DSE itself). Compliance becomes an index membership check, not a list you maintain.</p>
+
+    <div class="gate-row">
+      <div class="gate-card">
+        <div class="idx">DSEX</div>
+        <p>All DSE-listed companies. The full universe. Default view when no filter is applied.</p>
+      </div>
+      <div class="arrow">＋</div>
+      <div class="gate-card">
+        <div class="idx">DSES</div>
+        <p>DSE's own Shariah-compliant index. Toggling this filter is the entire compliance gate — no manual list to maintain or go stale.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="gate-card" style="border-color:var(--green);">
+        <div class="idx" style="color:var(--green-bright);">Screener</div>
+        <p>Fundamental filters, Health Score, and AI reasoning run on whichever index the user has selected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SYSTEM FLOW ================= -->
+  <section>
+    <div class="section-label">System overview</div>
+    <h2>Two tracks, one screener.</h2>
+    <p class="lede">A scheduled scraping pipeline keeps data fresh without a server. The app itself stays a static, storage-backed artifact. Everything downstream — scoring, technicals, AI reasoning — reads from the same cached dataset.</p>
+
+    <div class="flow">┌──────────────────────────────────────────────────────────────────┐
+│  <span class="lyr">DATA PIPELINE</span>  (GitHub Actions — scheduled, free)             │
+│                                                                    │
+│   bdshare / stocksurferbd  →  scrape dsebd.org                    │
+│   runs every 10min, 10:00–14:30 BDT, Sun–Thu                      │
+│         ↓                                                         │
+│   writes <span class="dat">prices.json</span>, <span class="dat">index-dsex.json</span>, <span class="dat">index-dses.json</span>            │
+│   commits to repo  →  served free via raw.githubusercontent.com   │
+│                                                                    │
+│   + daily EOD job (15:30 BDT) → appends <span class="dat">history/*.json</span>            │
+└───────────────────────────┬────────────────────────────────────────┘
+                            │  fetch on load / every few min
+┌───────────────────────────▼────────────────────────────────────────┐
+│  <span class="lyr">APPLICATION</span>  (React artifact, runs in-browser)                │
+│                                                                    │
+│   Index Selector (DSEX / DSES)                                    │
+│         ↓                                                         │
+│   Fundamental Screener  →  Health Score Engine                    │
+│         ↓                                                         │
+│   Technical Module (RSI / MACD / BB / MA)                         │
+│         ↓                                                         │
+│   AI Analyst Layer (Claude API)  →  plain-language reasoning      │
+│         ↓                                                         │
+│   Portfolio · SIP Tracker · Comparison Tool                       │
+│                                                                    │
+│   local cache + user data  →  <span class="dat">window.storage</span>                        │
+└──────────────────────────────────────────────────────────────────┘</div>
+  </section>
+
+  <!-- ================= AGENT ARCHITECTURE ================= -->
+  <section>
+    <div class="section-label">Agent architecture</div>
+    <h2>Separation of concerns, not a router of vendors.</h2>
+    <p class="lede">Multibagg AI's public writeups describe a multi-LLM router across GPT-4o and Gemini — treat the specific vendor claims as unverified, but the underlying pattern is sound. For single-user scale, the win isn't which model answers, it's keeping deterministic math out of the LLM's hands and giving each reasoning task its own scoped context.</p>
+
+    <p class="lede" style="margin-top:-20px;">A true Medallion-style edge isn't LLM agents at all — it's thousands of small deterministic signals (momentum, volume, volatility, mean-reversion) combined statistically. The agent layer's real job is narrating what that engine finds, not generating the edge itself.</p>
+
+    <div class="flow">                         ┌─────────────────────┐
+                         │  <span class="lyr">ORCHESTRATOR</span>        │
+                         │  routes by intent AND  │
+                         │  time horizon          │
+                         └──────────┬────────────┘
+      ┌──────────────┬──────────────┼──────────────┬──────────────┐
+      ▼              ▼              ▼              ▼              ▼
+┌───────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌──────────────┐
+│ <span class="lyr">NEWS</span>      │ │ <span class="lyr">RESEARCH</span>   │ │ <span class="lyr">TECHNICAL /</span> │ │ <span class="lyr">RISK</span>      │ │ <span class="dat">QUANT SIGNAL</span> │
+│ <span class="lyr">AGENT</span>     │ │ <span class="lyr">AGENT</span>     │ │ <span class="lyr">QUANT AGENT</span>│ │ <span class="lyr">AGENT</span>     │ │ <span class="dat">ENGINE</span>       │
+│ DSE announ-│ │ fundamental │ │ narrates    │ │ position   │ │ (not an LLM)   │
+│ cements,   │ │ narrative,  │ │ momentum /  │ │ sizing vs  │ │ momentum ·     │
+│ scoped     │ │ long-term   │ │ volume      │ │ volatility │ │ volume ·       │
+│ context    │ │ (Health     │ │ signals     │ │ context    │ │ volatility ·   │
+│            │ │ Score)      │ │ (short-term)│ │            │ │ mean-reversion │
+└───────────┘ └────────────┘ └──────┬─────┘ └──────┬─────┘ └───────┬───────┘
+                                      └───────────────┴──────────────┘
+                                        reads directly from Quant Signal Engine,
+                                        never invents a number itself
+
+   All LLM agents run on <span class="dat">one Claude model</span> right now — a multi-vendor router
+   is deferred until query volume actually makes cost-arbitrage worth it.</div>
+  </section>
+
+  <!-- ================= COVERAGE & COST CONTROL ================= -->
+  <section>
+    <div class="section-label">Coverage universe &amp; cost control</div>
+    <h2>Small, bounded, cached — that's how $0 stays $0.</h2>
+    <p class="lede">The screener stays full-market — DSEX/DSES, deterministic, free, no token cost. The AI agent layer is deliberately narrowed to a curated watchlist, because that's the only place free-tier token limits can actually bite.</p>
+
+    <table>
+      <tr><th>Tier</th><th>Universe</th><th>Count</th><th>Source</th></tr>
+      <tr><td class="hl">01</td><td>Blue-chip</td><td>~30</td><td>DS30 — DSE's own blue-chip index, no manual curation needed</td></tr>
+      <tr><td class="hl">02</td><td>Midcap</td><td>~15</td><td>Curated, weighted toward Damani sector-leadership names</td></tr>
+      <tr><td class="hl">03</td><td>Small-cap</td><td>~10–15</td><td>Curated, high-conviction only</td></tr>
+    </table>
+    <p style="color:var(--text-dim);font-size:14px;margin-top:18px;">Total AI-covered universe: <b style="color:var(--green-bright);">~55–60 stocks</b>, out of 300+ listed on DSE. Everything outside this stays visible in the screener but never triggers an agent call unless promoted into the watchlist.</p>
+
+    <div class="stack-grid" style="margin-top:36px;">
+      <div class="stack-cell">
+        <div class="lbl">Rule 01 — Cache always</div>
+        <div class="val">Every AI output → window.storage</div>
+        <div class="note">Timestamped. Reload or re-view reads cache, never re-calls the model.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Rule 02 — Regenerate on change</div>
+        <div class="val">Score moves ±5, or 24h passed</div>
+        <div class="note">Whichever comes first. Most stocks need zero fresh calls most days.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Rule 03 — Lazy, not eager</div>
+        <div class="val">Generate on open, one at a time</div>
+        <div class="note">Never pre-generate insights for all 55–60 stocks on page load.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Rule 04 — Graceful degradation</div>
+        <div class="val">Rate limit hit → show last cache</div>
+        <div class="note">Small "updating…" note, never a broken screen or hard error.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DATA MODEL ================= -->
+  <section>
+    <div class="section-label">Data model</div>
+    <h2>What lives where.</h2>
+    <p class="lede">Two data classes: pipeline-fed (prices, index membership — refreshed automatically) and user-owned (portfolio, SIP, fundamentals you verify — stored personally, never shared).</p>
+
+    <pre class="schema"><span class="c">// pipeline-fed — refreshed by GitHub Actions, fetched read-only</span>
+<span class="k">index:dsex</span>        { updated_at, constituents: [ticker, ...] }
+<span class="k">index:dses</span>        { updated_at, constituents: [ticker, ...] }   <span class="c">// Shariah gate</span>
+<span class="k">prices:{ticker}</span>   { last_price, change_pct, volume, updated_at }
+<span class="k">history:{ticker}</span> { entries: [{date, open, high, low, close, volume}] }
+
+<span class="c">// user-owned — window.storage, personal scope</span>
+<span class="k">stocks:{ticker}</span>   { roe, de_ratio, eps_history[], nocfps, cap_class, sector, verified_at }
+<span class="k">portfolio:holdings</span> { {ticker}: {qty, avg_cost, target_allocation} }
+<span class="k">sip:schedule</span>      { monthly_budget, step_up_rate, carry_forward: {ticker: amount} }
+<span class="k">sip:history</span>       [ {date, ticker, qty, price, amount} ]
+<span class="k">settings:profile</span>  { freedom_target, horizon_years, risk_notes }</pre>
+  </section>
+
+  <!-- ================= PHASES ================= -->
+  <section>
+    <div class="section-label">Build plan</div>
+    <h2>Six phases, each independently usable.</h2>
+    <p class="lede">Every phase ships something you can actually use with real data before the next one starts — no phase depends on unfinished work from a later phase.</p>
+
+    <div class="phase">
+      <div class="phase-num">01</div>
+      <div class="phase-body">
+        <h3>Data Pipeline &amp; Index Foundation</h3>
+        <div class="phase-goal">Goal — fresh DSEX/DSES data flowing, free, on a schedule</div>
+        <p class="desc">Stand up the scraping pipeline before touching the UI. This is the foundation everything else reads from, so it's proven first, in isolation.</p>
+        <div class="chip-row">
+          <span class="chip">bdshare (Python)</span>
+          <span class="chip">GitHub Actions cron</span>
+          <span class="chip">raw.githubusercontent.com</span>
+          <span class="chip">EOD CSV fallback</span>
+        </div>
+        <ul class="deliv">
+          <li>Python scraper script using bdshare, pulling DSEX + DSES constituent lists and live prices</li>
+          <li>GitHub Actions workflow: runs every 10min during 10:00–14:30 BDT, Sun–Thu; separate daily EOD job at 15:30</li>
+          <li>JSON output committed to repo, fetchable free via raw.githubusercontent.com</li>
+          <li>Staleness check — flags data older than expected instead of silently serving old numbers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">02</div>
+      <div class="phase-body">
+        <h3>Index Screener Core</h3>
+        <div class="phase-goal">Goal — browse DSEX or DSES, filter by fundamentals, see a Health Score</div>
+        <p class="desc">The first real screen. Pick an index, apply Buffett/Damani-style filters, and get a ranked, scored list — this alone is already a usable daily tool.</p>
+        <div class="chip-row">
+          <span class="chip">React artifact</span>
+          <span class="chip">Tailwind</span>
+          <span class="chip">window.storage cache</span>
+        </div>
+        <ul class="deliv">
+          <li>Index selector: DSEX (all) / DSES (Shariah-filtered)</li>
+          <li>Fundamental filters — ROE, D/E, EPS growth trend, NOCFPS</li>
+          <li>Health Score engine: 30% profitability, 25% balance sheet, 20% earnings consistency, 15% cash generation, 10% sector-cycle bonus</li>
+          <li><b style="color:var(--text)">TradingView-tier UI</b> — customizable/reorderable columns, saved filter presets, dense sortable table with keyboard row navigation</li>
+          <li>Heatmap view — color-coded by Health Score or % change, not just a list</li>
+          <li>Inline sparklines per row — 30-day price trend at a glance, no click-through needed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">03</div>
+      <div class="phase-body">
+        <h3>Stock Detail &amp; Technicals</h3>
+        <div class="phase-goal">Goal — one page per stock, fundamentals and price action side by side</div>
+        <p class="desc">Click through from the screener into a full profile — this is where technical and fundamental views finally sit together instead of living in separate tools.</p>
+        <div class="chip-row">
+          <span class="chip">Recharts</span>
+          <span class="chip">history:{ticker} feed</span>
+        </div>
+        <ul class="deliv">
+          <li>Candlestick chart from the history feed</li>
+          <li>RSI, MACD, Bollinger Bands, moving averages overlay toggles</li>
+          <li><b style="color:var(--text)">Quant Signal Engine</b> — momentum (ROC, MACD histogram trend, MA crossovers), volume (spike vs 20/50-day avg, OBV, price-volume divergence), volatility (ATR, BB width), mean-reversion (%B, z-score)</li>
+          <li><b style="color:var(--text)">Trading Signal Score</b> — separate from the long-term Health Score; answers "is this stock doing something unusual right now"</li>
+          <li>Fundamental panel — Health Score breakdown, IBSL/DSES badge, sector tag</li>
+          <li>"Add to portfolio" / "Add to SIP" actions launch from here</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">04</div>
+      <div class="phase-body">
+        <h3>Portfolio &amp; SIP Tracker</h3>
+        <div class="phase-goal">Goal — your actual holdings, carry-forward logic, wealth ledger, in the app</div>
+        <p class="desc">Migrates your existing manual wealth-ledger logic into the product itself, including the carry-forward handling for stocks priced above your monthly per-stock budget.</p>
+        <div class="chip-row">
+          <span class="chip">portfolio:holdings</span>
+          <span class="chip">sip:schedule / sip:history</span>
+        </div>
+        <ul class="deliv">
+          <li>Holdings view — qty, avg cost, current value, allocation vs target</li>
+          <li>Monthly SIP calculator — whole-share purchase logic against live price</li>
+          <li>Carry-forward tracker for high-priced stocks (e.g. Berger, Marico-style cases)</li>
+          <li>Step-up SIP support and wealth ledger auto-populated from executed buys</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">05</div>
+      <div class="phase-body">
+        <h3>Multi-Agent AI Layer</h3>
+        <div class="phase-goal">Goal — specialized agents for both time horizons, math never left to the LLM</div>
+        <p class="desc">Five roles, not one do-everything prompt: an Orchestrator that routes by intent and time horizon, News, Research, Technical/Quant, and Risk agents. All run on a single Claude model — a multi-vendor router is deliberately deferred until real usage volume justifies the added complexity.</p>
+        <div class="chip-row">
+          <span class="chip">Claude API (fetch, no key needed)</span>
+          <span class="chip">single-model, multi-agent</span>
+          <span class="chip">grounded prompting</span>
+        </div>
+        <ul class="deliv">
+          <li><b style="color:var(--text)">Orchestrator</b> — routes by intent and time horizon: long-term question → Research Agent, short-term/momentum question → Technical Agent</li>
+          <li><b style="color:var(--text)">News Agent</b> — summarizes recent corporate announcements / DSE news for a ticker, separate context window from analysis</li>
+          <li><b style="color:var(--text)">Research Agent</b> — grounded long-term fundamental narrative from stored data only, no invented numbers</li>
+          <li><b style="color:var(--text)">Technical/Quant Agent</b> — narrates what the Quant Signal Engine found in plain language: momentum breakouts, volume anomalies, mean-reversion setups</li>
+          <li><b style="color:var(--text)">Risk Agent</b> — volatility-adjusted position sizing context, so momentum signals come with a sense of scale, not just direction</li>
+          <li><b style="color:var(--text)">Quant Signal Engine</b> — not an agent at all: momentum, volume, volatility, mean-reversion stay pure deterministic code, LLM only narrates the result</li>
+          <li><b style="color:var(--text)">Scoped to the ~55–60 stock watchlist</b> — DS30 + curated mid/small-cap tiers; cached in window.storage, regenerated only on ±5 score change or 24h staleness</li>
+          <li>Every AI output carries a visible "not financial advice, verify independently" disclaimer</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">06</div>
+      <div class="phase-body">
+        <h3>Comparison &amp; Polish</h3>
+        <div class="phase-goal">Goal — side-by-side decisions, and a product that feels finished</div>
+        <p class="desc">The rounding-out phase — comparison tooling plus the details that make it feel like a real product rather than a prototype.</p>
+        <div class="chip-row">
+          <span class="chip">2–4 stock compare view</span>
+          <span class="chip">UI polish pass</span>
+        </div>
+        <ul class="deliv">
+          <li>Side-by-side comparison — fundamentals, Health Score, technicals, DSES badge</li>
+    <div class="phase">
+      <div class="phase-num">07</div>
+      <div class="phase-body">
+        <h3>Paper Trading Engine</h3>
+        <div class="phase-goal">Goal — test the Quant Signal Engine with virtual money before real money</div>
+        <p class="desc">A full simulated trading account, reusing the Portfolio module's data shape under a separate <code style="color:var(--gold);">paper:</code> storage prefix. One honest constraint set upfront: fills simulate against the latest scraped price (~10min interval), not a live tick-by-tick order book — the UI says so plainly rather than pretending otherwise.</p>
+        <div class="chip-row">
+          <span class="chip">Webull-style mode indicator</span>
+          <span class="chip">market + limit orders</span>
+          <span class="chip">equity curve</span>
+        </div>
+        <ul class="deliv">
+          <li><b style="color:var(--text)">Persistent "PAPER TRADING" banner</b> — Webull-style: a fixed, impossible-to-miss mode strip (amber/black diagonal pattern) across the entire trading UI whenever in paper mode, plus a colored account-switcher so real vs. paper is never ambiguous mid-session</li>
+          <li><b style="color:var(--text)">Virtual account</b> — configurable starting cash, tracked entirely separate from real portfolio data</li>
+          <li><b style="color:var(--text)">Order types</b> — market (fills at latest cached price) and limit (fills next time scraped price crosses the limit) — scoped honestly to what a 10-min feed supports</li>
+          <li><b style="color:var(--text)">Position &amp; P&amp;L tracking</b> — realized/unrealized, per-trade and portfolio-wide</li>
+          <li><b style="color:var(--text)">Performance analytics</b> — win rate, avg win/loss, max drawdown, equity curve chart</li>
+          <li><b style="color:var(--text)">Trade journal</b> — a note per trade, so reasoning can be checked against outcome later</li>
+          <li>Feeds directly off the Quant Signal Engine — a trading idea from a momentum/volume signal can be paper-tested in one click before ever touching the real Portfolio module</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PREMIUM TRADING UI ================= -->
+  <section>
+    <div class="section-label">Trading UI — real and paper, one shared bar</div>
+    <h2>Same premium surface, two modes, zero ambiguity.</h2>
+    <p class="lede">Real trading isn't in the app's execution path yet — DSE has no retail order-routing API for a solo founder to plug into — but the stock-detail and screener surfaces are built to the same TradingView/IBKR-class bar either way, since that's where both real and paper decisions actually get made.</p>
+
+    <div class="stack-grid">
+      <div class="stack-cell">
+        <div class="lbl">Charting</div>
+        <div class="val">Multi-pane candlestick</div>
+        <div class="note">Price pane + separate RSI/MACD/volume sub-panes, synced crosshair across all — not indicators crammed into one chart.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Indicator stack</div>
+        <div class="val">Full technical suite</div>
+        <div class="note">RSI, MACD, Bollinger Bands, moving averages (SMA/EMA), ATR, OBV, volume profile — all from the Quant Signal Engine, toggleable per chart.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Order ticket</div>
+        <div class="val">IBKR-style side panel</div>
+        <div class="note">Docked, not modal — qty/price/order-type entry visible alongside the chart at all times, same panel for real and paper.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Mode indicator</div>
+        <div class="val">Webull-style paper banner</div>
+        <div class="note">Fixed amber/black strip + account switcher — impossible to place a paper order thinking it's real, or vice versa.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Watchlist rail</div>
+        <div class="val">Persistent side rail</div>
+        <div class="note">Tier 1/2/3 watchlist with live price + sparkline, always visible while charting — click to swap the main chart instantly.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Layout density</div>
+        <div class="val">Dense, keyboard-driven</div>
+        <div class="note">No wasted whitespace, hotkeys for order entry and chart navigation — matches how an active trader actually works, not a marketing page.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECH STACK ================= -->
+  <section>
+    <div class="section-label">Tech stack</div>
+    <h2>Every layer, and why.</h2>
+    <div class="stack-grid">
+      <div class="stack-cell">
+        <div class="lbl">Data acquisition</div>
+        <div class="val">bdshare (Python)</div>
+        <div class="note">Scrapes dsebd.org for prices + index constituents. Free, no key.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Scheduling</div>
+        <div class="val">GitHub Actions cron</div>
+        <div class="note">Free tier (~2,000 min/mo) comfortably covers market-hours-only polling.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Data hosting</div>
+        <div class="val">raw.githubusercontent.com</div>
+        <div class="note">Free, CDN-backed, publicly fetchable JSON — no database needed.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Frontend</div>
+        <div class="val">React (single-file artifact)</div>
+        <div class="note">Tailwind for styling, Recharts for candlestick/technical charts.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Persistence</div>
+        <div class="val">window.storage</div>
+        <div class="note">Personal scope for portfolio/SIP data — never shared, survives sessions.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">AI layer</div>
+        <div class="val">Claude API — single model, 3 agent roles</div>
+        <div class="note">Orchestrator, News Agent, Research Agent. Multi-vendor routing deferred until volume justifies it.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Screener UI tier</div>
+        <div class="val">TradingView-class</div>
+        <div class="note">Custom columns, saved presets, heatmap view, sparklines — not a static filtered table.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Compliance gate</div>
+        <div class="val">DSES index membership</div>
+        <div class="note">Replaces manual IBSL curation — pulled by the same scraper as DSEX.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Historical data</div>
+        <div class="val">Daily EOD JSON archive</div>
+        <div class="note">Appended once daily after DSE's official close settles (~15:30 BDT).</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Paper trading</div>
+        <div class="val">Simulated fills, real logic</div>
+        <div class="note">Market/limit orders against latest scraped price — Webull-style mode banner keeps it unmistakably separate from real portfolio data.</div>
+      </div>
+      <div class="stack-cell">
+        <div class="lbl">Trading UI tier</div>
+        <div class="val">TradingView / IBKR-class</div>
+        <div class="note">Multi-pane charting, docked order ticket, persistent watchlist rail — same bar for real and paper.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WATCHLIST ================= -->
+  <section>
+    <div class="section-label">Status — decided</div>
+    <h2>Watchlist locked. Plan is now build-ready.</h2>
+    <p class="lede">Tier 2/3 picked on turnover and liquidity — the criteria that actually matter for a trading watchlist, since momentum/volume signals are meaningless on thin volume. Not investment advice — a starting universe to refine as real data flows in.</p>
+
+    <table>
+      <tr><th>Tier</th><th>Stock</th><th>Sector</th><th>Why it's in</th></tr>
+      <tr><td class="hl">Mid</td><td>IPDC Finance</td><td>Financial services</td><td>Recurring turnover leader</td></tr>
+      <tr><td class="hl">Mid</td><td>Genex Infosys</td><td>Tech/IT</td><td>Only real tech-sector liquidity on DSE</td></tr>
+      <tr><td class="hl">Mid</td><td>Alif Industries</td><td>Engineering/steel</td><td>Infrastructure-cycle exposure, active volume</td></tr>
+      <tr><td class="hl">Mid</td><td>Dominage Steel</td><td>Steel/engineering</td><td>Most-traded stock in a recent session</td></tr>
+      <tr><td class="hl">Mid</td><td>Sunlife Insurance</td><td>Insurance</td><td>Consistent turnover appearance</td></tr>
+      <tr><td class="hl">Mid</td><td>Rupali Life Insurance</td><td>Insurance</td><td>Consistent turnover appearance</td></tr>
+      <tr><td class="hl">Mid</td><td>Pubali Bank</td><td>Banking</td><td>Frequent turnover topper</td></tr>
+      <tr><td class="hl">Mid</td><td>City General Insurance</td><td>Insurance</td><td>Recurring high-turnover name</td></tr>
+      <tr><td class="hl">Small</td><td>Lavello Ice-cream</td><td>Consumer/food</td><td>Most-traded stock in a recent session — real retail volume</td></tr>
+      <tr><td class="hl">Small</td><td>GQ Ball Pen</td><td>Consumer/manufacturing</td><td>Repeated turnover-leader appearance</td></tr>
+      <tr><td class="hl">Small</td><td>Peoples Insurance</td><td>Insurance</td><td>Consistent small-cap liquidity</td></tr>
+    </table>
+    <p style="color:var(--text-dim);font-size:13.5px;margin-top:16px;">Tier 1 (blue-chip) stays "whatever DS30 currently contains" — pulled live by the Phase 01 scraper rather than hand-typed here, so it's never stale.</p>
+
+    <div class="decision" style="margin-top:32px;border-left-color:var(--green);">
+      <div class="q">Phase 04 — pre-load holdings or start empty?</div>
+      <div class="a">Decided: start empty. No verified lot-level holdings (quantities, avg cost) exist to pre-load without fabricating placeholder numbers. Phase 04 ships with the input flow ready; populate once, in one sitting.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="sig">Plan is closed. Phase 01 is next.</div>
+  </footer>
+
+</div>
+</body>
+</html>
