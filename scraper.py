@@ -209,15 +209,32 @@ def append_eod_history(tickers):
     today = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d")
     for ticker in tickers:
         try:
-            df = bdshare.get_hist_data(code=ticker)
+            df = bdshare.get_historical_data(code=ticker)
         except Exception as e:
             print(f"  [warn] history fetch failed for {ticker}: {e}")
             continue
         if df is None or df.empty:
             continue
 
-        row = df.iloc[0].to_dict()
-        entry = {"date": today, **{k: (None if pd_isna(v) else v) for k, v in row.items()}}
+        row = {str(k).strip().upper(): v for k, v in df.iloc[0].to_dict().items()}
+        
+        def safe_float(keys, default=0.0):
+            for k in keys:
+                if k in row and not pd_isna(row[k]):
+                    try:
+                        return float(str(row[k]).replace(',', ''))
+                    except (ValueError, TypeError):
+                        pass
+            return default
+
+        entry = {
+            "date": today,
+            "open": safe_float(['OPEN_P', 'OPEN']),
+            "high": safe_float(['HIGH']),
+            "low": safe_float(['LOW']),
+            "close": safe_float(['CLOSE_P', 'CLOSE', 'LTP']),
+            "volume": safe_float(['VOLUME', 'VOL', 'TRADE'])
+        }
 
         hist_path = HISTORY_DIR / f"{ticker}.json"
         existing = []
