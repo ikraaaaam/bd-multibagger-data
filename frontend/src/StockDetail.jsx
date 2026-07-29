@@ -426,15 +426,14 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
   const [chartHeight, setChartHeight] = useState(400);
 
   useEffect(() => {
-    function onResize() {
-      if (containerRef.current) {
-        setWidth(containerRef.current.offsetWidth);
-        setChartHeight(containerRef.current.offsetHeight);
-      }
-    }
-    onResize();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    if (!containerRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      const { width, height } = entries[0].contentRect;
+      if (width > 0) setWidth(width);
+      if (height > 0) setChartHeight(height);
+    });
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
   }, []);
 
   const [fullBars, setFullBars] = useState([]);
