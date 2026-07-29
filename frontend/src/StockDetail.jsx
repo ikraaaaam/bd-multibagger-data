@@ -425,7 +425,12 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
   const [width, setWidth] = useState(800);
   const [chartHeight, setChartHeight] = useState(400);
 
+  const [fullBars, setFullBars] = useState([]);
+  const [loadingBars, setLoadingBars] = useState(true);
+  const [barsError, setBarsError] = useState(false);
+
   useEffect(() => {
+    if (loadingBars) return;
     if (!containerRef.current) return;
     const observer = new ResizeObserver((entries) => {
       const { width, height } = entries[0].contentRect;
@@ -434,11 +439,9 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
     });
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [loadingBars]);
 
-  const [fullBars, setFullBars] = useState([]);
-  const [loadingBars, setLoadingBars] = useState(true);
-  const [barsError, setBarsError] = useState(false);
+
 
   // Fetch real data
   useEffect(() => {
