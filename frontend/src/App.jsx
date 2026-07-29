@@ -58,17 +58,19 @@ export default function App() {
   useEffect(() => {
     const fetchLiveData = async () => {
       try {
-        const [pricesRes, watchlistRes, dsesRes] = await Promise.all([
+        const [pricesRes, watchlistRes, dsesRes, sparklinesRes] = await Promise.all([
           fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/prices.json"),
           fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/watchlist.json"),
-          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/index-dses.json")
+          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/index-dses.json"),
+          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/sparklines.json")
         ]);
         
         const prices = await pricesRes.json();
         const watchlist = await watchlistRes.json();
         const dsesData = await dsesRes.json();
+        const sparklines = await sparklinesRes.json().catch(() => ({}));
         
-        setLiveData({ prices: prices.prices, watchlist, dses: dsesData.constituents || [], loading: false });
+        setLiveData({ prices: prices.prices, watchlist, dses: dsesData.constituents || [], sparklines, loading: false });
       } catch (err) {
         console.error("Failed to load live data:", err);
         setLiveData((prev) => ({ ...prev, loading: false }));
@@ -194,7 +196,7 @@ export default function App() {
         changePct: changePct,
         dsex: true,
         dses,
-        spark: seededSpark(ticker, live.LTP || 100, changePct),
+        spark: liveData.sparklines && liveData.sparklines[ticker] ? liveData.sparklines[ticker] : seededSpark(ticker, live.LTP || 100, changePct),
       };
     }).filter((s) => {
       if (indexGate === "DSES" && !s.dses) return false;
