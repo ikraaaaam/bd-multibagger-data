@@ -331,7 +331,7 @@ export default function App() {
                   className={`mono text-sm font-bold px-5 py-2.5 transition-colors ${
                     indexGate === idx 
                       ? "bg-[#1fae6b] text-white dark:text-[#04120b]" 
-                      : "bg-white dark:bg-[#121a16] text-slate-900 dark:text-[#e9ede8]-dim hover:bg-slate-100 dark:hover:text-[#e9ede8]"
+                      : "bg-white dark:bg-[#121a16] text-slate-900 dark:text-[#e9ede8]/70 hover:bg-slate-100 dark:hover:text-[#e9ede8]"
                   }`}
                 >
                   {idx}
@@ -343,7 +343,7 @@ export default function App() {
               <select
                 value={tierFilter}
                 onChange={(e) => setTierFilter(e.target.value)}
-                className="appearance-none bg-white dark:bg-[#121a16] border border-slate-300 dark:border-[#22302a] rounded-md px-4 py-2.5 pr-10 text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]-dim hover:border-[#1fae6b] focus:border-[#1fae6b] outline-none shadow-sm cursor-pointer transition-colors"
+                className="appearance-none bg-white dark:bg-[#121a16] border border-slate-300 dark:border-[#22302a] rounded-md px-4 py-2.5 pr-10 text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]/70 hover:border-[#1fae6b] focus:border-[#1fae6b] outline-none shadow-sm cursor-pointer transition-colors"
               >
                 {["All Tiers", "Large Cap (Tier 1)", "Mid Cap (Tier 2)", "Small Cap (Tier 3)"].map(tier => <option key={tier} value={tier}>{tier}</option>)}
               </select>
@@ -354,7 +354,7 @@ export default function App() {
               <select
                 value={sectorFilter}
                 onChange={(e) => setSectorFilter(e.target.value)}
-                className="appearance-none bg-white dark:bg-[#121a16] border border-slate-300 dark:border-[#22302a] rounded-md px-4 py-2.5 pr-10 text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]-dim hover:border-[#1fae6b] focus:border-[#1fae6b] outline-none shadow-sm cursor-pointer transition-colors"
+                className="appearance-none bg-white dark:bg-[#121a16] border border-slate-300 dark:border-[#22302a] rounded-md px-4 py-2.5 pr-10 text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]/70 hover:border-[#1fae6b] focus:border-[#1fae6b] outline-none shadow-sm cursor-pointer transition-colors"
               >
                 {allSectors.map(sec => <option key={sec} value={sec}>{sec}</option>)}
               </select>
@@ -374,13 +374,13 @@ export default function App() {
             <div className="flex rounded-md border border-slate-300 dark:border-[#22302a] overflow-hidden shadow-sm">
               <button
                 onClick={() => setViewMode("table")}
-                className={`px-4 py-2.5 flex items-center gap-2 text-sm font-bold mono transition-colors ${viewMode === "table" ? "bg-[#1fae6b] text-white dark:text-[#04120b]" : "bg-white dark:bg-[#121a16] text-slate-900 dark:text-[#e9ede8]-dim hover:bg-slate-100 dark:hover:text-[#e9ede8]"}`}
+                className={`px-4 py-2.5 flex items-center gap-2 text-sm font-bold mono transition-colors ${viewMode === "table" ? "bg-[#1fae6b] text-white dark:text-[#04120b]" : "bg-white dark:bg-[#121a16] text-slate-900 dark:text-[#e9ede8]/70 hover:bg-slate-100 dark:hover:text-[#e9ede8]"}`}
               >
                 <List size={16} /> Table
               </button>
               <button
                 onClick={() => setViewMode("heatmap")}
-                className={`px-4 py-2.5 flex items-center gap-2 text-sm font-bold mono transition-colors ${viewMode === "heatmap" ? "bg-[#1fae6b] text-white dark:text-[#04120b]" : "bg-white dark:bg-[#121a16] text-slate-900 dark:text-[#e9ede8]-dim hover:bg-slate-100 dark:hover:text-[#e9ede8]"}`}
+                className={`px-4 py-2.5 flex items-center gap-2 text-sm font-bold mono transition-colors ${viewMode === "heatmap" ? "bg-[#1fae6b] text-white dark:text-[#04120b]" : "bg-white dark:bg-[#121a16] text-slate-900 dark:text-[#e9ede8]/70 hover:bg-slate-100 dark:hover:text-[#e9ede8]"}`}
               >
                 <LayoutGrid size={16} /> Heatmap
               </button>
@@ -389,7 +389,7 @@ export default function App() {
             <div className="relative" ref={presetPanelRef}>
               <button
                 onClick={() => setPresetPanelOpen((o) => !o)}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-md shadow-sm border border-slate-300 dark:border-[#22302a] bg-white dark:bg-[#121a16] text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]-dim hover:bg-slate-100 dark:hover:text-[#e9ede8] transition-colors hover:border-[#1fae6b]"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-md shadow-sm border border-slate-300 dark:border-[#22302a] bg-white dark:bg-[#121a16] text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]/70 hover:bg-slate-100 dark:hover:text-[#e9ede8] transition-colors hover:border-[#1fae6b]"
               >
                 <Save size={16} /> Presets <ChevronDown size={14} />
               </button>
@@ -426,7 +426,7 @@ export default function App() {
             <div className="relative" ref={colPanelRef}>
               <button
                 onClick={() => setColPanelOpen((o) => !o)}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-md shadow-sm border border-slate-300 dark:border-[#22302a] bg-white dark:bg-[#121a16] text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]-dim hover:bg-slate-100 dark:hover:text-[#e9ede8] transition-colors hover:border-[#1fae6b]"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-md shadow-sm border border-slate-300 dark:border-[#22302a] bg-white dark:bg-[#121a16] text-sm font-bold mono text-slate-900 dark:text-[#e9ede8]/70 hover:bg-slate-100 dark:hover:text-[#e9ede8] transition-colors hover:border-[#1fae6b]"
               >
                 <SlidersHorizontal size={16} /> Columns <ChevronDown size={14} />
               </button>
@@ -483,7 +483,7 @@ export default function App() {
               </div>
               <input type="range" min="0" max="100" value={epsGrowthMin} onChange={(e) => setEpsGrowthMin(+e.target.value)} className="w-full h-2 bg-slate-200 dark:bg-[#22302a] rounded-lg appearance-none cursor-pointer" />
             </div>
-            <label className="flex items-center gap-3 mono text-sm font-bold text-slate-900 dark:text-[#e9ede8]-dim cursor-pointer self-end pb-1 hover:text-slate-900 dark:hover:text-[#e9ede8] transition-colors">
+            <label className="flex items-center gap-3 mono text-sm font-bold text-slate-900 dark:text-[#e9ede8]/70 cursor-pointer self-end pb-1 hover:text-slate-900 dark:hover:text-[#e9ede8] transition-colors">
               <input type="checkbox" checked={nocfpsPositiveOnly} onChange={(e) => setNocfpsPositiveOnly(e.target.checked)} className="w-5 h-5 accent-[#1fae6b] cursor-pointer" />
               NOCFPS positive only
             </label>

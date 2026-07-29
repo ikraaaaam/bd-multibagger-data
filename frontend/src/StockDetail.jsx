@@ -128,6 +128,7 @@ function computeIndicators(bars) {
 }
 
 function tradingSignal(bars, ind) {
+  if (!bars || bars.length === 0) return null;
   const n = bars.length - 1;
   const close = bars[n].close;
   const roc10 = n >= 10 ? ((close - bars[n - 10].close) / bars[n - 10].close) * 100 : 0;
