@@ -1,1 +1,6018 @@
-[{"date":"2007-01-08","open":2.62,"high":2.7,"low":2.6,"close":2.6,"volume":27000.0},{"date":"2007-01-10","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":2500.0},{"date":"2007-01-11","open":3.2,"high":3.2,"low":3.1,"close":3.1,"volume":21500.0},{"date":"2007-02-08","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":6500.0},{"date":"2007-02-09","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":4500.0},{"date":"2007-02-10","open":2.5,"high":2.5,"low":2.4,"close":2.4,"volume":15000.0},{"date":"2007-02-12","open":2.9,"high":2.9,"low":2.8,"close":2.8,"volume":25000.0},{"date":"2007-03-09","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":2000.0},{"date":"2007-03-10","open":2.5,"high":2.5,"low":2.4,"close":2.4,"volume":1500.0},{"date":"2007-03-12","open":2.8,"high":2.8,"low":2.7,"close":2.7,"volume":10500.0},{"date":"2007-04-10","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":6000.0},{"date":"2007-04-11","open":3.2,"high":3.2,"low":3.1,"close":3.1,"volume":30500.0},{"date":"2007-04-12","open":2.8,"high":2.9,"low":2.8,"close":2.8,"volume":11000.0},{"date":"2007-05-08","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":16500.0},{"date":"2007-05-09","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":4500.0},{"date":"2007-05-11","open":3.2,"high":3.2,"low":3.1,"close":3.1,"volume":29500.0},{"date":"2007-05-12","open":2.9,"high":2.9,"low":2.9,"close":2.9,"volume":1000.0},{"date":"2007-06-08","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":32500.0},{"date":"2007-06-09","open":2.6,"high":2.6,"low":2.5,"close":2.5,"volume":15000.0},{"date":"2007-06-11","open":3.1,"high":3.1,"low":3.0,"close":3.0,"volume":72000.0},{"date":"2007-06-12","open":3.0,"high":3.3,"low":3.0,"close":3.1,"volume":81500.0},{"date":"2007-07-08","open":2.44,"high":2.5,"low":2.4,"close":2.4,"volume":48000.0},{"date":"2007-07-10","open":2.6,"high":2.7,"low":2.6,"close":2.6,"volume":6000.0},{"date":"2007-07-22","open":2.99,"high":3.0,"low":2.9,"close":2.9,"volume":30500.0},{"date":"2007-07-23","open":2.97,"high":3.0,"low":2.9,"close":2.9,"volume":48000.0},{"date":"2007-07-24","open":2.9,"high":2.9,"low":2.9,"close":2.9,"volume":3500.0},{"date":"2007-07-25","open":2.83,"high":2.9,"low":2.8,"close":2.8,"volume":49000.0},{"date":"2007-07-26","open":2.72,"high":2.8,"low":2.7,"close":2.7,"volume":10500.0},{"date":"2007-07-30","open":2.64,"high":2.7,"low":2.6,"close":2.6,"volume":12000.0},{"date":"2007-07-31","open":2.56,"high":2.6,"low":2.5,"close":2.5,"volume":26500.0},{"date":"2007-08-08","open":2.38,"high":2.5,"low":2.3,"close":2.3,"volume":44000.0},{"date":"2007-08-10","open":2.6,"high":2.7,"low":2.6,"close":2.6,"volume":17500.0},{"date":"2007-08-11","open":3.0,"high":3.1,"low":3.0,"close":3.0,"volume":8000.0},{"date":"2007-08-13","open":2.42,"high":2.5,"low":2.4,"close":2.4,"volume":32500.0},{"date":"2007-08-14","open":2.75,"high":2.9,"low":2.5,"close":2.7,"volume":12000.0},{"date":"2007-08-15","open":2.93,"high":3.0,"low":2.8,"close":2.9,"volume":49500.0},{"date":"2007-08-16","open":2.96,"high":3.1,"low":2.8,"close":2.9,"volume":57500.0},{"date":"2007-08-19","open":2.84,"high":2.9,"low":2.8,"close":2.8,"volume":6500.0},{"date":"2007-08-20","open":2.81,"high":2.9,"low":2.8,"close":2.8,"volume":18500.0},{"date":"2007-08-21","open":2.79,"high":2.8,"low":2.7,"close":2.7,"volume":10000.0},{"date":"2007-08-22","open":2.67,"high":2.7,"low":2.6,"close":2.6,"volume":12000.0},{"date":"2007-08-27","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":7000.0},{"date":"2007-08-28","open":2.65,"high":2.7,"low":2.6,"close":2.6,"volume":4000.0},{"date":"2007-08-29","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":500.0},{"date":"2007-09-08","open":2.4,"high":2.4,"low":2.4,"close":2.4,"volume":24000.0},{"date":"2007-09-09","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":14000.0},{"date":"2007-09-10","open":2.7,"high":2.9,"low":2.7,"close":2.7,"volume":22500.0},{"date":"2007-09-12","open":3.1,"high":3.1,"low":3.0,"close":3.0,"volume":17500.0},{"date":"2007-09-13","open":2.5,"high":2.5,"low":2.4,"close":2.4,"volume":76500.0},{"date":"2007-09-16","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":1000.0},{"date":"2007-09-17","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":1000.0},{"date":"2007-09-18","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":2500.0},{"date":"2007-09-19","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":1500.0},{"date":"2007-09-20","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":13500.0},{"date":"2007-09-23","open":2.4,"high":2.4,"low":2.4,"close":2.4,"volume":10000.0},{"date":"2007-09-24","open":2.5,"high":2.5,"low":2.4,"close":2.4,"volume":26000.0},{"date":"2007-09-25","open":2.4,"high":2.5,"low":2.4,"close":2.4,"volume":4000.0},{"date":"2007-09-26","open":2.5,"high":2.5,"low":2.5,"close":2.5,"volume":1000.0},{"date":"2007-09-27","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":3500.0},{"date":"2007-09-30","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":11000.0},{"date":"2007-10-09","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":13000.0},{"date":"2007-10-12","open":3.1,"high":3.1,"low":3.0,"close":3.0,"volume":9500.0},{"date":"2007-10-17","open":2.8,"high":2.9,"low":2.8,"close":2.8,"volume":18000.0},{"date":"2007-10-18","open":2.8,"high":2.9,"low":2.8,"close":2.8,"volume":4500.0},{"date":"2007-10-22","open":2.9,"high":2.9,"low":2.8,"close":2.8,"volume":30000.0},{"date":"2007-10-23","open":2.9,"high":2.9,"low":2.7,"close":2.7,"volume":21000.0},{"date":"2007-10-24","open":2.7,"high":2.9,"low":2.7,"close":2.8,"volume":24000.0},{"date":"2007-10-25","open":2.9,"high":3.0,"low":2.9,"close":2.9,"volume":75000.0},{"date":"2007-10-28","open":2.9,"high":3.6,"low":2.9,"close":3.3,"volume":66000.0},{"date":"2007-10-29","open":3.4,"high":3.7,"low":3.3,"close":3.4,"volume":102500.0},{"date":"2007-10-30","open":3.4,"high":3.6,"low":3.4,"close":3.4,"volume":85000.0},{"date":"2007-10-31","open":3.4,"high":3.4,"low":3.2,"close":3.2,"volume":36500.0},{"date":"2007-11-09","open":2.6,"high":2.6,"low":2.6,"close":2.6,"volume":15000.0},{"date":"2007-11-11","open":2.9,"high":3.1,"low":2.9,"close":3.0,"volume":14500.0},{"date":"2007-11-12","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":1000.0},{"date":"2007-11-13","open":2.9,"high":3.0,"low":2.9,"close":2.9,"volume":28500.0},{"date":"2007-11-14","open":3.0,"high":3.1,"low":3.0,"close":3.0,"volume":15000.0},{"date":"2007-11-15","open":3.0,"high":3.1,"low":3.0,"close":3.0,"volume":18000.0},{"date":"2007-11-18","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":28000.0},{"date":"2007-11-19","open":3.0,"high":3.1,"low":3.0,"close":3.0,"volume":33500.0},{"date":"2007-11-20","open":3.1,"high":3.1,"low":2.9,"close":2.9,"volume":39500.0},{"date":"2007-11-21","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":2500.0},{"date":"2007-11-22","open":3.1,"high":3.1,"low":3.0,"close":3.0,"volume":39000.0},{"date":"2007-11-25","open":3.0,"high":3.1,"low":3.0,"close":3.0,"volume":15000.0},{"date":"2007-11-26","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":19000.0},{"date":"2007-11-27","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":10500.0},{"date":"2007-11-28","open":3.1,"high":3.1,"low":3.0,"close":3.0,"volume":2500.0},{"date":"2007-11-29","open":3.0,"high":3.1,"low":3.0,"close":3.0,"volume":11000.0},{"date":"2007-12-08","open":2.48,"high":2.6,"low":2.4,"close":2.4,"volume":64000.0},{"date":"2007-12-09","open":2.5,"high":2.6,"low":2.5,"close":2.5,"volume":7500.0},{"date":"2007-12-11","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":15500.0},{"date":"2007-12-12","open":3.1,"high":3.2,"low":3.1,"close":3.1,"volume":64500.0},{"date":"2007-12-13","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":13000.0},{"date":"2007-12-17","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":1500.0},{"date":"2007-12-19","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":6000.0},{"date":"2007-12-26","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":4000.0},{"date":"2007-12-27","open":3.0,"high":3.0,"low":3.0,"close":3.0,"volume":15000.0},{"date":"2007-12-30","open":3.0,"high":3.2,"low":3.0,"close":3.1,"volume":44500.0},{"date":"2008-01-01","open":3.2,"high":3.2,"low":3.1,"close":3.1,"volume":28000.0},{"date":"2008-01-04","open":5.2,"high":5.5,"low":5.1,"close":5.3,"volume":179500.0},{"date":"2008-01-06","open":5.0,"high":5.1,"low":4.9,"close":4.9,"volume":105500.0},{"date":"2008-01-09","open":3.7,"high":3.8,"low":3.7,"close":3.7,"volume":12500.0},{"date":"2008-01-12","open":4.3,"high":4.3,"low":4.1,"close":4.1,"volume":20000.0},{"date":"2008-01-13","open":3.1,"high":3.1,"low":3.1,"close":3.1,"volume":2000.0},{"date":"2008-01-14","open":3.1,"high":3.3,"low":3.1,"close":3.1,"volume":32000.0},{"date":"2008-01-15","open":3.2,"high":3.3,"low":3.2,"close":3.3,"volume":43500.0},{"date":"2008-01-16","open":3.4,"high":4.4,"low":3.4,"close":4.2,"volume":45000.0},{"date":"2008-01-17","open":3.9,"high":3.9,"low":3.4,"close":3.5,"volume":50000.0},{"date":"2008-01-21","open":3.4,"high":3.5,"low":3.3,"close":3.4,"volume":31500.0},{"date":"2008-01-22","open":3.4,"high":3.5,"low":3.3,"close":3.3,"volume":39000.0},{"date":"2008-01-23","open":3.4,"high":3.4,"low":3.3,"close":3.3,"volume":35000.0},{"date":"2008-01-24","open":3.4,"high":3.4,"low":3.4,"close":3.4,"volume":19000.0},{"date":"2008-01-27","open":3.5,"high":3.6,"low":3.5,"close":3.5,"volume":101500.0},{"date":"2008-01-28","open":3.6,"high":3.8,"low":3.5,"close":3.7,"volume":84000.0},{"date":"2008-01-29","open":3.9,"high":4.0,"low":3.8,"close":3.9,"volume":160500.0},{"date":"2008-01-30","open":3.9,"high":4.0,"low":3.7,"close":3.7,"volume":70500.0},{"date":"2008-01-31","open":3.8,"high":3.9,"low":3.6,"close":3.6,"volume":72500.0},{"date":"2008-02-01","open":3.2,"high":3.2,"low":3.1,"close":3.1,"volume":50500.0},{"date":"2008-02-03","open":3.3,"high":3.3,"low":3.3,"close":3.3,"volume":17000.0},{"date":"2008-02-04","open":5.3,"high":5.8,"low":5.3,"close":5.5,"volume":184500.0},{"date":"2008-02-06","open":5.1,"high":5.3,"low":5.0,"close":5.1,"volume":119000.0},{"date":"2008-02-07","open":4.5,"high":4.9,"low":4.5,"close":4.6,"volume":27500.0},{"date":"2008-02-09","open":3.7,"high":3.7,"low":3.7,"close":3.7,"volume":3000.0},{"date":"2008-02-11","open":4.4,"high":4.6,"low":4.4,"close":4.4,"volume":16000.0},{"date":"2008-02-12","open":4.2,"high":4.2,"low":4.1,"close":4.1,"volume":25500.0},{"date":"2008-02-13","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":11500.0},{"date":"2008-02-14","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":32000.0},{"date":"2008-02-17","open":3.4,"high":3.4,"low":3.4,"close":3.4,"volume":6000.0},{"date":"2008-02-18","open":3.3,"high":3.3,"low":3.2,"close":3.2,"volume":25000.0},{"date":"2008-02-19","open":3.2,"high":3.2,"low":3.2,"close":3.2,"volume":6500.0},{"date":"2008-02-20","open":3.2,"high":3.3,"low":3.2,"close":3.2,"volume":8000.0},{"date":"2008-02-24","open":3.2,"high":3.2,"low":3.2,"close":3.2,"volume":7000.0},{"date":"2008-02-25","open":3.2,"high":3.2,"low":3.1,"close":3.1,"volume":14500.0},{"date":"2008-02-26","open":3.1,"high":3.1,"low":3.1,"close":3.1,"volume":16500.0},{"date":"2008-02-27","open":3.1,"high":3.2,"low":3.0,"close":3.1,"volume":32500.0},{"date":"2008-02-28","open":3.2,"high":3.3,"low":3.1,"close":3.1,"volume":12000.0},{"date":"2008-03-01","open":3.1,"high":3.2,"low":3.1,"close":3.1,"volume":18000.0},{"date":"2008-03-02","open":3.6,"high":3.6,"low":3.5,"close":3.5,"volume":37000.0},{"date":"2008-03-03","open":3.4,"high":3.5,"low":3.3,"close":3.3,"volume":17000.0},{"date":"2008-03-04","open":5.6,"high":5.7,"low":5.4,"close":5.4,"volume":221000.0},{"date":"2008-03-06","open":5.4,"high":5.4,"low":5.2,"close":5.2,"volume":113000.0},{"date":"2008-03-07","open":4.6,"high":4.7,"low":4.6,"close":4.6,"volume":12500.0},{"date":"2008-03-08","open":4.0,"high":4.0,"low":3.9,"close":3.9,"volume":8000.0},{"date":"2008-03-09","open":3.7,"high":3.7,"low":3.6,"close":3.6,"volume":14000.0},{"date":"2008-03-11","open":4.4,"high":4.4,"low":4.2,"close":4.3,"volume":28000.0},{"date":"2008-03-12","open":4.3,"high":4.3,"low":4.1,"close":4.1,"volume":13500.0},{"date":"2008-03-13","open":3.7,"high":3.8,"low":3.6,"close":3.7,"volume":205500.0},{"date":"2008-03-16","open":3.8,"high":4.0,"low":3.7,"close":3.9,"volume":348000.0},{"date":"2008-03-17","open":4.0,"high":4.2,"low":3.9,"close":4.1,"volume":376000.0},{"date":"2008-03-18","open":4.2,"high":4.2,"low":4.0,"close":4.0,"volume":294000.0},{"date":"2008-03-19","open":4.0,"high":4.5,"low":4.0,"close":4.4,"volume":257000.0},{"date":"2008-03-20","open":4.7,"high":5.2,"low":4.5,"close":5.1,"volume":443500.0},{"date":"2008-03-23","open":5.6,"high":6.1,"low":5.6,"close":6.0,"volume":498500.0},{"date":"2008-03-24","open":6.1,"high":6.1,"low":5.0,"close":5.3,"volume":241000.0},{"date":"2008-03-25","open":5.2,"high":6.3,"low":5.0,"close":6.1,"volume":213500.0},{"date":"2008-03-30","open":6.4,"high":6.5,"low":5.5,"close":5.8,"volume":176000.0},{"date":"2008-03-31","open":5.9,"high":5.9,"low":5.2,"close":5.2,"volume":230000.0},{"date":"2008-04-02","open":3.6,"high":3.6,"low":3.4,"close":3.4,"volume":18500.0},{"date":"2008-04-03","open":3.3,"high":3.3,"low":3.3,"close":3.3,"volume":14500.0},{"date":"2008-04-05","open":5.2,"high":5.3,"low":5.0,"close":5.1,"volume":43500.0},{"date":"2008-04-06","open":5.4,"high":5.4,"low":5.2,"close":5.3,"volume":128500.0},{"date":"2008-04-09","open":3.7,"high":3.7,"low":3.6,"close":3.6,"volume":36000.0},{"date":"2008-04-11","open":4.5,"high":4.5,"low":4.2,"close":4.3,"volume":35000.0},{"date":"2008-04-12","open":4.2,"high":4.2,"low":4.0,"close":4.0,"volume":51000.0},{"date":"2008-04-15","open":5.1,"high":5.1,"low":4.8,"close":4.9,"volume":51000.0},{"date":"2008-04-16","open":5.1,"high":5.4,"low":5.1,"close":5.2,"volume":142500.0},{"date":"2008-04-17","open":5.4,"high":6.1,"low":5.4,"close":5.6,"volume":320000.0},{"date":"2008-04-20","open":5.6,"high":5.7,"low":5.5,"close":5.6,"volume":88000.0},{"date":"2008-04-21","open":5.5,"high":5.9,"low":5.5,"close":5.5,"volume":187500.0},{"date":"2008-04-22","open":5.6,"high":6.2,"low":5.6,"close":6.0,"volume":329000.0},{"date":"2008-04-23","open":6.0,"high":6.5,"low":6.0,"close":6.1,"volume":307500.0},{"date":"2008-04-24","open":6.0,"high":6.2,"low":5.9,"close":5.9,"volume":149000.0},{"date":"2008-04-27","open":5.9,"high":5.9,"low":5.5,"close":5.5,"volume":127000.0},{"date":"2008-04-28","open":5.5,"high":5.5,"low":5.3,"close":5.3,"volume":56000.0},{"date":"2008-04-29","open":5.2,"high":5.4,"low":5.2,"close":5.3,"volume":31500.0},{"date":"2008-04-30","open":5.3,"high":5.4,"low":5.2,"close":5.3,"volume":66500.0},{"date":"2008-05-02","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":32000.0},{"date":"2008-05-03","open":3.3,"high":3.3,"low":3.2,"close":3.2,"volume":22500.0},{"date":"2008-05-05","open":5.1,"high":5.2,"low":5.0,"close":5.0,"volume":52500.0},{"date":"2008-05-08","open":3.9,"high":4.0,"low":3.9,"close":3.9,"volume":38500.0},{"date":"2008-05-10","open":3.6,"high":4.1,"low":3.6,"close":3.9,"volume":31500.0},{"date":"2008-05-11","open":4.2,"high":4.3,"low":4.2,"close":4.2,"volume":21500.0},{"date":"2008-05-13","open":5.0,"high":5.0,"low":4.8,"close":4.8,"volume":60500.0},{"date":"2008-05-14","open":4.9,"high":5.1,"low":4.8,"close":4.9,"volume":29000.0},{"date":"2008-05-15","open":4.9,"high":4.9,"low":4.7,"close":4.7,"volume":43500.0},{"date":"2008-05-18","open":4.7,"high":4.9,"low":4.6,"close":4.7,"volume":47500.0},{"date":"2008-05-20","open":4.7,"high":4.8,"low":4.4,"close":4.5,"volume":74000.0},{"date":"2008-05-21","open":4.1,"high":4.7,"low":4.1,"close":4.5,"volume":96000.0},{"date":"2008-05-22","open":4.4,"high":4.7,"low":4.4,"close":4.5,"volume":32500.0},{"date":"2008-05-25","open":4.9,"high":5.4,"low":4.8,"close":5.4,"volume":126000.0},{"date":"2008-05-26","open":5.5,"high":5.5,"low":5.1,"close":5.2,"volume":118000.0},{"date":"2008-05-27","open":5.2,"high":5.2,"low":4.9,"close":5.0,"volume":58500.0},{"date":"2008-05-28","open":4.8,"high":5.1,"low":4.8,"close":5.0,"volume":30500.0},{"date":"2008-05-29","open":5.1,"high":5.1,"low":4.7,"close":4.8,"volume":101500.0},{"date":"2008-06-01","open":3.1,"high":3.1,"low":3.0,"close":3.0,"volume":10500.0},{"date":"2008-06-02","open":3.4,"high":3.6,"low":3.4,"close":3.4,"volume":38000.0},{"date":"2008-06-03","open":3.3,"high":3.3,"low":3.2,"close":3.2,"volume":20500.0},{"date":"2008-06-04","open":5.6,"high":5.6,"low":5.0,"close":5.0,"volume":150000.0},{"date":"2008-06-05","open":5.1,"high":5.3,"low":5.1,"close":5.2,"volume":24000.0},{"date":"2008-06-06","open":5.2,"high":5.5,"low":5.1,"close":5.2,"volume":128500.0},{"date":"2008-06-07","open":4.6,"high":4.7,"low":4.5,"close":4.5,"volume":37000.0},{"date":"2008-06-08","open":4.0,"high":4.0,"low":3.9,"close":3.9,"volume":28000.0},{"date":"2008-06-10","open":3.9,"high":4.1,"low":3.9,"close":4.0,"volume":116500.0},{"date":"2008-06-11","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":15500.0},{"date":"2008-06-15","open":5.0,"high":5.0,"low":4.8,"close":4.8,"volume":29500.0},{"date":"2008-06-16","open":4.8,"high":5.0,"low":4.8,"close":4.8,"volume":54500.0},{"date":"2008-06-17","open":5.0,"high":5.0,"low":4.8,"close":4.8,"volume":56000.0},{"date":"2008-06-18","open":4.8,"high":5.0,"low":4.8,"close":4.9,"volume":26500.0},{"date":"2008-06-19","open":4.9,"high":5.1,"low":4.9,"close":5.0,"volume":59500.0},{"date":"2008-06-22","open":4.9,"high":4.9,"low":4.8,"close":4.8,"volume":30000.0},{"date":"2008-06-23","open":4.8,"high":4.9,"low":4.8,"close":4.8,"volume":34500.0},{"date":"2008-06-24","open":4.7,"high":5.0,"low":4.7,"close":4.8,"volume":15500.0},{"date":"2008-06-25","open":4.8,"high":4.9,"low":4.7,"close":4.7,"volume":73500.0},{"date":"2008-06-26","open":4.9,"high":4.9,"low":4.7,"close":4.7,"volume":33500.0},{"date":"2008-06-29","open":4.7,"high":4.7,"low":4.6,"close":4.6,"volume":29500.0},{"date":"2008-06-30","open":4.6,"high":4.6,"low":4.5,"close":4.5,"volume":48000.0},{"date":"2008-07-01","open":3.1,"high":3.1,"low":3.1,"close":3.1,"volume":29000.0},{"date":"2008-07-02","open":3.5,"high":3.6,"low":3.4,"close":3.5,"volume":43000.0},{"date":"2008-07-04","open":5.0,"high":5.1,"low":4.8,"close":4.8,"volume":197500.0},{"date":"2008-07-05","open":5.2,"high":5.3,"low":5.1,"close":5.1,"volume":27500.0},{"date":"2008-07-07","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":24500.0},{"date":"2008-07-08","open":3.9,"high":3.9,"low":3.8,"close":3.8,"volume":28500.0},{"date":"2008-07-09","open":3.5,"high":3.6,"low":3.5,"close":3.5,"volume":16000.0},{"date":"2008-07-10","open":4.1,"high":4.4,"low":3.9,"close":4.2,"volume":92000.0},{"date":"2008-07-13","open":4.4,"high":4.5,"low":4.3,"close":4.3,"volume":42000.0},{"date":"2008-07-14","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":24500.0},{"date":"2008-07-15","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":12500.0},{"date":"2008-07-16","open":4.4,"high":4.5,"low":4.3,"close":4.3,"volume":20000.0},{"date":"2008-07-17","open":4.3,"high":4.4,"low":4.3,"close":4.3,"volume":24000.0},{"date":"2008-07-20","open":4.2,"high":4.4,"low":4.2,"close":4.2,"volume":16000.0},{"date":"2008-07-21","open":4.2,"high":4.3,"low":4.2,"close":4.2,"volume":35500.0},{"date":"2008-07-22","open":4.2,"high":4.2,"low":4.1,"close":4.1,"volume":20000.0},{"date":"2008-07-23","open":4.1,"high":4.1,"low":4.0,"close":4.0,"volume":40500.0},{"date":"2008-07-24","open":4.0,"high":4.1,"low":3.9,"close":4.0,"volume":70500.0},{"date":"2008-08-01","open":3.1,"high":3.1,"low":3.1,"close":3.1,"volume":16500.0},{"date":"2008-08-04","open":5.1,"high":5.2,"low":5.0,"close":5.0,"volume":127000.0},{"date":"2008-08-05","open":5.0,"high":5.2,"low":5.0,"close":5.1,"volume":73500.0},{"date":"2008-08-06","open":5.2,"high":5.3,"low":5.0,"close":5.0,"volume":79500.0},{"date":"2008-08-07","open":4.5,"high":4.6,"low":4.5,"close":4.5,"volume":16500.0},{"date":"2008-08-08","open":3.9,"high":3.9,"low":3.8,"close":3.8,"volume":28500.0},{"date":"2008-08-09","open":3.6,"high":3.6,"low":3.4,"close":3.4,"volume":28500.0},{"date":"2008-08-10","open":4.1,"high":5.0,"low":4.1,"close":4.9,"volume":199000.0},{"date":"2008-08-13","open":3.8,"high":3.8,"low":3.8,"close":3.8,"volume":22000.0},{"date":"2008-08-14","open":3.8,"high":3.8,"low":3.8,"close":3.8,"volume":9500.0},{"date":"2008-08-18","open":3.7,"high":3.7,"low":3.7,"close":3.7,"volume":21000.0},{"date":"2008-08-19","open":3.6,"high":3.7,"low":3.5,"close":3.6,"volume":44500.0},{"date":"2008-08-20","open":3.7,"high":4.0,"low":3.7,"close":3.8,"volume":17500.0},{"date":"2008-08-21","open":3.8,"high":3.9,"low":3.8,"close":3.8,"volume":11000.0},{"date":"2008-08-25","open":3.8,"high":3.8,"low":3.7,"close":3.7,"volume":17000.0},{"date":"2008-08-26","open":3.8,"high":3.8,"low":3.7,"close":3.7,"volume":29000.0},{"date":"2008-08-27","open":3.8,"high":3.8,"low":3.7,"close":3.7,"volume":16000.0},{"date":"2008-08-28","open":3.7,"high":3.8,"low":3.7,"close":3.7,"volume":6500.0},{"date":"2008-08-31","open":3.7,"high":3.8,"low":3.7,"close":3.7,"volume":17000.0},{"date":"2008-09-01","open":3.1,"high":3.2,"low":3.1,"close":3.1,"volume":10500.0},{"date":"2008-09-03","open":3.5,"high":3.5,"low":3.3,"close":3.3,"volume":33500.0},{"date":"2008-09-04","open":5.0,"high":5.2,"low":5.0,"close":5.0,"volume":78500.0},{"date":"2008-09-06","open":5.1,"high":5.2,"low":4.9,"close":5.0,"volume":98000.0},{"date":"2008-09-07","open":4.4,"high":4.5,"low":4.4,"close":4.4,"volume":17000.0},{"date":"2008-09-09","open":3.6,"high":3.6,"low":3.5,"close":3.5,"volume":14500.0},{"date":"2008-09-11","open":4.4,"high":4.5,"low":4.4,"close":4.4,"volume":38500.0},{"date":"2008-09-14","open":3.5,"high":3.6,"low":3.4,"close":3.4,"volume":18000.0},{"date":"2008-09-15","open":3.6,"high":3.6,"low":3.5,"close":3.5,"volume":3000.0},{"date":"2008-09-16","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":10000.0},{"date":"2008-09-17","open":3.5,"high":3.5,"low":3.4,"close":3.4,"volume":3000.0},{"date":"2008-09-18","open":3.4,"high":3.4,"low":3.3,"close":3.3,"volume":15500.0},{"date":"2008-09-21","open":3.3,"high":3.3,"low":3.2,"close":3.2,"volume":32000.0},{"date":"2008-09-22","open":3.2,"high":3.3,"low":3.2,"close":3.2,"volume":27000.0},{"date":"2008-09-23","open":3.2,"high":3.3,"low":3.2,"close":3.2,"volume":27000.0},{"date":"2008-09-24","open":3.2,"high":3.3,"low":3.2,"close":3.2,"volume":12500.0},{"date":"2008-09-25","open":3.3,"high":3.8,"low":3.2,"close":3.5,"volume":26000.0},{"date":"2008-10-01","open":3.2,"high":3.2,"low":3.0,"close":3.1,"volume":13500.0},{"date":"2008-10-02","open":3.5,"high":3.5,"low":3.4,"close":3.4,"volume":54500.0},{"date":"2008-10-03","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":39500.0},{"date":"2008-10-04","open":5.0,"high":5.2,"low":4.9,"close":5.0,"volume":98500.0},{"date":"2008-10-06","open":5.3,"high":5.4,"low":5.1,"close":5.1,"volume":75000.0},{"date":"2008-10-07","open":4.6,"high":4.6,"low":4.4,"close":4.4,"volume":59000.0},{"date":"2008-10-08","open":3.9,"high":3.9,"low":3.8,"close":3.8,"volume":4500.0},{"date":"2008-10-09","open":3.5,"high":3.6,"low":3.5,"close":3.5,"volume":10000.0},{"date":"2008-10-11","open":4.3,"high":4.5,"low":4.2,"close":4.3,"volume":31500.0},{"date":"2008-10-13","open":4.4,"high":4.7,"low":4.4,"close":4.6,"volume":76500.0},{"date":"2008-10-14","open":4.8,"high":5.0,"low":4.7,"close":4.9,"volume":143000.0},{"date":"2008-10-15","open":4.9,"high":4.9,"low":4.6,"close":4.7,"volume":147000.0},{"date":"2008-10-16","open":4.8,"high":5.0,"low":4.7,"close":4.9,"volume":94000.0},{"date":"2008-10-19","open":4.7,"high":4.8,"low":4.6,"close":4.6,"volume":35000.0},{"date":"2008-10-20","open":4.6,"high":4.6,"low":4.5,"close":4.5,"volume":47500.0},{"date":"2008-10-21","open":4.6,"high":4.7,"low":4.5,"close":4.5,"volume":45500.0},{"date":"2008-10-22","open":4.5,"high":4.6,"low":4.5,"close":4.5,"volume":27000.0},{"date":"2008-10-23","open":4.5,"high":4.8,"low":4.5,"close":4.6,"volume":57000.0},{"date":"2008-10-26","open":4.8,"high":4.8,"low":4.5,"close":4.7,"volume":130000.0},{"date":"2008-10-27","open":4.8,"high":5.0,"low":4.7,"close":4.7,"volume":99000.0},{"date":"2008-10-28","open":4.5,"high":4.7,"low":4.5,"close":4.5,"volume":17500.0},{"date":"2008-10-29","open":4.7,"high":4.7,"low":4.5,"close":4.6,"volume":20000.0},{"date":"2008-10-30","open":4.7,"high":4.7,"low":4.4,"close":4.4,"volume":23500.0},{"date":"2008-11-02","open":3.5,"high":3.5,"low":3.4,"close":3.4,"volume":21000.0},{"date":"2008-11-03","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":54000.0},{"date":"2008-11-05","open":5.2,"high":5.2,"low":5.0,"close":5.0,"volume":63000.0},{"date":"2008-11-06","open":5.1,"high":5.2,"low":4.9,"close":5.0,"volume":33500.0},{"date":"2008-11-08","open":3.8,"high":3.8,"low":3.6,"close":3.7,"volume":24500.0},{"date":"2008-11-09","open":3.5,"high":3.5,"low":3.4,"close":3.4,"volume":17500.0},{"date":"2008-11-11","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":17000.0},{"date":"2008-11-13","open":4.4,"high":4.6,"low":4.4,"close":4.5,"volume":70000.0},{"date":"2008-11-16","open":4.6,"high":4.8,"low":4.5,"close":4.7,"volume":159000.0},{"date":"2008-11-17","open":4.7,"high":5.2,"low":4.7,"close":4.7,"volume":205500.0},{"date":"2008-11-18","open":4.8,"high":4.8,"low":4.6,"close":4.7,"volume":74500.0},{"date":"2008-11-19","open":4.6,"high":4.8,"low":4.6,"close":4.6,"volume":25500.0},{"date":"2008-11-20","open":4.5,"high":4.6,"low":4.4,"close":4.5,"volume":55500.0},{"date":"2008-11-23","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":12000.0},{"date":"2008-11-24","open":4.5,"high":4.6,"low":4.5,"close":4.5,"volume":16000.0},{"date":"2008-11-25","open":4.6,"high":4.6,"low":4.5,"close":4.5,"volume":21500.0},{"date":"2008-11-26","open":4.5,"high":4.5,"low":4.3,"close":4.3,"volume":53000.0},{"date":"2008-11-27","open":4.3,"high":4.3,"low":4.1,"close":4.1,"volume":51000.0},{"date":"2008-11-30","open":4.1,"high":4.2,"low":4.0,"close":4.0,"volume":26000.0},{"date":"2008-12-02","open":3.4,"high":3.5,"low":3.4,"close":3.4,"volume":19500.0},{"date":"2008-12-03","open":3.5,"high":3.7,"low":3.5,"close":3.6,"volume":270000.0},{"date":"2008-12-05","open":5.2,"high":5.4,"low":4.9,"close":4.9,"volume":112500.0},{"date":"2008-12-06","open":5.0,"high":5.0,"low":4.9,"close":4.9,"volume":58500.0},{"date":"2008-12-08","open":3.7,"high":3.9,"low":3.7,"close":3.7,"volume":21500.0},{"date":"2008-12-10","open":5.0,"high":5.0,"low":4.5,"close":4.6,"volume":217000.0},{"date":"2008-12-11","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":22500.0},{"date":"2008-12-14","open":4.0,"high":4.1,"low":4.0,"close":4.0,"volume":23000.0},{"date":"2008-12-15","open":3.9,"high":4.0,"low":3.9,"close":3.9,"volume":22000.0},{"date":"2008-12-17","open":4.0,"high":4.1,"low":4.0,"close":4.0,"volume":25000.0},{"date":"2008-12-18","open":4.0,"high":4.2,"low":4.0,"close":4.0,"volume":14500.0},{"date":"2008-12-21","open":4.1,"high":4.1,"low":4.1,"close":4.1,"volume":5000.0},{"date":"2008-12-22","open":4.0,"high":4.2,"low":4.0,"close":4.1,"volume":22000.0},{"date":"2008-12-23","open":4.2,"high":4.5,"low":4.2,"close":4.4,"volume":77000.0},{"date":"2008-12-24","open":4.5,"high":4.6,"low":4.4,"close":4.4,"volume":42000.0},{"date":"2008-12-28","open":4.4,"high":4.5,"low":4.4,"close":4.4,"volume":18000.0},{"date":"2008-12-30","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":30500.0},{"date":"2009-01-01","open":4.4,"high":4.5,"low":4.4,"close":4.4,"volume":52500.0},{"date":"2009-01-02","open":6.8,"high":7.4,"low":6.2,"close":7.0,"volume":735000.0},{"date":"2009-01-03","open":7.7,"high":8.8,"low":7.7,"close":8.8,"volume":864000.0},{"date":"2009-01-04","open":9.6,"high":9.6,"low":9.0,"close":9.3,"volume":287500.0},{"date":"2009-01-06","open":12.9,"high":15.1,"low":12.9,"close":14.5,"volume":1324000.0},{"date":"2009-01-09","open":24.0,"high":24.0,"low":22.5,"close":23.1,"volume":301500.0},{"date":"2009-01-10","open":28.3,"high":28.7,"low":27.9,"close":28.0,"volume":902500.0},{"date":"2009-01-11","open":30.9,"high":32.3,"low":29.1,"close":29.5,"volume":286000.0},{"date":"2009-01-12","open":27.1,"high":28.0,"low":27.0,"close":27.2,"volume":158500.0},{"date":"2009-01-13","open":4.9,"high":5.0,"low":4.8,"close":4.8,"volume":101500.0},{"date":"2009-01-14","open":5.0,"high":5.0,"low":4.7,"close":4.7,"volume":54000.0},{"date":"2009-01-15","open":4.8,"high":4.8,"low":4.6,"close":4.6,"volume":56500.0},{"date":"2009-01-18","open":4.6,"high":4.6,"low":4.5,"close":4.5,"volume":26500.0},{"date":"2009-01-19","open":4.5,"high":4.5,"low":4.4,"close":4.4,"volume":40000.0},{"date":"2009-01-20","open":4.6,"high":4.9,"low":4.6,"close":4.8,"volume":105500.0},{"date":"2009-01-21","open":4.9,"high":5.5,"low":4.9,"close":5.2,"volume":538000.0},{"date":"2009-01-22","open":5.4,"high":6.1,"low":5.3,"close":5.6,"volume":519500.0},{"date":"2009-01-25","open":6.0,"high":6.0,"low":5.4,"close":5.4,"volume":202500.0},{"date":"2009-01-26","open":5.3,"high":5.5,"low":5.1,"close":5.3,"volume":169500.0},{"date":"2009-01-27","open":5.6,"high":5.6,"low":5.3,"close":5.5,"volume":123000.0},{"date":"2009-01-28","open":5.5,"high":6.2,"low":5.5,"close":6.1,"volume":519000.0},{"date":"2009-01-29","open":6.3,"high":7.3,"low":6.3,"close":7.3,"volume":656000.0},{"date":"2009-02-02","open":6.9,"high":6.9,"low":6.3,"close":6.6,"volume":376000.0},{"date":"2009-02-03","open":8.9,"high":10.5,"low":8.8,"close":10.5,"volume":1247000.0},{"date":"2009-02-04","open":9.6,"high":11.1,"low":9.5,"close":11.0,"volume":1254500.0},{"date":"2009-02-06","open":14.7,"high":15.2,"low":13.9,"close":14.0,"volume":756000.0},{"date":"2009-02-07","open":20.5,"high":20.5,"low":17.6,"close":18.9,"volume":1071000.0},{"date":"2009-02-08","open":22.4,"high":24.4,"low":22.4,"close":24.4,"volume":568000.0},{"date":"2009-02-09","open":23.5,"high":24.6,"low":23.3,"close":24.2,"volume":329000.0},{"date":"2009-02-11","open":29.1,"high":30.1,"low":28.6,"close":28.7,"volume":298000.0},{"date":"2009-02-12","open":27.5,"high":27.9,"low":26.7,"close":26.9,"volume":235000.0},{"date":"2009-02-15","open":6.5,"high":6.5,"low":5.6,"close":5.9,"volume":272000.0},{"date":"2009-02-16","open":5.5,"high":7.0,"low":5.1,"close":6.8,"volume":377500.0},{"date":"2009-02-17","open":6.7,"high":6.8,"low":6.3,"close":6.3,"volume":186500.0},{"date":"2009-02-18","open":6.9,"high":6.9,"low":6.1,"close":6.2,"volume":208000.0},{"date":"2009-02-19","open":6.2,"high":6.7,"low":6.2,"close":6.5,"volume":169500.0},{"date":"2009-02-22","open":6.5,"high":7.0,"low":6.5,"close":6.9,"volume":292500.0},{"date":"2009-02-23","open":7.0,"high":7.2,"low":6.4,"close":6.5,"volume":303500.0},{"date":"2009-02-24","open":6.6,"high":6.8,"low":6.5,"close":6.6,"volume":214500.0},{"date":"2009-02-25","open":6.7,"high":7.0,"low":6.1,"close":6.5,"volume":516500.0},{"date":"2009-02-26","open":6.7,"high":7.7,"low":6.6,"close":7.4,"volume":1022500.0},{"date":"2009-03-02","open":6.5,"high":6.8,"low":6.3,"close":6.5,"volume":217000.0},{"date":"2009-03-03","open":11.3,"high":12.5,"low":10.0,"close":10.7,"volume":891000.0},{"date":"2009-03-05","open":14.3,"high":14.5,"low":13.4,"close":13.5,"volume":1054000.0},{"date":"2009-03-06","open":13.5,"high":14.6,"low":13.5,"close":13.6,"volume":705500.0},{"date":"2009-03-08","open":26.0,"high":27.0,"low":22.4,"close":22.9,"volume":1509500.0},{"date":"2009-03-09","open":24.7,"high":24.7,"low":23.8,"close":24.0,"volume":279000.0},{"date":"2009-03-11","open":28.7,"high":29.5,"low":28.0,"close":29.2,"volume":370000.0},{"date":"2009-03-12","open":27.0,"high":28.0,"low":27.0,"close":27.5,"volume":276500.0},{"date":"2009-03-15","open":7.9,"high":8.2,"low":7.6,"close":7.7,"volume":231500.0},{"date":"2009-03-16","open":7.7,"high":8.0,"low":7.0,"close":7.3,"volume":342500.0},{"date":"2009-03-17","open":7.3,"high":7.6,"low":6.9,"close":7.1,"volume":230500.0},{"date":"2009-03-18","open":7.1,"high":7.1,"low":6.5,"close":6.8,"volume":244500.0},{"date":"2009-03-19","open":7.1,"high":8.0,"low":7.0,"close":7.8,"volume":379500.0},{"date":"2009-03-22","open":7.2,"high":8.4,"low":7.2,"close":8.2,"volume":376500.0},{"date":"2009-03-23","open":7.8,"high":9.0,"low":7.8,"close":8.4,"volume":328500.0},{"date":"2009-03-24","open":8.4,"high":9.5,"low":8.4,"close":9.1,"volume":955000.0},{"date":"2009-03-25","open":9.7,"high":10.7,"low":9.7,"close":10.1,"volume":1331500.0},{"date":"2009-03-29","open":10.5,"high":10.9,"low":9.5,"close":9.7,"volume":463000.0},{"date":"2009-03-30","open":10.1,"high":10.1,"low":9.1,"close":9.6,"volume":297000.0},{"date":"2009-03-31","open":9.5,"high":9.8,"low":9.4,"close":9.4,"volume":242000.0},{"date":"2009-04-01","open":4.4,"high":4.6,"low":4.3,"close":4.5,"volume":80500.0},{"date":"2009-04-02","open":6.7,"high":7.8,"low":6.7,"close":7.5,"volume":805500.0},{"date":"2009-04-03","open":10.0,"high":11.0,"low":9.4,"close":9.8,"volume":567500.0},{"date":"2009-04-05","open":13.2,"high":13.8,"low":12.9,"close":13.0,"volume":470000.0},{"date":"2009-04-06","open":13.7,"high":14.0,"low":13.7,"close":13.8,"volume":367000.0},{"date":"2009-04-08","open":23.8,"high":26.2,"low":22.7,"close":25.9,"volume":1321500.0},{"date":"2009-04-10","open":27.9,"high":27.9,"low":26.3,"close":27.0,"volume":1058500.0},{"date":"2009-04-11","open":29.1,"high":29.9,"low":28.5,"close":28.7,"volume":249500.0},{"date":"2009-04-13","open":16.0,"high":16.2,"low":14.4,"close":14.9,"volume":608000.0},{"date":"2009-04-15","open":14.0,"high":14.8,"low":13.2,"close":13.8,"volume":542500.0},{"date":"2009-04-16","open":13.6,"high":15.3,"low":13.6,"close":14.4,"volume":572000.0},{"date":"2009-04-19","open":14.5,"high":14.5,"low":12.6,"close":13.3,"volume":732500.0},{"date":"2009-04-20","open":12.9,"high":12.9,"low":11.9,"close":12.0,"volume":261500.0},{"date":"2009-04-21","open":11.8,"high":12.9,"low":10.7,"close":12.6,"volume":258500.0},{"date":"2009-04-22","open":12.0,"high":14.0,"low":11.9,"close":12.2,"volume":513000.0},{"date":"2009-04-23","open":12.2,"high":12.8,"low":11.8,"close":12.4,"volume":197000.0},{"date":"2009-04-26","open":12.7,"high":13.4,"low":12.3,"close":12.5,"volume":390500.0},{"date":"2009-04-27","open":12.7,"high":13.3,"low":12.5,"close":12.8,"volume":1131000.0},{"date":"2009-04-28","open":13.5,"high":13.5,"low":12.4,"close":12.8,"volume":1010500.0},{"date":"2009-04-29","open":13.0,"high":13.7,"low":12.7,"close":13.4,"volume":1450000.0},{"date":"2009-04-30","open":13.9,"high":15.0,"low":13.9,"close":14.1,"volume":1940500.0},{"date":"2009-05-01","open":4.5,"high":4.7,"low":4.5,"close":4.6,"volume":104500.0},{"date":"2009-05-02","open":7.8,"high":8.0,"low":6.9,"close":7.0,"volume":533000.0},{"date":"2009-05-03","open":9.0,"high":9.0,"low":7.9,"close":7.9,"volume":595500.0},{"date":"2009-05-04","open":11.8,"high":13.0,"low":11.5,"close":12.1,"volume":1447500.0},{"date":"2009-05-05","open":13.2,"high":13.2,"low":12.4,"close":12.5,"volume":822500.0},{"date":"2009-05-07","open":18.5,"high":19.9,"low":16.5,"close":16.7,"volume":709500.0},{"date":"2009-05-08","open":26.8,"high":27.3,"low":24.7,"close":26.7,"volume":786000.0},{"date":"2009-05-10","open":27.5,"high":27.5,"low":26.6,"close":26.7,"volume":530000.0},{"date":"2009-05-11","open":28.9,"high":28.9,"low":28.0,"close":28.3,"volume":311000.0},{"date":"2009-05-13","open":13.6,"high":13.6,"low":13.2,"close":13.4,"volume":394000.0},{"date":"2009-05-14","open":13.7,"high":13.7,"low":12.8,"close":12.9,"volume":610500.0},{"date":"2009-05-17","open":12.9,"high":13.2,"low":12.3,"close":12.6,"volume":532500.0},{"date":"2009-05-18","open":12.7,"high":12.7,"low":12.0,"close":12.0,"volume":528000.0},{"date":"2009-05-19","open":11.9,"high":12.0,"low":11.4,"close":11.7,"volume":532500.0},{"date":"2009-05-20","open":11.8,"high":11.9,"low":11.0,"close":11.2,"volume":401500.0},{"date":"2009-05-21","open":11.2,"high":12.7,"low":11.2,"close":12.3,"volume":355500.0},{"date":"2009-05-24","open":12.8,"high":12.8,"low":11.7,"close":11.9,"volume":223000.0},{"date":"2009-05-25","open":11.8,"high":11.8,"low":11.4,"close":11.4,"volume":141500.0},{"date":"2009-05-26","open":11.5,"high":11.5,"low":11.1,"close":11.3,"volume":117500.0},{"date":"2009-05-27","open":11.6,"high":12.5,"low":11.6,"close":12.1,"volume":304000.0},{"date":"2009-05-31","open":13.1,"high":13.4,"low":12.5,"close":12.9,"volume":601500.0},{"date":"2009-06-01","open":4.6,"high":4.8,"low":4.6,"close":4.6,"volume":67000.0},{"date":"2009-06-04","open":11.9,"high":12.0,"low":10.6,"close":10.8,"volume":400500.0},{"date":"2009-06-05","open":12.5,"high":13.0,"low":11.9,"close":12.7,"volume":796000.0},{"date":"2009-06-07","open":16.5,"high":17.5,"low":16.0,"close":16.1,"volume":1015500.0},{"date":"2009-06-08","open":27.8,"high":28.3,"low":26.1,"close":27.9,"volume":1128000.0},{"date":"2009-06-09","open":24.7,"high":24.7,"low":23.0,"close":23.1,"volume":290000.0},{"date":"2009-06-10","open":27.0,"high":27.1,"low":26.4,"close":26.9,"volume":612500.0},{"date":"2009-06-12","open":28.0,"high":30.0,"low":28.0,"close":29.9,"volume":636000.0},{"date":"2009-06-14","open":14.5,"high":14.5,"low":13.2,"close":13.4,"volume":292500.0},{"date":"2009-06-15","open":13.4,"high":14.2,"low":13.3,"close":13.7,"volume":548500.0},{"date":"2009-06-16","open":14.1,"high":15.0,"low":14.0,"close":14.6,"volume":1040000.0},{"date":"2009-06-17","open":14.9,"high":17.3,"low":14.7,"close":17.0,"volume":1994500.0},{"date":"2009-06-18","open":17.3,"high":19.0,"low":17.3,"close":18.0,"volume":1224000.0},{"date":"2009-06-21","open":19.0,"high":19.5,"low":17.7,"close":18.4,"volume":705000.0},{"date":"2009-06-22","open":18.5,"high":18.6,"low":17.3,"close":18.1,"volume":584500.0},{"date":"2009-06-23","open":18.0,"high":18.7,"low":18.0,"close":18.6,"volume":630000.0},{"date":"2009-06-24","open":18.8,"high":22.3,"low":18.6,"close":22.2,"volume":1291500.0},{"date":"2009-06-25","open":23.4,"high":23.9,"low":22.0,"close":22.9,"volume":939000.0},{"date":"2009-06-28","open":22.1,"high":22.1,"low":19.0,"close":20.9,"volume":1026500.0},{"date":"2009-06-29","open":20.9,"high":22.4,"low":20.9,"close":21.3,"volume":439500.0},{"date":"2009-06-30","open":21.9,"high":21.9,"low":20.6,"close":20.9,"volume":584500.0},{"date":"2009-07-01","open":4.7,"high":4.7,"low":4.5,"close":4.5,"volume":35000.0},{"date":"2009-07-04","open":11.5,"high":12.9,"low":11.5,"close":12.8,"volume":1085500.0},{"date":"2009-07-05","open":13.0,"high":14.2,"low":12.9,"close":13.7,"volume":1719000.0},{"date":"2009-07-06","open":13.6,"high":14.0,"low":13.2,"close":13.3,"volume":305500.0},{"date":"2009-07-07","open":16.5,"high":16.5,"low":15.5,"close":15.7,"volume":1038000.0},{"date":"2009-07-09","open":23.0,"high":23.7,"low":22.8,"close":22.9,"volume":322500.0},{"date":"2009-07-10","open":27.4,"high":28.1,"low":26.9,"close":27.2,"volume":688000.0},{"date":"2009-07-12","open":30.9,"high":31.0,"low":28.5,"close":28.9,"volume":339500.0},{"date":"2009-07-13","open":19.0,"high":19.2,"low":17.7,"close":18.0,"volume":649000.0},{"date":"2009-07-14","open":17.5,"high":18.1,"low":17.5,"close":17.7,"volume":286500.0},{"date":"2009-07-15","open":17.5,"high":17.9,"low":17.0,"close":17.4,"volume":360500.0},{"date":"2009-07-16","open":17.6,"high":18.1,"low":17.6,"close":17.8,"volume":255000.0},{"date":"2009-07-19","open":18.5,"high":18.5,"low":17.0,"close":17.0,"volume":609000.0},{"date":"2009-07-20","open":17.0,"high":17.4,"low":16.6,"close":16.7,"volume":320000.0},{"date":"2009-07-21","open":16.9,"high":17.0,"low":16.3,"close":16.7,"volume":328500.0},{"date":"2009-07-22","open":16.9,"high":16.9,"low":16.5,"close":16.6,"volume":264000.0},{"date":"2009-07-23","open":16.9,"high":17.5,"low":16.3,"close":16.8,"volume":802000.0},{"date":"2009-07-26","open":17.4,"high":17.9,"low":17.0,"close":17.1,"volume":983500.0},{"date":"2009-07-30","open":18.8,"high":20.5,"low":18.8,"close":20.4,"volume":26000.0},{"date":"2009-08-02","open":6.9,"high":6.9,"low":6.0,"close":6.4,"volume":352000.0},{"date":"2009-08-03","open":7.3,"high":9.1,"low":7.1,"close":8.6,"volume":323000.0},{"date":"2009-08-04","open":13.0,"high":14.8,"low":12.7,"close":14.5,"volume":985000.0},{"date":"2009-08-06","open":13.4,"high":13.5,"low":12.8,"close":12.9,"volume":419500.0},{"date":"2009-08-07","open":16.5,"high":16.9,"low":15.4,"close":15.8,"volume":1352500.0},{"date":"2009-08-09","open":23.0,"high":23.2,"low":22.6,"close":22.6,"volume":234500.0},{"date":"2009-08-10","open":27.2,"high":27.9,"low":27.2,"close":27.7,"volume":711000.0},{"date":"2009-08-11","open":28.0,"high":29.0,"low":27.0,"close":27.2,"volume":391000.0},{"date":"2009-08-12","open":29.7,"high":29.8,"low":28.5,"close":28.7,"volume":172500.0},{"date":"2009-08-16","open":25.3,"high":27.0,"low":25.1,"close":26.8,"volume":1104500.0},{"date":"2009-08-17","open":27.1,"high":28.0,"low":26.8,"close":27.0,"volume":836500.0},{"date":"2009-08-18","open":27.5,"high":27.5,"low":27.0,"close":27.1,"volume":671000.0},{"date":"2009-08-19","open":27.0,"high":27.3,"low":26.0,"close":26.1,"volume":530500.0},{"date":"2009-08-20","open":25.8,"high":26.3,"low":25.1,"close":25.2,"volume":553500.0},{"date":"2009-08-23","open":25.2,"high":25.7,"low":24.0,"close":24.1,"volume":641000.0},{"date":"2009-08-24","open":24.1,"high":25.2,"low":23.9,"close":24.9,"volume":384500.0},{"date":"2009-08-25","open":25.8,"high":26.0,"low":25.4,"close":25.6,"volume":328500.0},{"date":"2009-08-26","open":26.0,"high":26.2,"low":24.7,"close":24.9,"volume":342000.0},{"date":"2009-08-27","open":24.5,"high":25.0,"low":24.2,"close":24.3,"volume":457500.0},{"date":"2009-08-30","open":24.2,"high":24.9,"low":24.0,"close":24.1,"volume":243500.0},{"date":"2009-08-31","open":24.2,"high":24.5,"low":23.5,"close":23.6,"volume":263500.0},{"date":"2009-09-02","open":6.3,"high":7.0,"low":6.1,"close":6.7,"volume":467000.0},{"date":"2009-09-03","open":8.5,"high":9.2,"low":7.7,"close":7.9,"volume":247000.0},{"date":"2009-09-04","open":15.0,"high":15.7,"low":14.0,"close":15.4,"volume":1132500.0},{"date":"2009-09-06","open":13.0,"high":13.9,"low":12.9,"close":13.5,"volume":488000.0},{"date":"2009-09-07","open":16.5,"high":18.9,"low":16.0,"close":18.7,"volume":1763000.0},{"date":"2009-09-08","open":28.4,"high":28.4,"low":26.6,"close":27.3,"volume":531500.0},{"date":"2009-09-09","open":22.8,"high":23.1,"low":22.5,"close":22.7,"volume":293500.0},{"date":"2009-09-11","open":27.0,"high":27.0,"low":26.0,"close":26.3,"volume":355000.0},{"date":"2009-09-12","open":29.2,"high":29.8,"low":28.9,"close":29.0,"volume":227500.0},{"date":"2009-09-13","open":24.0,"high":24.8,"low":24.0,"close":24.5,"volume":367500.0},{"date":"2009-09-14","open":24.8,"high":25.9,"low":24.5,"close":25.7,"volume":550500.0},{"date":"2009-09-15","open":25.7,"high":26.0,"low":25.1,"close":25.3,"volume":426500.0},{"date":"2009-09-16","open":24.3,"high":25.9,"low":24.3,"close":25.3,"volume":544000.0},{"date":"2009-09-17","open":25.7,"high":26.2,"low":25.7,"close":25.8,"volume":1199500.0},{"date":"2009-09-27","open":25.2,"high":26.9,"low":25.2,"close":26.7,"volume":701000.0},{"date":"2009-09-29","open":27.0,"high":29.5,"low":27.0,"close":29.2,"volume":1895500.0},{"date":"2009-09-30","open":29.5,"high":29.9,"low":27.5,"close":28.3,"volume":1029000.0},{"date":"2009-10-02","open":7.0,"high":7.4,"low":6.6,"close":7.0,"volume":637000.0},{"date":"2009-10-05","open":14.0,"high":14.7,"low":13.5,"close":13.5,"volume":1254000.0},{"date":"2009-10-06","open":14.0,"high":14.0,"low":13.2,"close":13.3,"volume":240000.0},{"date":"2009-10-08","open":27.2,"high":27.2,"low":24.6,"close":25.9,"volume":607000.0},{"date":"2009-10-09","open":23.0,"high":24.0,"low":22.8,"close":23.8,"volume":532500.0},{"date":"2009-10-11","open":26.0,"high":27.0,"low":25.7,"close":26.5,"volume":271000.0},{"date":"2009-10-12","open":28.5,"high":28.7,"low":27.1,"close":27.5,"volume":233000.0},{"date":"2009-10-13","open":27.5,"high":30.0,"low":27.3,"close":29.9,"volume":1705000.0},{"date":"2009-10-14","open":30.3,"high":35.7,"low":30.3,"close":35.2,"volume":2511500.0},{"date":"2009-10-15","open":35.4,"high":35.4,"low":32.0,"close":33.1,"volume":1301500.0},{"date":"2009-10-18","open":33.0,"high":35.0,"low":32.6,"close":34.2,"volume":771500.0},{"date":"2009-10-19","open":35.0,"high":39.0,"low":35.0,"close":38.4,"volume":1669500.0},{"date":"2009-10-20","open":37.5,"high":37.5,"low":31.1,"close":34.0,"volume":1247000.0},{"date":"2009-10-21","open":33.3,"high":34.4,"low":31.6,"close":32.0,"volume":663500.0},{"date":"2009-10-22","open":31.0,"high":32.5,"low":28.0,"close":31.9,"volume":756500.0},{"date":"2009-10-25","open":32.8,"high":34.0,"low":32.5,"close":32.8,"volume":393500.0},{"date":"2009-10-26","open":32.1,"high":32.5,"low":29.7,"close":30.0,"volume":474000.0},{"date":"2009-10-27","open":29.5,"high":30.0,"low":28.6,"close":28.8,"volume":330000.0},{"date":"2009-10-28","open":30.0,"high":31.3,"low":28.8,"close":30.7,"volume":245500.0},{"date":"2009-10-29","open":31.9,"high":33.0,"low":30.6,"close":30.8,"volume":301000.0},{"date":"2009-11-01","open":4.6,"high":4.7,"low":4.5,"close":4.5,"volume":35500.0},{"date":"2009-11-02","open":6.8,"high":6.9,"low":6.5,"close":6.6,"volume":480500.0},{"date":"2009-11-03","open":7.8,"high":8.0,"low":7.1,"close":7.2,"volume":289000.0},{"date":"2009-11-05","open":14.0,"high":14.0,"low":13.2,"close":13.6,"volume":676500.0},{"date":"2009-11-06","open":13.5,"high":13.7,"low":13.2,"close":13.4,"volume":274000.0},{"date":"2009-11-08","open":25.3,"high":26.0,"low":24.5,"close":25.1,"volume":588000.0},{"date":"2009-11-10","open":27.5,"high":28.0,"low":26.5,"close":26.7,"volume":742000.0},{"date":"2009-11-11","open":27.4,"high":27.5,"low":26.5,"close":26.7,"volume":207500.0},{"date":"2009-11-15","open":26.8,"high":26.9,"low":24.2,"close":24.7,"volume":306000.0},{"date":"2009-11-16","open":25.0,"high":27.9,"low":25.0,"close":27.2,"volume":252500.0},{"date":"2009-11-17","open":28.5,"high":29.3,"low":28.0,"close":28.1,"volume":264000.0},{"date":"2009-11-18","open":28.0,"high":28.0,"low":26.7,"close":26.9,"volume":175000.0},{"date":"2009-11-19","open":27.0,"high":27.8,"low":26.9,"close":27.3,"volume":166500.0},{"date":"2009-11-22","open":27.7,"high":27.7,"low":26.8,"close":27.0,"volume":240500.0},{"date":"2009-11-23","open":27.0,"high":27.9,"low":26.7,"close":26.8,"volume":255500.0},{"date":"2009-11-24","open":28.0,"high":28.0,"low":26.6,"close":26.8,"volume":255500.0},{"date":"2009-11-25","open":27.3,"high":28.0,"low":27.2,"close":27.6,"volume":238000.0},{"date":"2009-11-26","open":27.1,"high":28.2,"low":27.1,"close":27.5,"volume":246500.0},{"date":"2009-12-01","open":4.6,"high":4.9,"low":4.6,"close":4.8,"volume":130000.0},{"date":"2009-12-02","open":6.9,"high":6.9,"low":6.4,"close":6.4,"volume":198000.0},{"date":"2009-12-03","open":7.0,"high":8.4,"low":7.0,"close":7.9,"volume":173500.0},{"date":"2009-12-04","open":15.0,"high":16.9,"low":14.2,"close":16.2,"volume":572000.0},{"date":"2009-12-05","open":13.8,"high":13.8,"low":13.3,"close":13.4,"volume":367000.0},{"date":"2009-12-07","open":19.4,"high":19.7,"low":18.7,"close":19.0,"volume":1000000.0},{"date":"2009-12-08","open":24.9,"high":26.0,"low":24.9,"close":25.2,"volume":705000.0},{"date":"2009-12-10","open":26.5,"high":27.4,"low":26.2,"close":27.0,"volume":521500.0},{"date":"2009-12-11","open":26.4,"high":26.4,"low":25.3,"close":25.6,"volume":289500.0},{"date":"2009-12-13","open":29.7,"high":29.8,"low":26.5,"close":26.6,"volume":217000.0},{"date":"2009-12-14","open":26.4,"high":27.2,"low":26.3,"close":26.7,"volume":167500.0},{"date":"2009-12-15","open":26.2,"high":26.9,"low":26.2,"close":26.4,"volume":131000.0},{"date":"2009-12-17","open":27.4,"high":27.4,"low":24.9,"close":26.1,"volume":461500.0},{"date":"2009-12-20","open":25.7,"high":26.4,"low":24.3,"close":24.4,"volume":269000.0},{"date":"2009-12-21","open":24.5,"high":24.9,"low":24.1,"close":24.8,"volume":237500.0},{"date":"2009-12-22","open":25.5,"high":26.0,"low":25.0,"close":25.8,"volume":177500.0},{"date":"2009-12-23","open":26.5,"high":26.5,"low":25.6,"close":25.8,"volume":101000.0},{"date":"2009-12-24","open":26.0,"high":26.0,"low":25.0,"close":25.2,"volume":124500.0},{"date":"2009-12-27","open":25.0,"high":25.1,"low":24.5,"close":24.6,"volume":151000.0},{"date":"2009-12-29","open":24.9,"high":24.9,"low":24.1,"close":24.3,"volume":274500.0},{"date":"2009-12-30","open":24.3,"high":25.1,"low":24.1,"close":24.9,"volume":260000.0},{"date":"2010-01-02","open":25.5,"high":25.5,"low":24.5,"close":25.0,"volume":621000.0},{"date":"2010-01-03","open":21.5,"high":21.5,"low":21.0,"close":21.0,"volume":129500.0},{"date":"2010-01-04","open":23.5,"high":23.9,"low":23.3,"close":23.4,"volume":74000.0},{"date":"2010-01-06","open":17.3,"high":18.8,"low":17.3,"close":18.4,"volume":132500.0},{"date":"2010-01-08","open":17.0,"high":17.4,"low":16.8,"close":16.9,"volume":125000.0},{"date":"2010-01-13","open":28.2,"high":29.4,"low":26.0,"close":27.0,"volume":582000.0},{"date":"2010-01-14","open":27.9,"high":28.9,"low":27.1,"close":28.7,"volume":609500.0},{"date":"2010-01-17","open":28.5,"high":29.5,"low":28.1,"close":28.8,"volume":376000.0},{"date":"2010-01-18","open":29.4,"high":29.4,"low":28.0,"close":28.7,"volume":340500.0},{"date":"2010-01-19","open":29.1,"high":29.1,"low":28.3,"close":28.5,"volume":396500.0},{"date":"2010-01-20","open":28.6,"high":28.9,"low":27.5,"close":28.6,"volume":346000.0},{"date":"2010-01-21","open":28.7,"high":28.8,"low":27.7,"close":28.1,"volume":321500.0},{"date":"2010-01-24","open":28.0,"high":28.2,"low":27.6,"close":27.8,"volume":407500.0},{"date":"2010-01-25","open":28.3,"high":28.3,"low":27.5,"close":27.6,"volume":318000.0},{"date":"2010-01-26","open":27.6,"high":28.2,"low":27.0,"close":27.3,"volume":436500.0},{"date":"2010-01-27","open":28.0,"high":28.0,"low":27.0,"close":27.1,"volume":269000.0},{"date":"2010-01-28","open":27.5,"high":27.5,"low":26.9,"close":26.9,"volume":330000.0},{"date":"2010-01-31","open":26.4,"high":26.4,"low":23.1,"close":24.9,"volume":1261500.0},{"date":"2010-02-02","open":24.8,"high":25.6,"low":24.7,"close":25.1,"volume":353000.0},{"date":"2010-02-03","open":20.5,"high":21.6,"low":20.5,"close":20.6,"volume":126500.0},{"date":"2010-02-05","open":21.6,"high":21.6,"low":20.1,"close":20.3,"volume":485500.0},{"date":"2010-02-06","open":18.8,"high":18.8,"low":18.5,"close":18.5,"volume":147500.0},{"date":"2010-02-08","open":17.3,"high":17.3,"low":16.9,"close":17.0,"volume":134500.0},{"date":"2010-02-09","open":19.0,"high":21.7,"low":19.0,"close":21.1,"volume":630500.0},{"date":"2010-02-14","open":23.1,"high":23.1,"low":22.2,"close":22.3,"volume":324500.0},{"date":"2010-02-15","open":22.6,"high":22.6,"low":21.0,"close":21.6,"volume":333500.0},{"date":"2010-02-16","open":21.3,"high":23.3,"low":21.3,"close":22.9,"volume":396000.0},{"date":"2010-02-18","open":23.1,"high":23.7,"low":22.9,"close":23.3,"volume":312500.0},{"date":"2010-02-22","open":23.7,"high":23.7,"low":22.5,"close":22.6,"volume":202500.0},{"date":"2010-02-23","open":22.2,"high":22.8,"low":21.6,"close":21.7,"volume":189500.0},{"date":"2010-02-24","open":21.3,"high":22.3,"low":21.3,"close":21.7,"volume":142000.0},{"date":"2010-02-25","open":21.5,"high":22.0,"low":21.5,"close":21.6,"volume":189000.0},{"date":"2010-02-28","open":22.0,"high":22.0,"low":21.2,"close":21.4,"volume":130500.0},{"date":"2010-03-01","open":25.0,"high":25.5,"low":24.5,"close":24.7,"volume":188000.0},{"date":"2010-03-02","open":24.8,"high":25.8,"low":24.1,"close":24.3,"volume":338000.0},{"date":"2010-03-03","open":20.7,"high":21.3,"low":20.6,"close":20.6,"volume":138000.0},{"date":"2010-03-05","open":20.4,"high":20.8,"low":19.7,"close":20.2,"volume":296500.0},{"date":"2010-03-06","open":18.0,"high":18.6,"low":17.9,"close":18.0,"volume":199000.0},{"date":"2010-03-08","open":17.1,"high":17.3,"low":17.0,"close":17.1,"volume":135000.0},{"date":"2010-03-14","open":22.5,"high":22.7,"low":21.7,"close":21.8,"volume":124000.0},{"date":"2010-03-15","open":22.0,"high":22.0,"low":21.0,"close":21.6,"volume":117000.0},{"date":"2010-03-16","open":22.0,"high":22.4,"low":21.7,"close":22.2,"volume":86000.0},{"date":"2010-03-18","open":22.9,"high":23.0,"low":22.0,"close":22.0,"volume":109500.0},{"date":"2010-03-21","open":21.3,"high":22.1,"low":21.3,"close":21.9,"volume":171500.0},{"date":"2010-03-22","open":22.5,"high":22.5,"low":21.6,"close":21.8,"volume":170500.0},{"date":"2010-03-23","open":22.5,"high":22.5,"low":21.7,"close":21.8,"volume":186000.0},{"date":"2010-03-24","open":21.9,"high":22.2,"low":21.7,"close":22.0,"volume":142500.0},{"date":"2010-03-25","open":22.1,"high":23.0,"low":21.9,"close":22.5,"volume":520500.0},{"date":"2010-03-28","open":22.9,"high":24.0,"low":22.8,"close":23.9,"volume":670000.0},{"date":"2010-03-29","open":23.5,"high":24.8,"low":23.5,"close":23.9,"volume":354500.0},{"date":"2010-03-30","open":23.7,"high":23.7,"low":23.1,"close":23.2,"volume":186000.0},{"date":"2010-03-31","open":23.0,"high":23.9,"low":23.0,"close":23.5,"volume":151000.0},{"date":"2010-04-01","open":25.0,"high":26.3,"low":24.8,"close":25.8,"volume":362000.0},{"date":"2010-04-02","open":23.3,"high":24.7,"low":23.3,"close":24.3,"volume":191500.0},{"date":"2010-04-03","open":21.0,"high":21.0,"low":20.5,"close":20.8,"volume":128000.0},{"date":"2010-04-04","open":23.0,"high":23.2,"low":22.8,"close":22.9,"volume":141500.0},{"date":"2010-04-05","open":20.0,"high":20.7,"low":20.0,"close":20.3,"volume":153000.0},{"date":"2010-04-07","open":15.2,"high":15.3,"low":14.7,"close":14.8,"volume":146000.0},{"date":"2010-04-08","open":17.0,"high":18.9,"low":16.5,"close":18.4,"volume":444000.0},{"date":"2010-04-13","open":23.7,"high":23.7,"low":23.0,"close":23.0,"volume":134500.0},{"date":"2010-04-15","open":23.1,"high":23.4,"low":22.9,"close":22.9,"volume":154500.0},{"date":"2010-04-18","open":22.7,"high":23.0,"low":22.5,"close":22.6,"volume":127000.0},{"date":"2010-04-19","open":23.0,"high":23.0,"low":22.4,"close":22.5,"volume":133000.0},{"date":"2010-04-20","open":22.5,"high":22.8,"low":22.5,"close":22.5,"volume":137500.0},{"date":"2010-04-21","open":23.4,"high":23.4,"low":22.4,"close":22.5,"volume":217000.0},{"date":"2010-04-22","open":22.5,"high":22.7,"low":22.2,"close":22.3,"volume":272500.0},{"date":"2010-04-25","open":22.1,"high":22.3,"low":21.8,"close":21.9,"volume":276000.0},{"date":"2010-04-26","open":22.5,"high":22.5,"low":21.6,"close":22.0,"volume":211000.0},{"date":"2010-04-27","open":22.6,"high":22.9,"low":22.0,"close":22.3,"volume":244500.0},{"date":"2010-04-28","open":22.8,"high":22.8,"low":22.0,"close":22.1,"volume":161000.0},{"date":"2010-04-29","open":22.0,"high":22.4,"low":21.7,"close":21.8,"volume":183000.0},{"date":"2010-05-01","open":26.5,"high":26.5,"low":25.4,"close":25.6,"volume":152000.0},{"date":"2010-05-04","open":21.9,"high":23.0,"low":21.9,"close":22.3,"volume":124000.0},{"date":"2010-05-05","open":21.0,"high":21.0,"low":20.2,"close":20.4,"volume":163500.0},{"date":"2010-05-07","open":15.0,"high":16.9,"low":15.0,"close":16.4,"volume":223500.0},{"date":"2010-05-08","open":18.5,"high":19.5,"low":18.4,"close":19.2,"volume":480500.0},{"date":"2010-05-09","open":21.9,"high":22.1,"low":21.4,"close":21.8,"volume":575000.0},{"date":"2010-05-13","open":19.8,"high":19.8,"low":19.0,"close":19.2,"volume":295000.0},{"date":"2010-05-16","open":19.0,"high":19.4,"low":19.0,"close":19.1,"volume":263500.0},{"date":"2010-05-17","open":19.0,"high":19.2,"low":18.8,"close":19.0,"volume":227500.0},{"date":"2010-05-18","open":19.9,"high":20.4,"low":19.2,"close":19.5,"volume":376000.0},{"date":"2010-05-19","open":19.2,"high":19.9,"low":18.9,"close":19.1,"volume":228000.0},{"date":"2010-05-20","open":19.0,"high":19.5,"low":18.9,"close":19.2,"volume":189000.0},{"date":"2010-05-23","open":20.3,"high":20.3,"low":19.1,"close":19.4,"volume":152500.0},{"date":"2010-05-24","open":19.3,"high":19.4,"low":19.0,"close":19.0,"volume":121500.0},{"date":"2010-05-25","open":19.2,"high":19.8,"low":19.0,"close":19.0,"volume":182500.0},{"date":"2010-05-26","open":19.0,"high":19.0,"low":18.5,"close":18.7,"volume":241000.0},{"date":"2010-05-30","open":18.6,"high":18.6,"low":17.4,"close":17.6,"volume":238500.0},{"date":"2010-05-31","open":17.5,"high":18.5,"low":16.5,"close":18.0,"volume":303500.0},{"date":"2010-06-01","open":25.5,"high":26.2,"low":25.0,"close":25.4,"volume":234000.0},{"date":"2010-06-04","open":22.1,"high":22.6,"low":22.1,"close":22.2,"volume":95000.0},{"date":"2010-06-05","open":20.3,"high":20.8,"low":20.2,"close":20.4,"volume":153500.0},{"date":"2010-06-06","open":19.7,"high":19.7,"low":18.1,"close":18.2,"volume":92000.0},{"date":"2010-06-07","open":17.1,"high":18.7,"low":16.9,"close":18.0,"volume":401500.0},{"date":"2010-06-09","open":21.2,"high":22.0,"low":18.0,"close":21.8,"volume":469500.0},{"date":"2010-06-13","open":17.7,"high":18.0,"low":17.6,"close":17.8,"volume":187000.0},{"date":"2010-06-14","open":17.3,"high":18.2,"low":17.2,"close":17.7,"volume":226500.0},{"date":"2010-06-15","open":17.4,"high":17.9,"low":17.4,"close":17.4,"volume":133500.0},{"date":"2010-06-16","open":17.3,"high":17.5,"low":17.0,"close":17.0,"volume":189500.0},{"date":"2010-06-17","open":16.7,"high":17.2,"low":16.7,"close":16.9,"volume":92500.0},{"date":"2010-06-20","open":16.7,"high":17.6,"low":16.6,"close":16.6,"volume":114000.0},{"date":"2010-06-21","open":16.5,"high":16.9,"low":16.2,"close":16.3,"volume":172500.0},{"date":"2010-06-22","open":16.2,"high":17.4,"low":16.1,"close":17.1,"volume":160500.0},{"date":"2010-06-23","open":17.0,"high":17.1,"low":16.7,"close":16.9,"volume":75000.0},{"date":"2010-06-24","open":16.6,"high":16.9,"low":16.4,"close":16.5,"volume":72500.0},{"date":"2010-06-27","open":16.5,"high":16.6,"low":16.0,"close":16.2,"volume":78500.0},{"date":"2010-06-28","open":16.2,"high":16.5,"low":15.7,"close":15.8,"volume":134000.0},{"date":"2010-06-29","open":15.7,"high":15.9,"low":15.5,"close":15.6,"volume":127500.0},{"date":"2010-06-30","open":15.6,"high":15.9,"low":15.0,"close":15.2,"volume":142000.0},{"date":"2010-07-01","open":25.9,"high":26.0,"low":25.4,"close":25.7,"volume":188000.0},{"date":"2010-07-02","open":23.5,"high":24.0,"low":23.4,"close":23.5,"volume":233500.0},{"date":"2010-07-03","open":21.0,"high":21.0,"low":20.3,"close":20.4,"volume":272500.0},{"date":"2010-07-04","open":22.5,"high":22.6,"low":22.2,"close":22.4,"volume":90500.0},{"date":"2010-07-06","open":18.2,"high":18.6,"low":17.9,"close":18.0,"volume":137500.0},{"date":"2010-07-07","open":18.3,"high":18.7,"low":18.0,"close":18.5,"volume":264500.0},{"date":"2010-07-13","open":17.1,"high":17.3,"low":16.6,"close":16.7,"volume":52000.0},{"date":"2010-07-14","open":17.0,"high":17.2,"low":16.5,"close":16.5,"volume":83500.0},{"date":"2010-07-15","open":16.2,"high":16.7,"low":16.1,"close":16.4,"volume":56000.0},{"date":"2010-07-18","open":16.9,"high":17.0,"low":16.7,"close":16.9,"volume":105000.0},{"date":"2010-07-19","open":16.7,"high":16.9,"low":16.5,"close":16.6,"volume":94500.0},{"date":"2010-07-20","open":17.0,"high":17.4,"low":16.6,"close":17.2,"volume":138000.0},{"date":"2010-07-21","open":17.4,"high":17.5,"low":16.9,"close":17.0,"volume":162000.0},{"date":"2010-07-22","open":16.7,"high":17.4,"low":16.6,"close":16.9,"volume":125000.0},{"date":"2010-07-25","open":16.5,"high":17.3,"low":16.5,"close":16.8,"volume":125500.0},{"date":"2010-07-26","open":17.1,"high":17.2,"low":16.7,"close":16.8,"volume":104000.0},{"date":"2010-07-27","open":17.2,"high":17.2,"low":16.7,"close":16.7,"volume":101500.0},{"date":"2010-07-29","open":16.7,"high":17.0,"low":16.7,"close":16.9,"volume":77500.0},{"date":"2010-08-02","open":23.1,"high":24.0,"low":23.1,"close":23.3,"volume":189000.0},{"date":"2010-08-03","open":20.1,"high":21.1,"low":20.1,"close":20.9,"volume":145000.0},{"date":"2010-08-04","open":22.6,"high":22.9,"low":22.4,"close":22.6,"volume":122500.0},{"date":"2010-08-06","open":18.0,"high":18.6,"low":18.0,"close":18.1,"volume":157000.0},{"date":"2010-08-07","open":18.9,"high":18.9,"low":17.1,"close":17.9,"volume":124000.0},{"date":"2010-08-08","open":19.9,"high":21.0,"low":19.7,"close":20.8,"volume":543000.0},{"date":"2010-08-09","open":22.0,"high":22.3,"low":21.0,"close":21.2,"volume":304500.0},{"date":"2010-08-16","open":19.6,"high":19.8,"low":18.6,"close":18.9,"volume":154500.0},{"date":"2010-08-17","open":18.6,"high":18.8,"low":18.1,"close":18.5,"volume":120000.0},{"date":"2010-08-18","open":19.8,"high":19.8,"low":18.0,"close":18.9,"volume":164000.0},{"date":"2010-08-19","open":19.0,"high":19.2,"low":18.5,"close":18.6,"volume":148500.0},{"date":"2010-08-22","open":18.4,"high":19.3,"low":18.4,"close":18.7,"volume":143500.0},{"date":"2010-08-23","open":18.7,"high":18.9,"low":18.5,"close":18.6,"volume":159500.0},{"date":"2010-08-24","open":18.3,"high":18.9,"low":18.2,"close":18.3,"volume":181500.0},{"date":"2010-08-25","open":18.3,"high":19.4,"low":18.2,"close":18.7,"volume":255500.0},{"date":"2010-08-26","open":19.4,"high":19.4,"low":18.7,"close":18.8,"volume":215500.0},{"date":"2010-08-29","open":18.9,"high":19.1,"low":18.8,"close":18.9,"volume":126000.0},{"date":"2010-08-30","open":19.0,"high":19.4,"low":18.9,"close":19.0,"volume":183000.0},{"date":"2010-08-31","open":19.0,"high":19.5,"low":18.8,"close":19.1,"volume":155500.0},{"date":"2010-09-02","open":23.3,"high":23.9,"low":23.0,"close":23.5,"volume":197000.0},{"date":"2010-09-03","open":20.9,"high":21.2,"low":20.8,"close":20.9,"volume":131500.0},{"date":"2010-09-05","open":20.5,"high":20.7,"low":20.2,"close":20.2,"volume":163000.0},{"date":"2010-09-06","open":18.5,"high":18.5,"low":18.0,"close":18.1,"volume":151500.0},{"date":"2010-09-08","open":21.0,"high":22.0,"low":20.5,"close":21.0,"volume":543500.0},{"date":"2010-09-13","open":21.0,"high":21.3,"low":20.1,"close":21.0,"volume":192000.0},{"date":"2010-09-14","open":20.7,"high":21.5,"low":20.7,"close":21.3,"volume":281000.0},{"date":"2010-09-15","open":21.5,"high":22.5,"low":21.5,"close":22.0,"volume":478500.0},{"date":"2010-09-16","open":21.8,"high":25.5,"low":21.8,"close":25.2,"volume":1845500.0},{"date":"2010-09-19","open":25.5,"high":27.5,"low":25.5,"close":26.9,"volume":622500.0},{"date":"2010-09-20","open":27.5,"high":27.5,"low":24.4,"close":26.3,"volume":999000.0},{"date":"2010-09-21","open":26.8,"high":27.4,"low":25.5,"close":26.2,"volume":846500.0},{"date":"2010-09-22","open":26.9,"high":27.9,"low":25.6,"close":27.4,"volume":1169500.0},{"date":"2010-09-23","open":28.2,"high":29.2,"low":28.0,"close":28.8,"volume":967000.0},{"date":"2010-09-26","open":29.0,"high":32.5,"low":29.0,"close":32.1,"volume":1213000.0},{"date":"2010-09-27","open":33.0,"high":35.0,"low":30.1,"close":31.1,"volume":854500.0},{"date":"2010-09-28","open":33.0,"high":33.0,"low":28.0,"close":29.2,"volume":695500.0},{"date":"2010-09-29","open":28.3,"high":29.4,"low":26.2,"close":28.8,"volume":596500.0},{"date":"2010-09-30","open":30.0,"high":31.9,"low":29.7,"close":30.6,"volume":368000.0},{"date":"2010-10-01","open":25.7,"high":26.2,"low":25.6,"close":25.9,"volume":478500.0},{"date":"2010-10-02","open":24.0,"high":24.0,"low":23.1,"close":23.2,"volume":166500.0},{"date":"2010-10-03","open":21.3,"high":22.4,"low":21.0,"close":22.3,"volume":204000.0},{"date":"2010-10-05","open":20.3,"high":20.3,"low":19.6,"close":19.8,"volume":175500.0},{"date":"2010-10-06","open":18.5,"high":18.5,"low":17.7,"close":17.9,"volume":145000.0},{"date":"2010-10-08","open":21.3,"high":21.6,"low":19.3,"close":19.7,"volume":294000.0},{"date":"2010-11-01","open":26.0,"high":26.7,"low":25.9,"close":26.3,"volume":455500.0},{"date":"2010-11-02","open":23.3,"high":23.6,"low":22.9,"close":23.0,"volume":250000.0},{"date":"2010-11-03","open":22.4,"high":23.6,"low":22.2,"close":22.9,"volume":287000.0},{"date":"2010-11-04","open":22.9,"high":23.8,"low":22.7,"close":23.5,"volume":344000.0},{"date":"2010-11-05","open":20.0,"high":20.2,"low":19.7,"close":19.7,"volume":253500.0},{"date":"2010-11-07","open":17.1,"high":18.0,"low":17.1,"close":17.3,"volume":71000.0},{"date":"2010-11-08","open":19.1,"high":20.2,"low":19.1,"close":19.9,"volume":235500.0},{"date":"2010-12-01","open":26.2,"high":28.0,"low":26.2,"close":27.8,"volume":534500.0},{"date":"2010-12-04","open":23.3,"high":23.9,"low":23.3,"close":23.4,"volume":276500.0},{"date":"2010-12-05","open":19.5,"high":20.4,"low":19.3,"close":19.4,"volume":259500.0},{"date":"2010-12-07","open":17.1,"high":17.1,"low":16.1,"close":16.6,"volume":97500.0},{"date":"2010-12-08","open":19.3,"high":20.1,"low":19.2,"close":19.8,"volume":95000.0}]
+[
+  {
+    "date": "2007-01-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 8330790449
+  },
+  {
+    "date": "2007-01-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 771369486
+  },
+  {
+    "date": "2007-01-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6633777580
+  },
+  {
+    "date": "2007-02-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1682083137
+  },
+  {
+    "date": "2007-02-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1164519095
+  },
+  {
+    "date": "2007-02-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3881730317
+  },
+  {
+    "date": "2007-02-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6469550528
+  },
+  {
+    "date": "2007-03-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 517564042
+  },
+  {
+    "date": "2007-03-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 388173032
+  },
+  {
+    "date": "2007-03-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2717211222
+  },
+  {
+    "date": "2007-04-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1552692127
+  },
+  {
+    "date": "2007-04-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7892851644
+  },
+  {
+    "date": "2007-04-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2846602232
+  },
+  {
+    "date": "2007-05-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4269903348
+  },
+  {
+    "date": "2007-05-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1164519095
+  },
+  {
+    "date": "2007-05-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7634069623
+  },
+  {
+    "date": "2007-05-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 258782021
+  },
+  {
+    "date": "2007-06-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 8410415686
+  },
+  {
+    "date": "2007-06-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3881730317
+  },
+  {
+    "date": "2007-06-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 18632305520
+  },
+  {
+    "date": "2007-06-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 21090734720
+  },
+  {
+    "date": "2007-07-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9616673817
+  },
+  {
+    "date": "2007-07-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1202084227
+  },
+  {
+    "date": "2007-07-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6110594821
+  },
+  {
+    "date": "2007-07-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9616673817
+  },
+  {
+    "date": "2007-07-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 701215799
+  },
+  {
+    "date": "2007-07-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9817021188
+  },
+  {
+    "date": "2007-07-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2103647397
+  },
+  {
+    "date": "2007-07-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2404168454
+  },
+  {
+    "date": "2007-07-31",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5309205336
+  },
+  {
+    "date": "2007-08-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 8815284332
+  },
+  {
+    "date": "2007-08-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3506078996
+  },
+  {
+    "date": "2007-08-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1602778969
+  },
+  {
+    "date": "2007-08-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5209031651
+  },
+  {
+    "date": "2007-08-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1923334763
+  },
+  {
+    "date": "2007-08-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7933755899
+  },
+  {
+    "date": "2007-08-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9215979074
+  },
+  {
+    "date": "2007-08-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1041806330
+  },
+  {
+    "date": "2007-08-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2965141093
+  },
+  {
+    "date": "2007-08-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1602778969
+  },
+  {
+    "date": "2007-08-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1923334763
+  },
+  {
+    "date": "2007-08-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1121945279
+  },
+  {
+    "date": "2007-08-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 641111588
+  },
+  {
+    "date": "2007-08-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 80138948
+  },
+  {
+    "date": "2007-09-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3846669527
+  },
+  {
+    "date": "2007-09-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2243890557
+  },
+  {
+    "date": "2007-09-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3606252681
+  },
+  {
+    "date": "2007-09-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2804863197
+  },
+  {
+    "date": "2007-09-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9809007293
+  },
+  {
+    "date": "2007-09-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 128222318
+  },
+  {
+    "date": "2007-09-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 128222318
+  },
+  {
+    "date": "2007-09-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 320555794
+  },
+  {
+    "date": "2007-09-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 192333476
+  },
+  {
+    "date": "2007-09-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1731001287
+  },
+  {
+    "date": "2007-09-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1282223176
+  },
+  {
+    "date": "2007-09-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3333780256
+  },
+  {
+    "date": "2007-09-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 512889270
+  },
+  {
+    "date": "2007-09-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 128222318
+  },
+  {
+    "date": "2007-09-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 448778111
+  },
+  {
+    "date": "2007-09-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1410445493
+  },
+  {
+    "date": "2007-10-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1666890128
+  },
+  {
+    "date": "2007-10-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1218112017
+  },
+  {
+    "date": "2007-10-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2308001716
+  },
+  {
+    "date": "2007-10-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 577000429
+  },
+  {
+    "date": "2007-10-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3846669527
+  },
+  {
+    "date": "2007-10-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2692668669
+  },
+  {
+    "date": "2007-10-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3077335621
+  },
+  {
+    "date": "2007-10-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9616673817
+  },
+  {
+    "date": "2007-10-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 8462672959
+  },
+  {
+    "date": "2007-10-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 13142787549
+  },
+  {
+    "date": "2007-10-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 10898896992
+  },
+  {
+    "date": "2007-10-31",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4680114591
+  },
+  {
+    "date": "2007-11-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1562709495
+  },
+  {
+    "date": "2007-11-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1510619179
+  },
+  {
+    "date": "2007-11-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 104180633
+  },
+  {
+    "date": "2007-11-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2969148041
+  },
+  {
+    "date": "2007-11-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1562709495
+  },
+  {
+    "date": "2007-11-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1875251394
+  },
+  {
+    "date": "2007-11-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2917057724
+  },
+  {
+    "date": "2007-11-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3490051206
+  },
+  {
+    "date": "2007-11-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4115135004
+  },
+  {
+    "date": "2007-11-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 260451583
+  },
+  {
+    "date": "2007-11-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4063044688
+  },
+  {
+    "date": "2007-11-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1562709495
+  },
+  {
+    "date": "2007-11-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1979432027
+  },
+  {
+    "date": "2007-11-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1093896647
+  },
+  {
+    "date": "2007-11-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 260451583
+  },
+  {
+    "date": "2007-11-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1145986963
+  },
+  {
+    "date": "2007-12-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5334048410
+  },
+  {
+    "date": "2007-12-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 625083798
+  },
+  {
+    "date": "2007-12-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1291839849
+  },
+  {
+    "date": "2007-12-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5375720663
+  },
+  {
+    "date": "2007-12-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1083478583
+  },
+  {
+    "date": "2007-12-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 125016760
+  },
+  {
+    "date": "2007-12-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 500067038
+  },
+  {
+    "date": "2007-12-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 333378026
+  },
+  {
+    "date": "2007-12-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1250167596
+  },
+  {
+    "date": "2007-12-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3708830535
+  },
+  {
+    "date": "2008-01-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2333646179
+  },
+  {
+    "date": "2008-01-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 25577353604
+  },
+  {
+    "date": "2008-01-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 15032929277
+  },
+  {
+    "date": "2008-01-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1344952083
+  },
+  {
+    "date": "2008-01-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2151923332
+  },
+  {
+    "date": "2008-01-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 162706398
+  },
+  {
+    "date": "2008-01-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2603302372
+  },
+  {
+    "date": "2008-01-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3538864163
+  },
+  {
+    "date": "2008-01-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3660893961
+  },
+  {
+    "date": "2008-01-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3389716631
+  },
+  {
+    "date": "2008-01-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2135521477
+  },
+  {
+    "date": "2008-01-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2643978972
+  },
+  {
+    "date": "2008-01-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2372801642
+  },
+  {
+    "date": "2008-01-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1288092320
+  },
+  {
+    "date": "2008-01-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6881124761
+  },
+  {
+    "date": "2008-01-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5694723940
+  },
+  {
+    "date": "2008-01-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 10880990385
+  },
+  {
+    "date": "2008-01-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4779500449
+  },
+  {
+    "date": "2008-01-31",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4915089115
+  },
+  {
+    "date": "2008-02-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3423613797
+  },
+  {
+    "date": "2008-02-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1152503654
+  },
+  {
+    "date": "2008-02-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 20846757279
+  },
+  {
+    "date": "2008-02-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 13445875969
+  },
+  {
+    "date": "2008-02-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3107240245
+  },
+  {
+    "date": "2008-02-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 272651120
+  },
+  {
+    "date": "2008-02-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1454139308
+  },
+  {
+    "date": "2008-02-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2317534523
+  },
+  {
+    "date": "2008-02-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 866720228
+  },
+  {
+    "date": "2008-02-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2411743243
+  },
+  {
+    "date": "2008-02-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 452201858
+  },
+  {
+    "date": "2008-02-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1884174409
+  },
+  {
+    "date": "2008-02-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 489885346
+  },
+  {
+    "date": "2008-02-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 602935811
+  },
+  {
+    "date": "2008-02-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 527568834
+  },
+  {
+    "date": "2008-02-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1092821157
+  },
+  {
+    "date": "2008-02-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1243555110
+  },
+  {
+    "date": "2008-02-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2449426731
+  },
+  {
+    "date": "2008-02-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 904403716
+  },
+  {
+    "date": "2008-03-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1356605574
+  },
+  {
+    "date": "2008-03-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2788578125
+  },
+  {
+    "date": "2008-03-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1281238598
+  },
+  {
+    "date": "2008-03-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 27255439263
+  },
+  {
+    "date": "2008-03-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 13936039080
+  },
+  {
+    "date": "2008-03-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1541597243
+  },
+  {
+    "date": "2008-03-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 836484069
+  },
+  {
+    "date": "2008-03-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1463847122
+  },
+  {
+    "date": "2008-03-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2927694243
+  },
+  {
+    "date": "2008-03-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1411566867
+  },
+  {
+    "date": "2008-03-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 21487184534
+  },
+  {
+    "date": "2008-03-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 36387057022
+  },
+  {
+    "date": "2008-03-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 39314751265
+  },
+  {
+    "date": "2008-03-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 30740789553
+  },
+  {
+    "date": "2008-03-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 26872050732
+  },
+  {
+    "date": "2008-03-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 46372585601
+  },
+  {
+    "date": "2008-03-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 52123413578
+  },
+  {
+    "date": "2008-03-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 25199082593
+  },
+  {
+    "date": "2008-03-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 22323668604
+  },
+  {
+    "date": "2008-03-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 18402649528
+  },
+  {
+    "date": "2008-03-31",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 24048916997
+  },
+  {
+    "date": "2008-04-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1264779999
+  },
+  {
+    "date": "2008-04-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 991314053
+  },
+  {
+    "date": "2008-04-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4596092430
+  },
+  {
+    "date": "2008-04-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 13576962695
+  },
+  {
+    "date": "2008-04-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2583619947
+  },
+  {
+    "date": "2008-04-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2511852727
+  },
+  {
+    "date": "2008-04-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3660128259
+  },
+  {
+    "date": "2008-04-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3660128259
+  },
+  {
+    "date": "2008-04-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 10226828959
+  },
+  {
+    "date": "2008-04-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 22965510644
+  },
+  {
+    "date": "2008-04-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6315515427
+  },
+  {
+    "date": "2008-04-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 13456353893
+  },
+  {
+    "date": "2008-04-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 23611415631
+  },
+  {
+    "date": "2008-04-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 22068420385
+  },
+  {
+    "date": "2008-04-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 10693315894
+  },
+  {
+    "date": "2008-04-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 9114437037
+  },
+  {
+    "date": "2008-04-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4018964363
+  },
+  {
+    "date": "2008-04-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2260667454
+  },
+  {
+    "date": "2008-04-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4772520181
+  },
+  {
+    "date": "2008-05-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1473259173
+  },
+  {
+    "date": "2008-05-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1035885356
+  },
+  {
+    "date": "2008-05-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3776665362
+  },
+  {
+    "date": "2008-05-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2160252587
+  },
+  {
+    "date": "2008-05-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1767479389
+  },
+  {
+    "date": "2008-05-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1206374821
+  },
+  {
+    "date": "2008-05-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3394682636
+  },
+  {
+    "date": "2008-05-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1627203247
+  },
+  {
+    "date": "2008-05-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2440804871
+  },
+  {
+    "date": "2008-05-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2665246698
+  },
+  {
+    "date": "2008-05-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4152173803
+  },
+  {
+    "date": "2008-05-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5386603853
+  },
+  {
+    "date": "2008-05-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1823589846
+  },
+  {
+    "date": "2008-05-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7069917557
+  },
+  {
+    "date": "2008-05-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6621033902
+  },
+  {
+    "date": "2008-05-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3282461723
+  },
+  {
+    "date": "2008-05-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1711368932
+  },
+  {
+    "date": "2008-05-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5695211365
+  },
+  {
+    "date": "2008-06-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 368224873
+  },
+  {
+    "date": "2008-06-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1332623349
+  },
+  {
+    "date": "2008-06-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 718915228
+  },
+  {
+    "date": "2008-06-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 8219305195
+  },
+  {
+    "date": "2008-06-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1315088831
+  },
+  {
+    "date": "2008-06-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7041204784
+  },
+  {
+    "date": "2008-06-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2027428615
+  },
+  {
+    "date": "2008-06-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1534270303
+  },
+  {
+    "date": "2008-06-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6383660368
+  },
+  {
+    "date": "2008-06-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 849328204
+  },
+  {
+    "date": "2008-06-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1616463355
+  },
+  {
+    "date": "2008-06-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2986347554
+  },
+  {
+    "date": "2008-06-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3068540606
+  },
+  {
+    "date": "2008-06-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1452077251
+  },
+  {
+    "date": "2008-06-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3260324394
+  },
+  {
+    "date": "2008-06-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1643861039
+  },
+  {
+    "date": "2008-06-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1890440195
+  },
+  {
+    "date": "2008-06-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 849328204
+  },
+  {
+    "date": "2008-06-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4027459546
+  },
+  {
+    "date": "2008-06-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1835644827
+  },
+  {
+    "date": "2008-06-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1616463355
+  },
+  {
+    "date": "2008-06-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2630177663
+  },
+  {
+    "date": "2008-07-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1094689685
+  },
+  {
+    "date": "2008-07-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1623160567
+  },
+  {
+    "date": "2008-07-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7455214231
+  },
+  {
+    "date": "2008-07-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1038067804
+  },
+  {
+    "date": "2008-07-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 924824044
+  },
+  {
+    "date": "2008-07-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1075815724
+  },
+  {
+    "date": "2008-07-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 603966723
+  },
+  {
+    "date": "2008-07-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3472808654
+  },
+  {
+    "date": "2008-07-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1585412647
+  },
+  {
+    "date": "2008-07-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 924824044
+  },
+  {
+    "date": "2008-07-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 471849002
+  },
+  {
+    "date": "2008-07-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 754958403
+  },
+  {
+    "date": "2008-07-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 905950084
+  },
+  {
+    "date": "2008-07-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 603966723
+  },
+  {
+    "date": "2008-07-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1340051166
+  },
+  {
+    "date": "2008-07-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 754958403
+  },
+  {
+    "date": "2008-07-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1528790766
+  },
+  {
+    "date": "2008-07-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2661228371
+  },
+  {
+    "date": "2008-08-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 482701529
+  },
+  {
+    "date": "2008-08-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 5992482325
+  },
+  {
+    "date": "2008-08-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3468090164
+  },
+  {
+    "date": "2008-08-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3751199566
+  },
+  {
+    "date": "2008-08-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 778550853
+  },
+  {
+    "date": "2008-08-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1135583265
+  },
+  {
+    "date": "2008-08-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1135583265
+  },
+  {
+    "date": "2008-08-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 7929160339
+  },
+  {
+    "date": "2008-08-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 679804948
+  },
+  {
+    "date": "2008-08-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 293552136
+  },
+  {
+    "date": "2008-08-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 648904723
+  },
+  {
+    "date": "2008-08-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1375060008
+  },
+  {
+    "date": "2008-08-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 540753936
+  },
+  {
+    "date": "2008-08-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 339902474
+  },
+  {
+    "date": "2008-08-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 525303823
+  },
+  {
+    "date": "2008-08-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 896106522
+  },
+  {
+    "date": "2008-08-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 494403598
+  },
+  {
+    "date": "2008-08-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 200851462
+  },
+  {
+    "date": "2008-08-31",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 525303823
+  },
+  {
+    "date": "2008-09-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 271838465
+  },
+  {
+    "date": "2008-09-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 867294150
+  },
+  {
+    "date": "2008-09-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3079266882
+  },
+  {
+    "date": "2008-09-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3844180312
+  },
+  {
+    "date": "2008-09-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 666847605
+  },
+  {
+    "date": "2008-09-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 452440053
+  },
+  {
+    "date": "2008-09-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1201306347
+  },
+  {
+    "date": "2008-09-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 434002057
+  },
+  {
+    "date": "2008-09-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 72333676
+  },
+  {
+    "date": "2008-09-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 241112254
+  },
+  {
+    "date": "2008-09-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 72333676
+  },
+  {
+    "date": "2008-09-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 373723994
+  },
+  {
+    "date": "2008-09-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 771559213
+  },
+  {
+    "date": "2008-09-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 651003086
+  },
+  {
+    "date": "2008-09-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 651003086
+  },
+  {
+    "date": "2008-09-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 301390317
+  },
+  {
+    "date": "2008-09-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 626891860
+  },
+  {
+    "date": "2008-10-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 325501543
+  },
+  {
+    "date": "2008-10-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1314061784
+  },
+  {
+    "date": "2008-10-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 952393403
+  },
+  {
+    "date": "2008-10-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2374955701
+  },
+  {
+    "date": "2008-10-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1808341904
+  },
+  {
+    "date": "2008-10-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1422562298
+  },
+  {
+    "date": "2008-10-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 108500514
+  },
+  {
+    "date": "2008-10-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 241112254
+  },
+  {
+    "date": "2008-10-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 759503600
+  },
+  {
+    "date": "2008-10-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1844508742
+  },
+  {
+    "date": "2008-10-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3447905231
+  },
+  {
+    "date": "2008-10-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3544350133
+  },
+  {
+    "date": "2008-10-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2266455187
+  },
+  {
+    "date": "2008-10-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 843892889
+  },
+  {
+    "date": "2008-10-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1145283206
+  },
+  {
+    "date": "2008-10-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1097060755
+  },
+  {
+    "date": "2008-10-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 651003086
+  },
+  {
+    "date": "2008-10-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1374339847
+  },
+  {
+    "date": "2008-10-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3134459301
+  },
+  {
+    "date": "2008-10-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2387011314
+  },
+  {
+    "date": "2008-10-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 421946444
+  },
+  {
+    "date": "2008-10-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 482224508
+  },
+  {
+    "date": "2008-10-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 566613797
+  },
+  {
+    "date": "2008-11-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 391259430
+  },
+  {
+    "date": "2008-11-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1006095678
+  },
+  {
+    "date": "2008-11-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1173778291
+  },
+  {
+    "date": "2008-11-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 624151948
+  },
+  {
+    "date": "2008-11-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 337787308
+  },
+  {
+    "date": "2008-11-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 241276649
+  },
+  {
+    "date": "2008-11-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 234383030
+  },
+  {
+    "date": "2008-11-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 965106595
+  },
+  {
+    "date": "2008-11-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2192170693
+  },
+  {
+    "date": "2008-11-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2833277217
+  },
+  {
+    "date": "2008-11-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1027149161
+  },
+  {
+    "date": "2008-11-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 351574545
+  },
+  {
+    "date": "2008-11-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 765191657
+  },
+  {
+    "date": "2008-11-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 165446845
+  },
+  {
+    "date": "2008-11-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 220595793
+  },
+  {
+    "date": "2008-11-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 296425597
+  },
+  {
+    "date": "2008-11-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 730723564
+  },
+  {
+    "date": "2008-11-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 703149090
+  },
+  {
+    "date": "2008-11-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 358468164
+  },
+  {
+    "date": "2008-12-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 268851123
+  },
+  {
+    "date": "2008-12-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3722554008
+  },
+  {
+    "date": "2008-12-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1551064170
+  },
+  {
+    "date": "2008-12-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 806553368
+  },
+  {
+    "date": "2008-12-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 223831573
+  },
+  {
+    "date": "2008-12-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2259137273
+  },
+  {
+    "date": "2008-12-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 234242344
+  },
+  {
+    "date": "2008-12-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 239447729
+  },
+  {
+    "date": "2008-12-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 229036959
+  },
+  {
+    "date": "2008-12-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 260269271
+  },
+  {
+    "date": "2008-12-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 150956177
+  },
+  {
+    "date": "2008-12-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 52053854
+  },
+  {
+    "date": "2008-12-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 229036959
+  },
+  {
+    "date": "2008-12-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 801629355
+  },
+  {
+    "date": "2008-12-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 437252375
+  },
+  {
+    "date": "2008-12-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 187393875
+  },
+  {
+    "date": "2008-12-30",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 317528511
+  },
+  {
+    "date": "2009-01-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 546565469
+  },
+  {
+    "date": "2009-01-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 12173503636
+  },
+  {
+    "date": "2009-01-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 14310077743
+  },
+  {
+    "date": "2009-01-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4761744619
+  },
+  {
+    "date": "2009-01-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 34190172306
+  },
+  {
+    "date": "2009-01-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 12403509926
+  },
+  {
+    "date": "2009-01-10",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 37128251104
+  },
+  {
+    "date": "2009-01-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 11765850211
+  },
+  {
+    "date": "2009-01-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6520584820
+  },
+  {
+    "date": "2009-01-13",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 736878114
+  },
+  {
+    "date": "2009-01-14",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 392033676
+  },
+  {
+    "date": "2009-01-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 410183384
+  },
+  {
+    "date": "2009-01-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 192386897
+  },
+  {
+    "date": "2009-01-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 290395316
+  },
+  {
+    "date": "2009-01-20",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 765917645
+  },
+  {
+    "date": "2009-01-21",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3905816997
+  },
+  {
+    "date": "2009-01-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3771509164
+  },
+  {
+    "date": "2009-01-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1470126286
+  },
+  {
+    "date": "2009-01-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1230550151
+  },
+  {
+    "date": "2009-01-27",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 892965596
+  },
+  {
+    "date": "2009-01-28",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3767879222
+  },
+  {
+    "date": "2009-01-29",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4762483179
+  },
+  {
+    "date": "2009-02-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2729715968
+  },
+  {
+    "date": "2009-02-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 14402617679
+  },
+  {
+    "date": "2009-02-04",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 14489241282
+  },
+  {
+    "date": "2009-02-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 8731659154
+  },
+  {
+    "date": "2009-02-07",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 12369850468
+  },
+  {
+    "date": "2009-02-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 6560294179
+  },
+  {
+    "date": "2009-02-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3799888706
+  },
+  {
+    "date": "2009-02-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3441844481
+  },
+  {
+    "date": "2009-02-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2714206219
+  },
+  {
+    "date": "2009-02-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 689038700
+  },
+  {
+    "date": "2009-02-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 956294519
+  },
+  {
+    "date": "2009-02-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 472447491
+  },
+  {
+    "date": "2009-02-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 526911947
+  },
+  {
+    "date": "2009-02-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 429382572
+  },
+  {
+    "date": "2009-02-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 740969925
+  },
+  {
+    "date": "2009-02-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 768835461
+  },
+  {
+    "date": "2009-02-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 543377945
+  },
+  {
+    "date": "2009-02-25",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1308413560
+  },
+  {
+    "date": "2009-02-26",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2590228200
+  },
+  {
+    "date": "2009-03-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 549711021
+  },
+  {
+    "date": "2009-03-03",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 3715547653
+  },
+  {
+    "date": "2009-03-05",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 4395271859
+  },
+  {
+    "date": "2009-03-06",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2941996486
+  },
+  {
+    "date": "2009-03-08",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 10599242364
+  },
+  {
+    "date": "2009-03-09",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1959051752
+  },
+  {
+    "date": "2009-03-11",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 2598025621
+  },
+  {
+    "date": "2009-03-12",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1941497525
+  },
+  {
+    "date": "2009-03-15",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 455146002
+  },
+  {
+    "date": "2009-03-16",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 673380154
+  },
+  {
+    "date": "2009-03-17",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 453179929
+  },
+  {
+    "date": "2009-03-18",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 480704957
+  },
+  {
+    "date": "2009-03-19",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 746124872
+  },
+  {
+    "date": "2009-03-22",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 740226651
+  },
+  {
+    "date": "2009-03-23",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 645855126
+  },
+  {
+    "date": "2009-03-24",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1877600138
+  },
+  {
+    "date": "2009-03-25",
+    "open": 0.0,
+    "high": 0.01,
+    "low": 0.0,
+    "close": 0.01,
+    "volume": 2617826789
+  },
+  {
+    "date": "2009-03-29",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 910292004
+  },
+  {
+    "date": "2009-03-30",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 583923813
+  },
+  {
+    "date": "2009-03-31",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 475789773
+  },
+  {
+    "date": "2009-04-01",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 75767032
+  },
+  {
+    "date": "2009-04-02",
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 1263568211
+  },
+  {
+    "date": "2009-04-03",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 890223414
+  },
+  {
+    "date": "2009-04-05",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 737277541
+  },
+  {
+    "date": "2009-04-06",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 575703952
+  },
+  {
+    "date": "2009-04-08",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 3890639501
+  },
+  {
+    "date": "2009-04-10",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 3116338942
+  },
+  {
+    "date": "2009-04-11",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 734555093
+  },
+  {
+    "date": "2009-04-13",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 929312493
+  },
+  {
+    "date": "2009-04-15",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 829197413
+  },
+  {
+    "date": "2009-04-16",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 874287411
+  },
+  {
+    "date": "2009-04-19",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 1119607567
+  },
+  {
+    "date": "2009-04-20",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 399696080
+  },
+  {
+    "date": "2009-04-21",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 395110657
+  },
+  {
+    "date": "2009-04-22",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 784107416
+  },
+  {
+    "date": "2009-04-23",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 301109475
+  },
+  {
+    "date": "2009-04-26",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 596869290
+  },
+  {
+    "date": "2009-04-27",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 1728704653
+  },
+  {
+    "date": "2009-04-28",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 1544523477
+  },
+  {
+    "date": "2009-04-29",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 2216288017
+  },
+  {
+    "date": "2009-04-30",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 2966004756
+  },
+  {
+    "date": "2009-05-01",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 52109056
+  },
+  {
+    "date": "2009-05-02",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 404449528
+  },
+  {
+    "date": "2009-05-03",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 451875598
+  },
+  {
+    "date": "2009-05-04",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 1682340790
+  },
+  {
+    "date": "2009-05-05",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 955941485
+  },
+  {
+    "date": "2009-05-07",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 824608491
+  },
+  {
+    "date": "2009-05-08",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 1460537589
+  },
+  {
+    "date": "2009-05-10",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 984840868
+  },
+  {
+    "date": "2009-05-11",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.02,
+    "close": 0.02,
+    "volume": 577897189
+  },
+  {
+    "date": "2009-05-13",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.02,
+    "close": 0.02,
+    "volume": 346660834
+  },
+  {
+    "date": "2009-05-14",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 537148322
+  },
+  {
+    "date": "2009-05-17",
+    "open": 0.01,
+    "high": 0.02,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 468520036
+  },
+  {
+    "date": "2009-05-18",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 464560711
+  },
+  {
+    "date": "2009-05-19",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 468520036
+  },
+  {
+    "date": "2009-05-20",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 353259708
+  },
+  {
+    "date": "2009-05-21",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 312786615
+  },
+  {
+    "date": "2009-05-24",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 196206513
+  },
+  {
+    "date": "2009-05-25",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 124498751
+  },
+  {
+    "date": "2009-05-26",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 103382355
+  },
+  {
+    "date": "2009-05-27",
+    "open": 0.01,
+    "high": 0.01,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 267474349
+  },
+  {
+    "date": "2009-05-31",
+    "open": 0.01,
+    "high": 0.02,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 529229674
+  },
+  {
+    "date": "2009-06-01",
+    "open": 0.01,
+    "high": 0.02,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 21020908
+  },
+  {
+    "date": "2009-06-04",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.01,
+    "close": 0.01,
+    "volume": 295015695
+  },
+  {
+    "date": "2009-06-05",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.02,
+    "close": 0.02,
+    "volume": 586348297
+  },
+  {
+    "date": "2009-06-07",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.02,
+    "close": 0.02,
+    "volume": 748036050
+  },
+  {
+    "date": "2009-06-08",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.02,
+    "close": 0.02,
+    "volume": 1439892361
+  },
+  {
+    "date": "2009-06-09",
+    "open": 0.02,
+    "high": 0.02,
+    "low": 0.02,
+    "close": 0.02,
+    "volume": 306497335
+  },
+  {
+    "date": "2009-06-10",
+    "open": 0.03,
+    "high": 0.03,
+    "low": 0.02,
+    "close": 0.03,
+    "volume": 647343509
+  },
+  {
+    "date": "2009-06-12",
+    "open": 0.03,
+    "high": 0.03,
+    "low": 0.03,
+    "close": 0.03,
+    "volume": 672180362
+  },
+  {
+    "date": "2009-06-14",
+    "open": 0.03,
+    "high": 0.03,
+    "low": 0.03,
+    "close": 0.03,
+    "volume": 138544148
+  },
+  {
+    "date": "2009-06-15",
+    "open": 0.03,
+    "high": 0.03,
+    "low": 0.03,
+    "close": 0.03,
+    "volume": 259799880
+  },
+  {
+    "date": "2009-06-16",
+    "open": 0.03,
+    "high": 0.03,
+    "low": 0.03,
+    "close": 0.03,
+    "volume": 492601414
+  },
+  {
+    "date": "2009-06-17",
+    "open": 0.03,
+    "high": 0.04,
+    "low": 0.03,
+    "close": 0.04,
+    "volume": 944705307
+  },
+  {
+    "date": "2009-06-18",
+    "open": 0.04,
+    "high": 0.04,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 579753972
+  },
+  {
+    "date": "2009-06-21",
+    "open": 0.04,
+    "high": 0.04,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 333926920
+  },
+  {
+    "date": "2009-06-22",
+    "open": 0.04,
+    "high": 0.04,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 276851468
+  },
+  {
+    "date": "2009-06-23",
+    "open": 0.04,
+    "high": 0.04,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 298402779
+  },
+  {
+    "date": "2009-06-24",
+    "open": 0.04,
+    "high": 0.05,
+    "low": 0.04,
+    "close": 0.05,
+    "volume": 611725698
+  },
+  {
+    "date": "2009-06-25",
+    "open": 0.05,
+    "high": 0.05,
+    "low": 0.05,
+    "close": 0.05,
+    "volume": 444762238
+  },
+  {
+    "date": "2009-06-28",
+    "open": 0.05,
+    "high": 0.05,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 486207068
+  },
+  {
+    "date": "2009-06-29",
+    "open": 0.04,
+    "high": 0.05,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 208171463
+  },
+  {
+    "date": "2009-06-30",
+    "open": 0.05,
+    "high": 0.05,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 276851468
+  },
+  {
+    "date": "2009-07-01",
+    "open": 0.05,
+    "high": 0.05,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 3569411
+  },
+  {
+    "date": "2009-07-04",
+    "open": 0.04,
+    "high": 0.04,
+    "low": 0.04,
+    "close": 0.04,
+    "volume": 314887794
+  },
+  {
+    "date": "2009-07-05",
+    "open": 0.04,
+    "high": 0.05,
+    "low": 0.04,
+    "close": 0.05,
+    "volume": 498656948
+  },
+  {
+    "date": "2009-07-06",
+    "open": 0.05,
+    "high": 0.05,
+    "low": 0.05,
+    "close": 0.05,
+    "volume": 88621116
+  },
+  {
+    "date": "2009-07-07",
+    "open": 0.06,
+    "high": 0.06,
+    "low": 0.05,
+    "close": 0.05,
+    "volume": 301108733
+  },
+  {
+    "date": "2009-07-09",
+    "open": 0.08,
+    "high": 0.08,
+    "low": 0.08,
+    "close": 0.08,
+    "volume": 93552569
+  },
+  {
+    "date": "2009-07-10",
+    "open": 0.09,
+    "high": 0.1,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 199578813
+  },
+  {
+    "date": "2009-07-12",
+    "open": 0.11,
+    "high": 0.11,
+    "low": 0.1,
+    "close": 0.1,
+    "volume": 98484022
+  },
+  {
+    "date": "2009-07-13",
+    "open": 0.11,
+    "high": 0.11,
+    "low": 0.1,
+    "close": 0.1,
+    "volume": 117258776
+  },
+  {
+    "date": "2009-07-14",
+    "open": 0.1,
+    "high": 0.1,
+    "low": 0.1,
+    "close": 0.1,
+    "volume": 51763697
+  },
+  {
+    "date": "2009-07-15",
+    "open": 0.1,
+    "high": 0.1,
+    "low": 0.09,
+    "close": 0.1,
+    "volume": 65133727
+  },
+  {
+    "date": "2009-07-16",
+    "open": 0.1,
+    "high": 0.1,
+    "low": 0.1,
+    "close": 0.1,
+    "volume": 46072401
+  },
+  {
+    "date": "2009-07-19",
+    "open": 0.1,
+    "high": 0.1,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 110031733
+  },
+  {
+    "date": "2009-07-20",
+    "open": 0.09,
+    "high": 0.1,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 57816346
+  },
+  {
+    "date": "2009-07-21",
+    "open": 0.09,
+    "high": 0.09,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 59352092
+  },
+  {
+    "date": "2009-07-22",
+    "open": 0.09,
+    "high": 0.09,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 47698485
+  },
+  {
+    "date": "2009-07-23",
+    "open": 0.09,
+    "high": 0.1,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 144902217
+  },
+  {
+    "date": "2009-07-26",
+    "open": 0.1,
+    "high": 0.1,
+    "low": 0.09,
+    "close": 0.09,
+    "volume": 177694925
+  },
+  {
+    "date": "2009-07-30",
+    "open": 0.1,
+    "high": 0.11,
+    "low": 0.1,
+    "close": 0.11,
+    "volume": 4697578
+  },
+  {
+    "date": "2009-08-02",
+    "open": 0.12,
+    "high": 0.12,
+    "low": 0.11,
+    "close": 0.11,
+    "volume": 19952308
+  },
+  {
+    "date": "2009-08-03",
+    "open": 0.13,
+    "high": 0.16,
+    "low": 0.13,
+    "close": 0.15,
+    "volume": 18308509
+  },
+  {
+    "date": "2009-08-04",
+    "open": 0.14,
+    "high": 0.15,
+    "low": 0.13,
+    "close": 0.15,
+    "volume": 94136110
+  },
+  {
+    "date": "2009-08-06",
+    "open": 0.14,
+    "high": 0.14,
+    "low": 0.13,
+    "close": 0.13,
+    "volume": 40091470
+  },
+  {
+    "date": "2009-08-07",
+    "open": 0.17,
+    "high": 0.18,
+    "low": 0.16,
+    "close": 0.17,
+    "volume": 129257958
+  },
+  {
+    "date": "2009-08-09",
+    "open": 0.24,
+    "high": 0.24,
+    "low": 0.24,
+    "close": 0.24,
+    "volume": 22411084
+  },
+  {
+    "date": "2009-08-10",
+    "open": 0.28,
+    "high": 0.29,
+    "low": 0.28,
+    "close": 0.29,
+    "volume": 67950025
+  },
+  {
+    "date": "2009-08-11",
+    "open": 0.29,
+    "high": 0.3,
+    "low": 0.28,
+    "close": 0.28,
+    "volume": 37367735
+  },
+  {
+    "date": "2009-08-12",
+    "open": 0.31,
+    "high": 0.31,
+    "low": 0.3,
+    "close": 0.3,
+    "volume": 16485765
+  },
+  {
+    "date": "2009-08-16",
+    "open": 0.26,
+    "high": 0.28,
+    "low": 0.26,
+    "close": 0.28,
+    "volume": 105556684
+  },
+  {
+    "date": "2009-08-17",
+    "open": 0.28,
+    "high": 0.29,
+    "low": 0.28,
+    "close": 0.28,
+    "volume": 79944016
+  },
+  {
+    "date": "2009-08-18",
+    "open": 0.29,
+    "high": 0.29,
+    "low": 0.28,
+    "close": 0.28,
+    "volume": 64127238
+  },
+  {
+    "date": "2009-08-19",
+    "open": 0.28,
+    "high": 0.29,
+    "low": 0.27,
+    "close": 0.27,
+    "volume": 50699702
+  },
+  {
+    "date": "2009-08-20",
+    "open": 0.27,
+    "high": 0.28,
+    "low": 0.26,
+    "close": 0.26,
+    "volume": 52897804
+  },
+  {
+    "date": "2009-08-23",
+    "open": 0.26,
+    "high": 0.27,
+    "low": 0.25,
+    "close": 0.25,
+    "volume": 61260149
+  },
+  {
+    "date": "2009-08-24",
+    "open": 0.25,
+    "high": 0.26,
+    "low": 0.25,
+    "close": 0.26,
+    "volume": 36746532
+  },
+  {
+    "date": "2009-08-25",
+    "open": 0.27,
+    "high": 0.27,
+    "low": 0.27,
+    "close": 0.27,
+    "volume": 31394632
+  },
+  {
+    "date": "2009-08-26",
+    "open": 0.27,
+    "high": 0.27,
+    "low": 0.26,
+    "close": 0.26,
+    "volume": 32684822
+  },
+  {
+    "date": "2009-08-27",
+    "open": 0.26,
+    "high": 0.26,
+    "low": 0.25,
+    "close": 0.25,
+    "volume": 43723117
+  },
+  {
+    "date": "2009-08-30",
+    "open": 0.25,
+    "high": 0.26,
+    "low": 0.25,
+    "close": 0.25,
+    "volume": 23271211
+  },
+  {
+    "date": "2009-08-31",
+    "open": 0.25,
+    "high": 0.26,
+    "low": 0.25,
+    "close": 0.25,
+    "volume": 25182604
+  },
+  {
+    "date": "2009-09-02",
+    "open": 0.23,
+    "high": 0.26,
+    "low": 0.22,
+    "close": 0.25,
+    "volume": 12670673
+  },
+  {
+    "date": "2009-09-03",
+    "open": 0.31,
+    "high": 0.34,
+    "low": 0.28,
+    "close": 0.29,
+    "volume": 6701620
+  },
+  {
+    "date": "2009-09-04",
+    "open": 0.28,
+    "high": 0.3,
+    "low": 0.26,
+    "close": 0.29,
+    "volume": 59898322
+  },
+  {
+    "date": "2009-09-06",
+    "open": 0.25,
+    "high": 0.26,
+    "low": 0.24,
+    "close": 0.26,
+    "volume": 25810491
+  },
+  {
+    "date": "2009-09-07",
+    "open": 0.31,
+    "high": 0.36,
+    "low": 0.3,
+    "close": 0.35,
+    "volume": 93245688
+  },
+  {
+    "date": "2009-09-08",
+    "open": 0.54,
+    "high": 0.54,
+    "low": 0.5,
+    "close": 0.52,
+    "volume": 28111221
+  },
+  {
+    "date": "2009-09-09",
+    "open": 0.52,
+    "high": 0.53,
+    "low": 0.51,
+    "close": 0.52,
+    "volume": 12907667
+  },
+  {
+    "date": "2009-09-11",
+    "open": 0.61,
+    "high": 0.61,
+    "low": 0.59,
+    "close": 0.6,
+    "volume": 15612340
+  },
+  {
+    "date": "2009-09-12",
+    "open": 0.66,
+    "high": 0.68,
+    "low": 0.66,
+    "close": 0.66,
+    "volume": 10005091
+  },
+  {
+    "date": "2009-09-13",
+    "open": 0.65,
+    "high": 0.67,
+    "low": 0.65,
+    "close": 0.66,
+    "volume": 13654163
+  },
+  {
+    "date": "2009-09-14",
+    "open": 0.67,
+    "high": 0.7,
+    "low": 0.66,
+    "close": 0.69,
+    "volume": 20453379
+  },
+  {
+    "date": "2009-09-15",
+    "open": 0.69,
+    "high": 0.7,
+    "low": 0.68,
+    "close": 0.68,
+    "volume": 15846260
+  },
+  {
+    "date": "2009-09-16",
+    "open": 0.65,
+    "high": 0.7,
+    "low": 0.65,
+    "close": 0.68,
+    "volume": 20211877
+  },
+  {
+    "date": "2009-09-17",
+    "open": 0.69,
+    "high": 0.71,
+    "low": 0.69,
+    "close": 0.69,
+    "volume": 44566445
+  },
+  {
+    "date": "2009-09-27",
+    "open": 0.68,
+    "high": 0.72,
+    "low": 0.68,
+    "close": 0.72,
+    "volume": 26045084
+  },
+  {
+    "date": "2009-09-29",
+    "open": 0.73,
+    "high": 0.79,
+    "low": 0.73,
+    "close": 0.79,
+    "volume": 70425758
+  },
+  {
+    "date": "2009-09-30",
+    "open": 0.79,
+    "high": 0.8,
+    "low": 0.74,
+    "close": 0.76,
+    "volume": 38231657
+  },
+  {
+    "date": "2009-10-02",
+    "open": 0.76,
+    "high": 0.81,
+    "low": 0.72,
+    "close": 0.76,
+    "volume": 5854082
+  },
+  {
+    "date": "2009-10-05",
+    "open": 0.79,
+    "high": 0.83,
+    "low": 0.76,
+    "close": 0.76,
+    "volume": 22225555
+  },
+  {
+    "date": "2009-10-06",
+    "open": 0.79,
+    "high": 0.79,
+    "low": 0.74,
+    "close": 0.75,
+    "volume": 4253695
+  },
+  {
+    "date": "2009-10-08",
+    "open": 0.79,
+    "high": 0.79,
+    "low": 0.71,
+    "close": 0.75,
+    "volume": 20950379
+  },
+  {
+    "date": "2009-10-09",
+    "open": 0.67,
+    "high": 0.7,
+    "low": 0.66,
+    "close": 0.69,
+    "volume": 18379040
+  },
+  {
+    "date": "2009-10-11",
+    "open": 0.75,
+    "high": 0.78,
+    "low": 0.74,
+    "close": 0.77,
+    "volume": 9353464
+  },
+  {
+    "date": "2009-10-12",
+    "open": 0.83,
+    "high": 0.83,
+    "low": 0.79,
+    "close": 0.8,
+    "volume": 8041908
+  },
+  {
+    "date": "2009-10-13",
+    "open": 0.8,
+    "high": 0.87,
+    "low": 0.79,
+    "close": 0.87,
+    "volume": 58847441
+  },
+  {
+    "date": "2009-10-14",
+    "open": 0.88,
+    "high": 1.03,
+    "low": 0.88,
+    "close": 1.02,
+    "volume": 86683489
+  },
+  {
+    "date": "2009-10-15",
+    "open": 1.03,
+    "high": 1.03,
+    "low": 0.93,
+    "close": 0.96,
+    "volume": 44920789
+  },
+  {
+    "date": "2009-10-18",
+    "open": 0.96,
+    "high": 1.01,
+    "low": 0.94,
+    "close": 0.99,
+    "volume": 26628036
+  },
+  {
+    "date": "2009-10-19",
+    "open": 1.01,
+    "high": 1.13,
+    "low": 1.01,
+    "close": 1.11,
+    "volume": 57622172
+  },
+  {
+    "date": "2009-10-20",
+    "open": 1.09,
+    "high": 1.09,
+    "low": 0.9,
+    "close": 0.99,
+    "volume": 43039741
+  },
+  {
+    "date": "2009-10-21",
+    "open": 0.96,
+    "high": 1.0,
+    "low": 0.92,
+    "close": 0.93,
+    "volume": 22900456
+  },
+  {
+    "date": "2009-10-22",
+    "open": 0.9,
+    "high": 0.94,
+    "low": 0.81,
+    "close": 0.92,
+    "volume": 26110316
+  },
+  {
+    "date": "2009-10-25",
+    "open": 0.95,
+    "high": 0.99,
+    "low": 0.94,
+    "close": 0.95,
+    "volume": 13581506
+  },
+  {
+    "date": "2009-10-26",
+    "open": 0.93,
+    "high": 0.94,
+    "low": 0.86,
+    "close": 0.87,
+    "volume": 16359934
+  },
+  {
+    "date": "2009-10-27",
+    "open": 0.85,
+    "high": 0.87,
+    "low": 0.83,
+    "close": 0.83,
+    "volume": 11389827
+  },
+  {
+    "date": "2009-10-28",
+    "open": 0.87,
+    "high": 0.91,
+    "low": 0.83,
+    "close": 0.89,
+    "volume": 8473341
+  },
+  {
+    "date": "2009-10-29",
+    "open": 0.92,
+    "high": 0.96,
+    "low": 0.89,
+    "close": 0.89,
+    "volume": 10388903
+  },
+  {
+    "date": "2009-11-01",
+    "open": 0.91,
+    "high": 0.93,
+    "low": 0.89,
+    "close": 0.89,
+    "volume": 179017
+  },
+  {
+    "date": "2009-11-02",
+    "open": 1.35,
+    "high": 1.37,
+    "low": 1.29,
+    "close": 1.31,
+    "volume": 2423028
+  },
+  {
+    "date": "2009-11-03",
+    "open": 1.55,
+    "high": 1.59,
+    "low": 1.41,
+    "close": 1.43,
+    "volume": 1457347
+  },
+  {
+    "date": "2009-11-05",
+    "open": 1.47,
+    "high": 1.47,
+    "low": 1.39,
+    "close": 1.43,
+    "volume": 6443758
+  },
+  {
+    "date": "2009-11-06",
+    "open": 1.42,
+    "high": 1.44,
+    "low": 1.39,
+    "close": 1.41,
+    "volume": 2609889
+  },
+  {
+    "date": "2009-11-08",
+    "open": 1.42,
+    "high": 1.46,
+    "low": 1.37,
+    "close": 1.41,
+    "volume": 10491019
+  },
+  {
+    "date": "2009-11-10",
+    "open": 1.54,
+    "high": 1.57,
+    "low": 1.49,
+    "close": 1.5,
+    "volume": 13238666
+  },
+  {
+    "date": "2009-11-11",
+    "open": 1.54,
+    "high": 1.54,
+    "low": 1.49,
+    "close": 1.5,
+    "volume": 3702188
+  },
+  {
+    "date": "2009-11-15",
+    "open": 1.5,
+    "high": 1.51,
+    "low": 1.36,
+    "close": 1.38,
+    "volume": 5459612
+  },
+  {
+    "date": "2009-11-16",
+    "open": 1.4,
+    "high": 1.56,
+    "low": 1.4,
+    "close": 1.52,
+    "volume": 4505072
+  },
+  {
+    "date": "2009-11-17",
+    "open": 1.6,
+    "high": 1.64,
+    "low": 1.57,
+    "close": 1.57,
+    "volume": 4710253
+  },
+  {
+    "date": "2009-11-18",
+    "open": 1.57,
+    "high": 1.57,
+    "low": 1.5,
+    "close": 1.51,
+    "volume": 3122327
+  },
+  {
+    "date": "2009-11-19",
+    "open": 1.51,
+    "high": 1.56,
+    "low": 1.51,
+    "close": 1.53,
+    "volume": 2970671
+  },
+  {
+    "date": "2009-11-22",
+    "open": 1.55,
+    "high": 1.55,
+    "low": 1.5,
+    "close": 1.51,
+    "volume": 4290969
+  },
+  {
+    "date": "2009-11-23",
+    "open": 1.51,
+    "high": 1.56,
+    "low": 1.5,
+    "close": 1.5,
+    "volume": 4558597
+  },
+  {
+    "date": "2009-11-24",
+    "open": 1.57,
+    "high": 1.57,
+    "low": 1.49,
+    "close": 1.5,
+    "volume": 4558597
+  },
+  {
+    "date": "2009-11-25",
+    "open": 1.53,
+    "high": 1.57,
+    "low": 1.52,
+    "close": 1.55,
+    "volume": 4246365
+  },
+  {
+    "date": "2009-11-26",
+    "open": 1.52,
+    "high": 1.58,
+    "low": 1.52,
+    "close": 1.54,
+    "volume": 4398021
+  },
+  {
+    "date": "2009-12-01",
+    "open": 1.48,
+    "high": 1.57,
+    "low": 1.48,
+    "close": 1.54,
+    "volume": 404848
+  },
+  {
+    "date": "2009-12-02",
+    "open": 2.22,
+    "high": 2.22,
+    "low": 2.06,
+    "close": 2.06,
+    "volume": 616615
+  },
+  {
+    "date": "2009-12-03",
+    "open": 2.25,
+    "high": 2.7,
+    "low": 2.25,
+    "close": 2.54,
+    "volume": 540317
+  },
+  {
+    "date": "2009-12-04",
+    "open": 2.35,
+    "high": 2.65,
+    "low": 2.22,
+    "close": 2.54,
+    "volume": 3652858
+  },
+  {
+    "date": "2009-12-05",
+    "open": 2.61,
+    "high": 2.61,
+    "low": 2.52,
+    "close": 2.54,
+    "volume": 1938620
+  },
+  {
+    "date": "2009-12-07",
+    "open": 3.67,
+    "high": 3.73,
+    "low": 3.54,
+    "close": 3.6,
+    "volume": 5282343
+  },
+  {
+    "date": "2009-12-08",
+    "open": 4.71,
+    "high": 4.92,
+    "low": 4.71,
+    "close": 4.77,
+    "volume": 3724052
+  },
+  {
+    "date": "2009-12-10",
+    "open": 5.02,
+    "high": 5.19,
+    "low": 4.96,
+    "close": 5.11,
+    "volume": 2754742
+  },
+  {
+    "date": "2009-12-11",
+    "open": 5.0,
+    "high": 5.0,
+    "low": 4.79,
+    "close": 4.85,
+    "volume": 1529238
+  },
+  {
+    "date": "2009-12-13",
+    "open": 5.62,
+    "high": 5.64,
+    "low": 5.02,
+    "close": 5.04,
+    "volume": 1146268
+  },
+  {
+    "date": "2009-12-14",
+    "open": 5.0,
+    "high": 5.15,
+    "low": 4.98,
+    "close": 5.05,
+    "volume": 884792
+  },
+  {
+    "date": "2009-12-15",
+    "open": 4.96,
+    "high": 5.09,
+    "low": 4.96,
+    "close": 5.0,
+    "volume": 691987
+  },
+  {
+    "date": "2009-12-17",
+    "open": 5.19,
+    "high": 5.19,
+    "low": 4.71,
+    "close": 4.94,
+    "volume": 2437801
+  },
+  {
+    "date": "2009-12-20",
+    "open": 4.87,
+    "high": 5.0,
+    "low": 4.6,
+    "close": 4.62,
+    "volume": 1420950
+  },
+  {
+    "date": "2009-12-21",
+    "open": 4.64,
+    "high": 4.71,
+    "low": 4.56,
+    "close": 4.69,
+    "volume": 1254556
+  },
+  {
+    "date": "2009-12-22",
+    "open": 4.83,
+    "high": 4.92,
+    "low": 4.73,
+    "close": 4.88,
+    "volume": 937616
+  },
+  {
+    "date": "2009-12-23",
+    "open": 5.02,
+    "high": 5.02,
+    "low": 4.85,
+    "close": 4.88,
+    "volume": 533517
+  },
+  {
+    "date": "2009-12-24",
+    "open": 4.92,
+    "high": 4.92,
+    "low": 4.73,
+    "close": 4.77,
+    "volume": 657652
+  },
+  {
+    "date": "2009-12-27",
+    "open": 4.73,
+    "high": 4.75,
+    "low": 4.64,
+    "close": 4.66,
+    "volume": 797634
+  },
+  {
+    "date": "2009-12-29",
+    "open": 4.71,
+    "high": 4.71,
+    "low": 4.56,
+    "close": 4.6,
+    "volume": 1450003
+  },
+  {
+    "date": "2009-12-30",
+    "open": 4.6,
+    "high": 4.75,
+    "low": 4.56,
+    "close": 4.71,
+    "volume": 1373409
+  },
+  {
+    "date": "2010-01-02",
+    "open": 4.83,
+    "high": 4.83,
+    "low": 4.64,
+    "close": 4.73,
+    "volume": 3280335
+  },
+  {
+    "date": "2010-01-03",
+    "open": 4.85,
+    "high": 4.85,
+    "low": 4.73,
+    "close": 4.73,
+    "volume": 574613
+  },
+  {
+    "date": "2010-01-04",
+    "open": 5.3,
+    "high": 5.39,
+    "low": 5.25,
+    "close": 5.27,
+    "volume": 328350
+  },
+  {
+    "date": "2010-01-06",
+    "open": 4.96,
+    "high": 5.39,
+    "low": 4.96,
+    "close": 5.27,
+    "volume": 462300
+  },
+  {
+    "date": "2010-01-08",
+    "open": 4.87,
+    "high": 4.99,
+    "low": 4.82,
+    "close": 4.84,
+    "volume": 436132
+  },
+  {
+    "date": "2010-01-13",
+    "open": 5.06,
+    "high": 5.27,
+    "low": 4.66,
+    "close": 4.84,
+    "volume": 3244202
+  },
+  {
+    "date": "2010-01-14",
+    "open": 5.01,
+    "high": 5.18,
+    "low": 4.86,
+    "close": 5.15,
+    "volume": 3397493
+  },
+  {
+    "date": "2010-01-17",
+    "open": 5.11,
+    "high": 5.29,
+    "low": 5.04,
+    "close": 5.17,
+    "volume": 2095911
+  },
+  {
+    "date": "2010-01-18",
+    "open": 5.27,
+    "high": 5.27,
+    "low": 5.02,
+    "close": 5.15,
+    "volume": 1898025
+  },
+  {
+    "date": "2010-01-19",
+    "open": 5.22,
+    "high": 5.22,
+    "low": 5.08,
+    "close": 5.11,
+    "volume": 2210182
+  },
+  {
+    "date": "2010-01-20",
+    "open": 5.13,
+    "high": 5.18,
+    "low": 4.93,
+    "close": 5.13,
+    "volume": 1928684
+  },
+  {
+    "date": "2010-01-21",
+    "open": 5.15,
+    "high": 5.17,
+    "low": 4.97,
+    "close": 5.04,
+    "volume": 1792115
+  },
+  {
+    "date": "2010-01-24",
+    "open": 5.02,
+    "high": 5.06,
+    "low": 4.95,
+    "close": 4.99,
+    "volume": 2271499
+  },
+  {
+    "date": "2010-01-25",
+    "open": 5.08,
+    "high": 5.08,
+    "low": 4.93,
+    "close": 4.95,
+    "volume": 1772605
+  },
+  {
+    "date": "2010-01-26",
+    "open": 4.95,
+    "high": 5.06,
+    "low": 4.84,
+    "close": 4.9,
+    "volume": 2433151
+  },
+  {
+    "date": "2010-01-27",
+    "open": 5.02,
+    "high": 5.02,
+    "low": 4.84,
+    "close": 4.86,
+    "volume": 1499468
+  },
+  {
+    "date": "2010-01-28",
+    "open": 4.93,
+    "high": 4.93,
+    "low": 4.83,
+    "close": 4.83,
+    "volume": 1839496
+  },
+  {
+    "date": "2010-01-31",
+    "open": 4.74,
+    "high": 4.74,
+    "low": 4.14,
+    "close": 4.47,
+    "volume": 7031891
+  },
+  {
+    "date": "2010-02-02",
+    "open": 4.45,
+    "high": 4.59,
+    "low": 4.43,
+    "close": 4.5,
+    "volume": 1967703
+  },
+  {
+    "date": "2010-02-03",
+    "open": 4.48,
+    "high": 4.72,
+    "low": 4.48,
+    "close": 4.5,
+    "volume": 578721
+  },
+  {
+    "date": "2010-02-05",
+    "open": 4.72,
+    "high": 4.72,
+    "low": 4.39,
+    "close": 4.44,
+    "volume": 2221098
+  },
+  {
+    "date": "2010-02-06",
+    "open": 4.11,
+    "high": 4.11,
+    "low": 4.04,
+    "close": 4.04,
+    "volume": 674793
+  },
+  {
+    "date": "2010-02-08",
+    "open": 3.78,
+    "high": 3.78,
+    "low": 3.69,
+    "close": 3.72,
+    "volume": 615319
+  },
+  {
+    "date": "2010-02-09",
+    "open": 4.15,
+    "high": 4.74,
+    "low": 4.15,
+    "close": 4.61,
+    "volume": 2884453
+  },
+  {
+    "date": "2010-02-14",
+    "open": 5.05,
+    "high": 5.05,
+    "low": 4.85,
+    "close": 4.87,
+    "volume": 1484544
+  },
+  {
+    "date": "2010-02-15",
+    "open": 4.94,
+    "high": 4.94,
+    "low": 4.59,
+    "close": 4.72,
+    "volume": 1525718
+  },
+  {
+    "date": "2010-02-16",
+    "open": 4.66,
+    "high": 5.09,
+    "low": 4.66,
+    "close": 5.01,
+    "volume": 1811647
+  },
+  {
+    "date": "2010-02-18",
+    "open": 5.05,
+    "high": 5.18,
+    "low": 5.01,
+    "close": 5.09,
+    "volume": 1429646
+  },
+  {
+    "date": "2010-02-22",
+    "open": 5.18,
+    "high": 5.18,
+    "low": 4.92,
+    "close": 4.94,
+    "volume": 926410
+  },
+  {
+    "date": "2010-02-23",
+    "open": 4.85,
+    "high": 4.98,
+    "low": 4.72,
+    "close": 4.74,
+    "volume": 866937
+  },
+  {
+    "date": "2010-02-24",
+    "open": 4.66,
+    "high": 4.87,
+    "low": 4.66,
+    "close": 4.74,
+    "volume": 649631
+  },
+  {
+    "date": "2010-02-25",
+    "open": 4.7,
+    "high": 4.81,
+    "low": 4.7,
+    "close": 4.72,
+    "volume": 864650
+  },
+  {
+    "date": "2010-02-28",
+    "open": 4.81,
+    "high": 4.81,
+    "low": 4.63,
+    "close": 4.68,
+    "volume": 597020
+  },
+  {
+    "date": "2010-03-01",
+    "open": 5.46,
+    "high": 5.57,
+    "low": 5.36,
+    "close": 5.4,
+    "volume": 860075
+  },
+  {
+    "date": "2010-03-02",
+    "open": 5.42,
+    "high": 5.64,
+    "low": 5.27,
+    "close": 5.31,
+    "volume": 1546305
+  },
+  {
+    "date": "2010-03-03",
+    "open": 5.34,
+    "high": 5.49,
+    "low": 5.31,
+    "close": 5.31,
+    "volume": 535203
+  },
+  {
+    "date": "2010-03-05",
+    "open": 5.26,
+    "high": 5.36,
+    "low": 5.08,
+    "close": 5.21,
+    "volume": 1149910
+  },
+  {
+    "date": "2010-03-06",
+    "open": 4.64,
+    "high": 4.8,
+    "low": 4.62,
+    "close": 4.64,
+    "volume": 771778
+  },
+  {
+    "date": "2010-03-08",
+    "open": 4.41,
+    "high": 4.46,
+    "low": 4.38,
+    "close": 4.41,
+    "volume": 523568
+  },
+  {
+    "date": "2010-03-14",
+    "open": 5.8,
+    "high": 5.85,
+    "low": 5.6,
+    "close": 5.62,
+    "volume": 480907
+  },
+  {
+    "date": "2010-03-15",
+    "open": 5.67,
+    "high": 5.67,
+    "low": 5.41,
+    "close": 5.57,
+    "volume": 453759
+  },
+  {
+    "date": "2010-03-16",
+    "open": 5.67,
+    "high": 5.78,
+    "low": 5.6,
+    "close": 5.72,
+    "volume": 333532
+  },
+  {
+    "date": "2010-03-18",
+    "open": 5.9,
+    "high": 5.93,
+    "low": 5.67,
+    "close": 5.67,
+    "volume": 424672
+  },
+  {
+    "date": "2010-03-21",
+    "open": 5.49,
+    "high": 5.7,
+    "low": 5.49,
+    "close": 5.65,
+    "volume": 665125
+  },
+  {
+    "date": "2010-03-22",
+    "open": 5.8,
+    "high": 5.8,
+    "low": 5.57,
+    "close": 5.62,
+    "volume": 661247
+  },
+  {
+    "date": "2010-03-23",
+    "open": 5.8,
+    "high": 5.8,
+    "low": 5.6,
+    "close": 5.62,
+    "volume": 721360
+  },
+  {
+    "date": "2010-03-24",
+    "open": 5.65,
+    "high": 5.72,
+    "low": 5.6,
+    "close": 5.67,
+    "volume": 552655
+  },
+  {
+    "date": "2010-03-25",
+    "open": 5.7,
+    "high": 5.93,
+    "low": 5.65,
+    "close": 5.8,
+    "volume": 2018646
+  },
+  {
+    "date": "2010-03-28",
+    "open": 5.9,
+    "high": 6.19,
+    "low": 5.88,
+    "close": 6.16,
+    "volume": 2598449
+  },
+  {
+    "date": "2010-03-29",
+    "open": 6.06,
+    "high": 6.39,
+    "low": 6.06,
+    "close": 6.16,
+    "volume": 1374851
+  },
+  {
+    "date": "2010-03-30",
+    "open": 6.11,
+    "high": 6.11,
+    "low": 5.96,
+    "close": 5.98,
+    "volume": 721360
+  },
+  {
+    "date": "2010-03-31",
+    "open": 5.93,
+    "high": 6.16,
+    "low": 5.93,
+    "close": 6.06,
+    "volume": 585621
+  },
+  {
+    "date": "2010-04-01",
+    "open": 6.45,
+    "high": 6.78,
+    "low": 6.39,
+    "close": 6.65,
+    "volume": 1403938
+  },
+  {
+    "date": "2010-04-02",
+    "open": 6.01,
+    "high": 6.37,
+    "low": 6.01,
+    "close": 6.27,
+    "volume": 742691
+  },
+  {
+    "date": "2010-04-03",
+    "open": 5.41,
+    "high": 5.41,
+    "low": 5.29,
+    "close": 5.36,
+    "volume": 496420
+  },
+  {
+    "date": "2010-04-04",
+    "open": 5.93,
+    "high": 5.98,
+    "low": 5.88,
+    "close": 5.9,
+    "volume": 548777
+  },
+  {
+    "date": "2010-04-05",
+    "open": 5.16,
+    "high": 5.34,
+    "low": 5.16,
+    "close": 5.23,
+    "volume": 593377
+  },
+  {
+    "date": "2010-04-07",
+    "open": 5.38,
+    "high": 5.41,
+    "low": 5.2,
+    "close": 5.23,
+    "volume": 412817
+  },
+  {
+    "date": "2010-04-08",
+    "open": 6.01,
+    "high": 6.68,
+    "low": 5.84,
+    "close": 6.51,
+    "volume": 1255417
+  },
+  {
+    "date": "2010-04-13",
+    "open": 8.38,
+    "high": 8.38,
+    "low": 8.13,
+    "close": 8.13,
+    "volume": 380301
+  },
+  {
+    "date": "2010-04-15",
+    "open": 8.17,
+    "high": 8.28,
+    "low": 8.1,
+    "close": 8.1,
+    "volume": 436851
+  },
+  {
+    "date": "2010-04-18",
+    "open": 8.03,
+    "high": 8.13,
+    "low": 7.96,
+    "close": 7.99,
+    "volume": 359094
+  },
+  {
+    "date": "2010-04-19",
+    "open": 8.13,
+    "high": 8.13,
+    "low": 7.92,
+    "close": 7.96,
+    "volume": 376060
+  },
+  {
+    "date": "2010-04-20",
+    "open": 7.96,
+    "high": 8.06,
+    "low": 7.96,
+    "close": 7.96,
+    "volume": 388783
+  },
+  {
+    "date": "2010-04-21",
+    "open": 8.28,
+    "high": 8.28,
+    "low": 7.92,
+    "close": 7.96,
+    "volume": 613571
+  },
+  {
+    "date": "2010-04-22",
+    "open": 7.96,
+    "high": 8.03,
+    "low": 7.85,
+    "close": 7.89,
+    "volume": 770498
+  },
+  {
+    "date": "2010-04-25",
+    "open": 7.82,
+    "high": 7.89,
+    "low": 7.71,
+    "close": 7.75,
+    "volume": 780394
+  },
+  {
+    "date": "2010-04-26",
+    "open": 7.96,
+    "high": 7.96,
+    "low": 7.64,
+    "close": 7.78,
+    "volume": 596606
+  },
+  {
+    "date": "2010-04-27",
+    "open": 7.99,
+    "high": 8.1,
+    "low": 7.78,
+    "close": 7.89,
+    "volume": 691328
+  },
+  {
+    "date": "2010-04-28",
+    "open": 8.06,
+    "high": 8.06,
+    "low": 7.78,
+    "close": 7.82,
+    "volume": 455230
+  },
+  {
+    "date": "2010-04-29",
+    "open": 7.78,
+    "high": 7.92,
+    "low": 7.67,
+    "close": 7.71,
+    "volume": 517435
+  },
+  {
+    "date": "2010-05-01",
+    "open": 9.37,
+    "high": 9.37,
+    "low": 8.98,
+    "close": 9.05,
+    "volume": 429782
+  },
+  {
+    "date": "2010-05-04",
+    "open": 7.75,
+    "high": 8.13,
+    "low": 7.75,
+    "close": 7.89,
+    "volume": 350612
+  },
+  {
+    "date": "2010-05-05",
+    "open": 7.43,
+    "high": 7.43,
+    "low": 7.14,
+    "close": 7.21,
+    "volume": 462299
+  },
+  {
+    "date": "2010-05-07",
+    "open": 6.6,
+    "high": 7.43,
+    "low": 6.6,
+    "close": 7.21,
+    "volume": 508038
+  },
+  {
+    "date": "2010-05-08",
+    "open": 8.14,
+    "high": 8.58,
+    "low": 8.09,
+    "close": 8.45,
+    "volume": 1092225
+  },
+  {
+    "date": "2010-05-09",
+    "open": 9.63,
+    "high": 9.72,
+    "low": 9.41,
+    "close": 9.59,
+    "volume": 1307033
+  },
+  {
+    "date": "2010-05-13",
+    "open": 8.71,
+    "high": 8.71,
+    "low": 8.36,
+    "close": 8.45,
+    "volume": 670565
+  },
+  {
+    "date": "2010-05-16",
+    "open": 8.36,
+    "high": 8.53,
+    "low": 8.36,
+    "close": 8.4,
+    "volume": 598962
+  },
+  {
+    "date": "2010-05-17",
+    "open": 8.36,
+    "high": 8.45,
+    "low": 8.27,
+    "close": 8.36,
+    "volume": 517130
+  },
+  {
+    "date": "2010-05-18",
+    "open": 8.75,
+    "high": 8.97,
+    "low": 8.45,
+    "close": 8.58,
+    "volume": 854686
+  },
+  {
+    "date": "2010-05-19",
+    "open": 8.45,
+    "high": 8.75,
+    "low": 8.31,
+    "close": 8.4,
+    "volume": 518267
+  },
+  {
+    "date": "2010-05-20",
+    "open": 8.36,
+    "high": 8.58,
+    "low": 8.31,
+    "close": 8.45,
+    "volume": 429616
+  },
+  {
+    "date": "2010-05-23",
+    "open": 8.93,
+    "high": 8.93,
+    "low": 8.4,
+    "close": 8.53,
+    "volume": 346648
+  },
+  {
+    "date": "2010-05-24",
+    "open": 8.49,
+    "high": 8.53,
+    "low": 8.36,
+    "close": 8.36,
+    "volume": 276182
+  },
+  {
+    "date": "2010-05-25",
+    "open": 8.45,
+    "high": 8.71,
+    "low": 8.36,
+    "close": 8.36,
+    "volume": 414841
+  },
+  {
+    "date": "2010-05-26",
+    "open": 8.36,
+    "high": 8.36,
+    "low": 8.14,
+    "close": 8.23,
+    "volume": 547817
+  },
+  {
+    "date": "2010-05-30",
+    "open": 8.18,
+    "high": 8.18,
+    "low": 7.65,
+    "close": 7.74,
+    "volume": 542135
+  },
+  {
+    "date": "2010-05-31",
+    "open": 7.7,
+    "high": 8.14,
+    "low": 7.26,
+    "close": 7.92,
+    "volume": 689886
+  },
+  {
+    "date": "2010-06-01",
+    "open": 11.22,
+    "high": 11.53,
+    "low": 11.0,
+    "close": 11.17,
+    "volume": 531906
+  },
+  {
+    "date": "2010-06-04",
+    "open": 9.72,
+    "high": 9.94,
+    "low": 9.72,
+    "close": 9.77,
+    "volume": 215945
+  },
+  {
+    "date": "2010-06-05",
+    "open": 8.93,
+    "high": 9.15,
+    "low": 8.89,
+    "close": 8.97,
+    "volume": 348921
+  },
+  {
+    "date": "2010-06-06",
+    "open": 8.67,
+    "high": 8.67,
+    "low": 7.96,
+    "close": 8.01,
+    "volume": 209125
+  },
+  {
+    "date": "2010-06-07",
+    "open": 7.52,
+    "high": 8.23,
+    "low": 7.43,
+    "close": 7.92,
+    "volume": 912650
+  },
+  {
+    "date": "2010-06-09",
+    "open": 9.33,
+    "high": 9.68,
+    "low": 7.92,
+    "close": 9.59,
+    "volume": 1067221
+  },
+  {
+    "date": "2010-06-13",
+    "open": 9.54,
+    "high": 9.7,
+    "low": 9.48,
+    "close": 9.59,
+    "volume": 347075
+  },
+  {
+    "date": "2010-06-14",
+    "open": 9.32,
+    "high": 9.81,
+    "low": 9.27,
+    "close": 9.54,
+    "volume": 420388
+  },
+  {
+    "date": "2010-06-15",
+    "open": 9.37,
+    "high": 9.64,
+    "low": 9.37,
+    "close": 9.37,
+    "volume": 247778
+  },
+  {
+    "date": "2010-06-16",
+    "open": 9.32,
+    "high": 9.43,
+    "low": 9.16,
+    "close": 9.16,
+    "volume": 351715
+  },
+  {
+    "date": "2010-06-17",
+    "open": 9.0,
+    "high": 9.27,
+    "low": 9.0,
+    "close": 9.11,
+    "volume": 171682
+  },
+  {
+    "date": "2010-06-20",
+    "open": 9.0,
+    "high": 9.48,
+    "low": 8.94,
+    "close": 8.94,
+    "volume": 211586
+  },
+  {
+    "date": "2010-06-21",
+    "open": 8.89,
+    "high": 9.11,
+    "low": 8.73,
+    "close": 8.78,
+    "volume": 320163
+  },
+  {
+    "date": "2010-06-22",
+    "open": 8.73,
+    "high": 9.37,
+    "low": 8.67,
+    "close": 9.21,
+    "volume": 297891
+  },
+  {
+    "date": "2010-06-23",
+    "open": 9.16,
+    "high": 9.21,
+    "low": 9.0,
+    "close": 9.11,
+    "volume": 139201
+  },
+  {
+    "date": "2010-06-24",
+    "open": 8.94,
+    "high": 9.11,
+    "low": 8.84,
+    "close": 8.89,
+    "volume": 134561
+  },
+  {
+    "date": "2010-06-27",
+    "open": 8.89,
+    "high": 8.94,
+    "low": 8.62,
+    "close": 8.73,
+    "volume": 145697
+  },
+  {
+    "date": "2010-06-28",
+    "open": 8.73,
+    "high": 8.89,
+    "low": 8.46,
+    "close": 8.51,
+    "volume": 248706
+  },
+  {
+    "date": "2010-06-29",
+    "open": 8.46,
+    "high": 8.57,
+    "low": 8.35,
+    "close": 8.41,
+    "volume": 236642
+  },
+  {
+    "date": "2010-06-30",
+    "open": 8.41,
+    "high": 8.57,
+    "low": 8.08,
+    "close": 8.19,
+    "volume": 263555
+  },
+  {
+    "date": "2010-07-01",
+    "open": 8.25,
+    "high": 8.29,
+    "low": 8.09,
+    "close": 8.19,
+    "volume": 589970
+  },
+  {
+    "date": "2010-07-02",
+    "open": 7.49,
+    "high": 7.65,
+    "low": 7.46,
+    "close": 7.49,
+    "volume": 732755
+  },
+  {
+    "date": "2010-07-03",
+    "open": 6.69,
+    "high": 6.69,
+    "low": 6.47,
+    "close": 6.5,
+    "volume": 855142
+  },
+  {
+    "date": "2010-07-04",
+    "open": 7.17,
+    "high": 7.2,
+    "low": 7.07,
+    "close": 7.14,
+    "volume": 284001
+  },
+  {
+    "date": "2010-07-06",
+    "open": 7.22,
+    "high": 7.38,
+    "low": 7.1,
+    "close": 7.14,
+    "volume": 346736
+  },
+  {
+    "date": "2010-07-07",
+    "open": 7.26,
+    "high": 7.42,
+    "low": 7.14,
+    "close": 7.34,
+    "volume": 666994
+  },
+  {
+    "date": "2010-07-13",
+    "open": 6.78,
+    "high": 6.86,
+    "low": 6.58,
+    "close": 6.62,
+    "volume": 131129
+  },
+  {
+    "date": "2010-07-14",
+    "open": 6.74,
+    "high": 6.82,
+    "low": 6.54,
+    "close": 6.54,
+    "volume": 210563
+  },
+  {
+    "date": "2010-07-15",
+    "open": 6.42,
+    "high": 6.62,
+    "low": 6.38,
+    "close": 6.5,
+    "volume": 141216
+  },
+  {
+    "date": "2010-07-18",
+    "open": 6.7,
+    "high": 6.74,
+    "low": 6.62,
+    "close": 6.7,
+    "volume": 264780
+  },
+  {
+    "date": "2010-07-19",
+    "open": 6.62,
+    "high": 6.7,
+    "low": 6.54,
+    "close": 6.58,
+    "volume": 238302
+  },
+  {
+    "date": "2010-07-20",
+    "open": 6.74,
+    "high": 6.9,
+    "low": 6.58,
+    "close": 6.82,
+    "volume": 347997
+  },
+  {
+    "date": "2010-07-21",
+    "open": 6.9,
+    "high": 6.94,
+    "low": 6.7,
+    "close": 6.74,
+    "volume": 408518
+  },
+  {
+    "date": "2010-07-22",
+    "open": 6.62,
+    "high": 6.9,
+    "low": 6.58,
+    "close": 6.7,
+    "volume": 315215
+  },
+  {
+    "date": "2010-07-25",
+    "open": 6.54,
+    "high": 6.86,
+    "low": 6.54,
+    "close": 6.66,
+    "volume": 316475
+  },
+  {
+    "date": "2010-07-26",
+    "open": 6.78,
+    "high": 6.82,
+    "low": 6.62,
+    "close": 6.66,
+    "volume": 262258
+  },
+  {
+    "date": "2010-07-27",
+    "open": 6.82,
+    "high": 6.82,
+    "low": 6.62,
+    "close": 6.62,
+    "volume": 255954
+  },
+  {
+    "date": "2010-07-29",
+    "open": 6.62,
+    "high": 6.74,
+    "low": 6.62,
+    "close": 6.7,
+    "volume": 195433
+  },
+  {
+    "date": "2010-08-02",
+    "open": 9.16,
+    "high": 9.52,
+    "low": 9.16,
+    "close": 9.24,
+    "volume": 476604
+  },
+  {
+    "date": "2010-08-03",
+    "open": 7.97,
+    "high": 8.37,
+    "low": 7.97,
+    "close": 8.29,
+    "volume": 365649
+  },
+  {
+    "date": "2010-08-04",
+    "open": 8.96,
+    "high": 9.08,
+    "low": 8.88,
+    "close": 8.96,
+    "volume": 308910
+  },
+  {
+    "date": "2010-08-06",
+    "open": 8.91,
+    "high": 9.21,
+    "low": 8.91,
+    "close": 8.96,
+    "volume": 317078
+  },
+  {
+    "date": "2010-08-07",
+    "open": 9.36,
+    "high": 9.36,
+    "low": 8.47,
+    "close": 8.86,
+    "volume": 250431
+  },
+  {
+    "date": "2010-08-08",
+    "open": 9.85,
+    "high": 10.4,
+    "low": 9.75,
+    "close": 10.3,
+    "volume": 1096645
+  },
+  {
+    "date": "2010-08-09",
+    "open": 10.89,
+    "high": 11.04,
+    "low": 10.4,
+    "close": 10.5,
+    "volume": 614970
+  },
+  {
+    "date": "2010-08-16",
+    "open": 9.7,
+    "high": 9.8,
+    "low": 9.21,
+    "close": 9.36,
+    "volume": 312029
+  },
+  {
+    "date": "2010-08-17",
+    "open": 9.21,
+    "high": 9.31,
+    "low": 8.96,
+    "close": 9.16,
+    "volume": 242353
+  },
+  {
+    "date": "2010-08-18",
+    "open": 9.8,
+    "high": 9.8,
+    "low": 8.91,
+    "close": 9.36,
+    "volume": 331215
+  },
+  {
+    "date": "2010-08-19",
+    "open": 9.41,
+    "high": 9.51,
+    "low": 9.16,
+    "close": 9.21,
+    "volume": 299911
+  },
+  {
+    "date": "2010-08-22",
+    "open": 9.11,
+    "high": 9.56,
+    "low": 9.11,
+    "close": 9.26,
+    "volume": 289813
+  },
+  {
+    "date": "2010-08-23",
+    "open": 9.26,
+    "high": 9.36,
+    "low": 9.16,
+    "close": 9.21,
+    "volume": 322127
+  },
+  {
+    "date": "2010-08-24",
+    "open": 9.06,
+    "high": 9.36,
+    "low": 9.01,
+    "close": 9.06,
+    "volume": 366558
+  },
+  {
+    "date": "2010-08-25",
+    "open": 9.06,
+    "high": 9.61,
+    "low": 9.01,
+    "close": 9.26,
+    "volume": 516009
+  },
+  {
+    "date": "2010-08-26",
+    "open": 9.61,
+    "high": 9.61,
+    "low": 9.26,
+    "close": 9.31,
+    "volume": 435225
+  },
+  {
+    "date": "2010-08-29",
+    "open": 9.36,
+    "high": 9.46,
+    "low": 9.31,
+    "close": 9.36,
+    "volume": 254470
+  },
+  {
+    "date": "2010-08-30",
+    "open": 9.41,
+    "high": 9.61,
+    "low": 9.36,
+    "close": 9.41,
+    "volume": 369588
+  },
+  {
+    "date": "2010-08-31",
+    "open": 9.41,
+    "high": 9.66,
+    "low": 9.31,
+    "close": 9.46,
+    "volume": 314049
+  },
+  {
+    "date": "2010-09-02",
+    "open": 11.54,
+    "high": 11.83,
+    "low": 11.39,
+    "close": 11.64,
+    "volume": 397862
+  },
+  {
+    "date": "2010-09-03",
+    "open": 10.35,
+    "high": 10.5,
+    "low": 10.3,
+    "close": 10.35,
+    "volume": 265578
+  },
+  {
+    "date": "2010-09-05",
+    "open": 10.15,
+    "high": 10.25,
+    "low": 10.0,
+    "close": 10.0,
+    "volume": 329196
+  },
+  {
+    "date": "2010-09-06",
+    "open": 9.16,
+    "high": 9.16,
+    "low": 8.91,
+    "close": 8.96,
+    "volume": 305970
+  },
+  {
+    "date": "2010-09-08",
+    "open": 10.4,
+    "high": 10.89,
+    "low": 10.15,
+    "close": 10.4,
+    "volume": 1097655
+  },
+  {
+    "date": "2010-09-13",
+    "open": 10.4,
+    "high": 10.55,
+    "low": 9.95,
+    "close": 10.4,
+    "volume": 387764
+  },
+  {
+    "date": "2010-09-14",
+    "open": 10.25,
+    "high": 10.65,
+    "low": 10.25,
+    "close": 10.55,
+    "volume": 567509
+  },
+  {
+    "date": "2010-09-15",
+    "open": 10.65,
+    "high": 11.14,
+    "low": 10.65,
+    "close": 10.89,
+    "volume": 966381
+  },
+  {
+    "date": "2010-09-16",
+    "open": 10.79,
+    "high": 12.63,
+    "low": 10.79,
+    "close": 12.48,
+    "volume": 3727180
+  },
+  {
+    "date": "2010-09-19",
+    "open": 12.63,
+    "high": 13.62,
+    "low": 12.63,
+    "close": 13.32,
+    "volume": 1257204
+  },
+  {
+    "date": "2010-09-20",
+    "open": 13.62,
+    "high": 13.62,
+    "low": 12.08,
+    "close": 13.02,
+    "volume": 2017585
+  },
+  {
+    "date": "2010-09-21",
+    "open": 13.27,
+    "high": 13.57,
+    "low": 12.63,
+    "close": 12.97,
+    "volume": 1709595
+  },
+  {
+    "date": "2010-09-22",
+    "open": 13.32,
+    "high": 13.81,
+    "low": 12.68,
+    "close": 13.57,
+    "volume": 2361928
+  },
+  {
+    "date": "2010-09-23",
+    "open": 13.96,
+    "high": 14.46,
+    "low": 13.86,
+    "close": 14.26,
+    "volume": 1952958
+  },
+  {
+    "date": "2010-09-26",
+    "open": 14.36,
+    "high": 16.09,
+    "low": 14.36,
+    "close": 15.89,
+    "volume": 2449780
+  },
+  {
+    "date": "2010-09-27",
+    "open": 16.34,
+    "high": 17.33,
+    "low": 14.9,
+    "close": 15.4,
+    "volume": 1725752
+  },
+  {
+    "date": "2010-09-28",
+    "open": 16.34,
+    "high": 16.34,
+    "low": 13.86,
+    "close": 14.46,
+    "volume": 1404635
+  },
+  {
+    "date": "2010-09-29",
+    "open": 14.01,
+    "high": 14.56,
+    "low": 12.97,
+    "close": 14.26,
+    "volume": 1204694
+  },
+  {
+    "date": "2010-09-30",
+    "open": 14.85,
+    "high": 15.8,
+    "low": 14.71,
+    "close": 15.15,
+    "volume": 743215
+  },
+  {
+    "date": "2010-10-01",
+    "open": 15.03,
+    "high": 15.33,
+    "low": 14.98,
+    "close": 15.15,
+    "volume": 817950
+  },
+  {
+    "date": "2010-10-02",
+    "open": 14.04,
+    "high": 14.04,
+    "low": 13.51,
+    "close": 13.57,
+    "volume": 284616
+  },
+  {
+    "date": "2010-10-03",
+    "open": 12.46,
+    "high": 13.1,
+    "low": 12.28,
+    "close": 13.05,
+    "volume": 348718
+  },
+  {
+    "date": "2010-10-05",
+    "open": 11.88,
+    "high": 11.88,
+    "low": 11.47,
+    "close": 11.58,
+    "volume": 300000
+  },
+  {
+    "date": "2010-10-06",
+    "open": 10.82,
+    "high": 10.82,
+    "low": 10.35,
+    "close": 10.47,
+    "volume": 247864
+  },
+  {
+    "date": "2010-10-08",
+    "open": 12.46,
+    "high": 12.64,
+    "low": 11.29,
+    "close": 11.52,
+    "volume": 502565
+  },
+  {
+    "date": "2010-11-01",
+    "open": 15.21,
+    "high": 15.62,
+    "low": 15.15,
+    "close": 15.39,
+    "volume": 778633
+  },
+  {
+    "date": "2010-11-02",
+    "open": 13.63,
+    "high": 13.81,
+    "low": 13.4,
+    "close": 13.45,
+    "volume": 427351
+  },
+  {
+    "date": "2010-11-03",
+    "open": 13.1,
+    "high": 13.81,
+    "low": 12.99,
+    "close": 13.4,
+    "volume": 490599
+  },
+  {
+    "date": "2010-11-04",
+    "open": 13.4,
+    "high": 13.92,
+    "low": 13.28,
+    "close": 13.75,
+    "volume": 588035
+  },
+  {
+    "date": "2010-11-05",
+    "open": 13.96,
+    "high": 14.1,
+    "low": 13.75,
+    "close": 13.75,
+    "volume": 363263
+  },
+  {
+    "date": "2010-11-07",
+    "open": 11.93,
+    "high": 12.56,
+    "low": 11.93,
+    "close": 12.07,
+    "volume": 101742
+  },
+  {
+    "date": "2010-11-08",
+    "open": 13.33,
+    "high": 14.1,
+    "low": 13.33,
+    "close": 13.89,
+    "volume": 337469
+  },
+  {
+    "date": "2010-12-01",
+    "open": 18.28,
+    "high": 19.54,
+    "low": 18.28,
+    "close": 19.4,
+    "volume": 765933
+  },
+  {
+    "date": "2010-12-04",
+    "open": 19.32,
+    "high": 19.81,
+    "low": 19.32,
+    "close": 19.4,
+    "volume": 333510
+  },
+  {
+    "date": "2010-12-05",
+    "open": 19.5,
+    "high": 20.4,
+    "low": 19.3,
+    "close": 19.4,
+    "volume": 259500
+  },
+  {
+    "date": "2010-12-07",
+    "open": 17.1,
+    "high": 17.1,
+    "low": 16.1,
+    "close": 16.6,
+    "volume": 97500
+  },
+  {
+    "date": "2010-12-08",
+    "open": 19.3,
+    "high": 20.1,
+    "low": 19.2,
+    "close": 19.8,
+    "volume": 95000
+  }
+]
