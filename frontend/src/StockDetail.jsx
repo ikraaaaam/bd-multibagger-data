@@ -377,7 +377,12 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
 
   const last = bars[bars.length - 1] || fullBars[fullBars.length - 1] || { close: 0, open: 0, high: 0, low: 0, volume: 0, date: "" };
   const prev = bars[bars.length - 2] || fullBars[fullBars.length - 2] || { close: 0 };
-  const changePct = prev.close ? ((last.close - prev.close) / prev.close) * 100 : 0;
+
+  // Prefer live scraped data (LTP/YCP from prices.json) over historical last candle.
+  // This ensures the header price always matches the screener row.
+  const livePrice = (stock?.LTP != null && stock.LTP > 0) ? stock.LTP : last.close;
+  const liveYCP = (stock?.YCP != null && stock.YCP > 0) ? stock.YCP : prev.close;
+  const changePct = liveYCP ? ((livePrice - liveYCP) / liveYCP) * 100 : 0;
   const hoverBar = tvHoverBar || last;
   
   const filtered = allStocks?.filter((s) => s.ticker.includes(query.toUpperCase()) || s.name.toUpperCase().includes(query.toUpperCase())) || [];
@@ -525,7 +530,7 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
         <div className="flex items-center gap-8">
           <div className="flex items-baseline gap-3">
             <span className="text-[#9aa6a0] font-semibold">{stock?.name}</span>
-            <span className="mono text-3xl font-bold ml-2 text-white">৳{last.close.toFixed(2)}</span>
+            <span className="mono text-3xl font-bold ml-2 text-white">&#2547;{livePrice.toFixed(2)}</span>
             <span className={`mono font-bold text-lg flex items-center gap-1 ${changePct >= 0 ? "text-[#2fd888]" : "text-[#e5555a]"}`}>
               {changePct >= 0 ? <TrendingUp size={18} /> : <TrendingDown size={18} />}
               {changePct >= 0 ? "+" : ""}{changePct.toFixed(2)}%
