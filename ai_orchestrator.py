@@ -44,26 +44,27 @@ def call_llm(prompt):
     # Throttle to avoid free tier rate limits (15 RPM for Gemini Flash)
     time.sleep(4)
     
-    gemini_key = os.environ.get("GEMINI_API_KEY")
-    groq_key = os.environ.get("GROQ_API_KEY")
+    GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+    GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-    if has_gemini and gemini_key and gemini_key != "your_gemini_api_key_here":
+    if GEMINI_API_KEY:
         try:
-            genai.configure(api_key=gemini_key)
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            genai.configure(api_key=GEMINI_API_KEY)
+            model = genai.GenerativeModel("gemini-2.5-flash")
             response = model.generate_content(prompt)
             return response.text
         except Exception as e:
-            print(f"Gemini failed: {e}. Falling back to Groq...")
-
-    if has_groq and groq_key and groq_key != "your_groq_api_key_here":
+            print(f"Gemini failed: {e}.. falling back to Groq...")
+            pass
+    
+    if GROQ_API_KEY:
         try:
-            client = groq.Groq(api_key=groq_key)
-            chat_completion = client.chat.completions.create(
+            client = groq.Groq(api_key=GROQ_API_KEY)
+            response = client.chat.completions.create(
                 messages=[{"role": "user", "content": prompt}],
-                model="llama3-70b-8192",
+                model="llama-3.3-70b-versatile"
             )
-            return chat_completion.choices[0].message.content
+            return response.choices[0].message.content
         except Exception as e:
             print(f"Groq failed: {e}")
             raise Exception("Both Gemini and Groq failed or keys are missing.")
