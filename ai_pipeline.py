@@ -69,7 +69,7 @@ def generate_report(watchlist, prices, fundamentals_str):
         return
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash")
 
     results_json = []
     markdown_report = f"# SIP Portfolio AI Monthly Report - {datetime.date.today().strftime('%B %Y')}\n\n"
