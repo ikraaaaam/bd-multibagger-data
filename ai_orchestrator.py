@@ -1,4 +1,4 @@
-﻿import os
+import os
 import json
 import re
 import datetime
@@ -72,7 +72,8 @@ def call_llm(prompt):
 
 def load_data():
     with open("data/watchlist.json", "r", encoding="utf-8") as f:
-        watchlist = json.load(f)
+        data = json.load(f)
+        watchlist = data.get("combined", []) if isinstance(data, dict) else data
     
     with open("data/prices.json", "r", encoding="utf-8") as f:
         prices = json.load(f)["prices"]

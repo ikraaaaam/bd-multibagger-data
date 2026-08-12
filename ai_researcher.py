@@ -1,4 +1,4 @@
-﻿import json
+import json
 import datetime
 import os
 try:
@@ -24,7 +24,8 @@ def fetch_news(ticker):
 
 def run_research():
     with open("data/watchlist.json", "r", encoding="utf-8") as f:
-        watchlist = json.load(f)
+        data = json.load(f)
+        watchlist = data.get("combined", []) if isinstance(data, dict) else data
     
     log_file = "data/research_log.json"
     if os.path.exists(log_file):
