@@ -1,19 +1,18 @@
-name: BD Multibagger AI — Data Pipeline
+name: BD Multibagger AI � Data Pipeline
 
-# DSE trading hours: 10:00–14:30 BDT (UTC+6), Sunday–Thursday
-# BDT is UTC+6, so 10:00–14:30 BDT = 04:00–08:30 UTC
-# Cron day-of-week: 0=Sunday ... 4=Thursday (GitHub Actions cron is UTC, standard 5-field)
+# DSE trading hours: 10:00-14:30 BDT (UTC+6), Sunday-Thursday
+# BDT is UTC+6, so 10:00-14:30 BDT = 04:00-08:30 UTC
 
 on:
   schedule:
-    # Live price snapshot — every 10 minutes during market hours, Sun–Thu
-    - cron: '*/10 4-8 * * 0-4'
-    # EOD history append — once daily at 15:30 BDT (09:30 UTC), after official close settles
+    # Live price snapshot - every 5 minutes during market hours, Sun-Thu
+    - cron: '*/5 4-8 * * 0-4'
+    # EOD history append - once daily at 15:30 BDT (09:30 UTC)
     - cron: '30 9 * * 0-4'
-  workflow_dispatch: {}   # allows manual "Run workflow" trigger from the Actions tab
+  workflow_dispatch: {}
 
 permissions:
-  contents: write   # needed to commit updated JSON back to the repo
+  contents: write
 
 jobs:
   scrape:
@@ -30,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Determine mode (live vs eod) from trigger time
+      - name: Determine mode
         id: mode
         run: |
           HOUR=$(date -u +%H)
@@ -49,6 +48,6 @@ jobs:
           git config user.name "bd-multibagger-bot"
           git config user.email "actions@github.com"
           git add data/
-          git diff --staged --quiet && echo "No changes to commit" && exit 0
-          git commit -m "data: scrape update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "data: scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push

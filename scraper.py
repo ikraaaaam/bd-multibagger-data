@@ -154,12 +154,11 @@ def fetch_ds30_constituents():
 
 
 def fetch_dses_constituents():
-    # NOT independently verified — dsebd.org's DSES-specific listing page
-    # slug wasn't confirmed at build time (this sandbox can't reach dsebd.org
-    # to test). Try this first; if it 404s, check dsebd.org's own nav for the
-    # correct "DSES" link and update this URL — the scrape_index_constituents()
-    # parser itself doesn't need to change, only the URL.
-    return scrape_index_constituents("https://dsebd.org/dsesh_share.php", "DSES")
+    # The dedicated DSES page (dsesh_share.php) was removed from dsebd.org.
+    # DSES is a Shariah-screening overlay on DSEX — all DSEX members are candidates.
+    # We use the full DSEX page as a superset; the frontend applies the DSES tag
+    # based on the pre-screened list stored in fundamentals.js, not this dynamic list.
+    return scrape_index_constituents("https://dsebd.org/dseX_share.php", "DSES")
 
 
 # ---------------------------------------------------------------------------
@@ -260,8 +259,10 @@ def main():
     status = fetch_market_status()
     write_json("market-status.json", {"status": status, "checked_at": now_iso()})
 
-    if args.mode == "live" and status.lower() not in ("open", "unknown"):
-        print(f"Market status is '{status}' — skipping live scrape to save the run.")
+    # Skip scrape only if the market is definitively closed (not open and not unknown).
+    # During market hours 'unknown' can appear due to network hiccups — run anyway.
+    if args.mode == "live" and status.lower() in ("closed", "pre-open", "halt"):
+        print(f"Market status is '{status}' — skipping live scrape.")
         return
 
     print("== index constituents ==")
