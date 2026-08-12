@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+﻿import { useState } from "react";
 import {
   TrendingUp, TrendingDown, Plus, Trash2, Bot, ChevronDown, ChevronUp,
   Wallet, CalendarDays, ListChecks, Sparkles, CheckCircle2, XCircle, Pause,
@@ -133,7 +133,7 @@ function PortfolioTab({ holdings, livePrices, months, onSelectTicker }) {
   );
 }
 
-function MonthLogTab({ months, holdings, livePrices, addPurchaseToMonth, removePurchaseFromMonth, updateMonthBudget, ensureCurrentMonth, getCurrentMonthId }) {
+function MonthLogTab({ months, holdings, livePrices, addPurchaseToMonth, removePurchaseFromMonth, updateMonthBaseBudget, ensureCurrentMonth, getCurrentMonthId }) {
   const [activeMonth, setActiveMonth] = useState(months[0]?.id ?? "");
   const [form, setForm] = useState({ ticker: "", qty: "", price: "", date: new Date().toISOString().slice(0, 10) });
   const [editBudget, setEditBudget] = useState(false);
@@ -143,7 +143,7 @@ function MonthLogTab({ months, holdings, livePrices, addPurchaseToMonth, removeP
   const month = months.find(m => m.id === activeMonth);
 
   const handleNewMonth = () => {
-    ensureCurrentMonth(8000);
+    ensureCurrentMonth();
     setActiveMonth(curMonthId);
   };
 
@@ -182,31 +182,37 @@ function MonthLogTab({ months, holdings, livePrices, addPurchaseToMonth, removeP
           {/* Budget bar */}
           <div className="bg-[#121a16] border border-[#22302a] rounded-xl p-4">
             <div className="flex items-center justify-between mb-2">
-              <div className="text-sm font-bold text-[#9aa6a0]">Budget</div>
+              <div className="text-sm font-bold text-[#9aa6a0]">Effective Budget (Base + Carry Forward)</div>
               <div className="flex items-center gap-2">
                 {editBudget ? (
                   <>
                     <input type="number" value={budgetVal} onChange={e => setBudgetVal(e.target.value)}
                       className="w-28 bg-[#0a0f0c] border border-[#22302a] rounded px-2 py-1 text-sm mono outline-none focus:border-[#1fae6b] text-white" />
-                    <button onClick={() => { updateMonthBudget(month.id, parseFloat(budgetVal)); setEditBudget(false); }}
-                      className="text-xs font-bold text-[#2fd888] hover:text-white">Save</button>
+                    <button onClick={() => { updateMonthBaseBudget(month.id, parseFloat(budgetVal)); setEditBudget(false); }}
+                      className="text-xs font-bold text-[#2fd888] hover:text-white">Save Base</button>
                   </>
                 ) : (
-                  <button onClick={() => { setBudgetVal(month.budget); setEditBudget(true); }}
-                    className="text-xs font-bold text-[#9aa6a0] hover:text-white">Edit</button>
+                  <button onClick={() => { setBudgetVal(month.baseBudget); setEditBudget(true); }}
+                    className="text-xs font-bold text-[#9aa6a0] hover:text-white">Edit Base ৳{fmtK(month.baseBudget)}</button>
                 )}
               </div>
             </div>
+            
+            <div className="flex items-center gap-2 text-xs font-bold mb-3">
+              <span className="text-[#5f6b65] bg-[#1a2420] px-2 py-1 rounded">Base: ৳{fmtK(month.baseBudget)}</span>
+              <span className="text-[#5f6b65] bg-[#1a2420] px-2 py-1 rounded">Carry In: ৳{fmt(month.carryIn)}</span>
+              <span className="text-white bg-[#22302a] px-2 py-1 rounded">Effective: ৳{fmt(month.effectiveBudget)}</span>
+            </div>
+
             <div className="flex items-end gap-3">
-              <span className="text-2xl font-bold mono text-white">৳{fmt(month.totalSpent)}</span>
-              <span className="text-[#7d8a83] text-sm mb-0.5">/ ৳{fmtK(month.budget)} budget</span>
-              <span className={`ml-auto text-sm font-bold mono ${month.totalSpent <= month.budget ? "text-[#2fd888]" : "text-[#ff7176]"}`}>
-                ৳{fmt(Math.abs(month.budget - month.totalSpent))} {month.totalSpent <= month.budget ? "remaining" : "over"}
+              <span className="text-2xl font-bold mono text-white">৳{fmt(month.totalSpent)} <span className="text-sm text-[#7d8a83]">spent</span></span>
+              <span className={`ml-auto text-sm font-bold mono ${month.remaining >= 0 ? "text-[#2fd888]" : "text-[#ff7176]"}`}>
+                ৳{fmt(Math.abs(month.remaining))} {month.remaining >= 0 ? "carry forward" : "deficit"}
               </span>
             </div>
             <div className="mt-2 h-2 bg-[#1a2420] rounded-full overflow-hidden">
               <div className="h-full bg-[#1fae6b] rounded-full transition-all"
-                style={{ width: `${Math.min(100, (month.totalSpent / month.budget) * 100)}%` }} />
+                style={{ width: `${Math.min(100, (month.totalSpent / month.effectiveBudget) * 100)}%` }} />
             </div>
           </div>
 
@@ -300,7 +306,7 @@ function AIPicksTab({ months, watchlist, holdings, livePrices, allStocks, setAge
     setRunning(true);
     setProgress({ step: "Initialising agents...", pct: 0 });
     try {
-      ensureCurrentMonth(8000);
+      ensureCurrentMonth();
       const picks = await runSIPMonthlyPicks({
         watchlist, holdings, livePrices, allStocks,
         onProgress: p => setProgress(p),
@@ -496,7 +502,7 @@ export default function SIPTracker({ livePrices, allStocks, onSelectTicker }) {
     watchlist, addToWatchlist, removeFromWatchlist,
     holdings, months,
     getCurrentMonthId, ensureCurrentMonth,
-    updateMonthBudget, addPurchaseToMonth, removePurchaseFromMonth,
+    updateMonthBaseBudget, addPurchaseToMonth, removePurchaseFromMonth,
     setAgentPicks,
   } = useSIPPortfolio();
 
@@ -532,7 +538,7 @@ export default function SIPTracker({ livePrices, allStocks, onSelectTicker }) {
       {tab === "log" && (
         <MonthLogTab months={months} holdings={holdings} livePrices={livePrices}
           addPurchaseToMonth={addPurchaseToMonth} removePurchaseFromMonth={removePurchaseFromMonth}
-          updateMonthBudget={updateMonthBudget} ensureCurrentMonth={ensureCurrentMonth} getCurrentMonthId={getCurrentMonthId} />
+          updateMonthBaseBudget={updateMonthBaseBudget} ensureCurrentMonth={ensureCurrentMonth} getCurrentMonthId={getCurrentMonthId} />
       )}
       {tab === "picks" && (
         <AIPicksTab months={months} watchlist={watchlist} holdings={holdings} livePrices={livePrices}
