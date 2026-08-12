@@ -1,9 +1,9 @@
-﻿import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const KEYS = {
-  watchlist: "sip2:watchlist",
-  holdings:  "sip2:holdings",
-  months:    "sip2:months",
+  watchlist: "sip3:watchlist",
+  holdings:  "sip3:holdings",
+  months:    "sip3:months",
 };
 
 const DEFAULT_WATCHLIST = [
@@ -11,7 +11,7 @@ const DEFAULT_WATCHLIST = [
 ];
 
 const DEFAULT_HOLDINGS = {
-  LHB:        { qty: 57,  avgCost: 56.04  },
+  LHB:        { qty: 84,  avgCost: 56.57  },
   SQURPHARMA: { qty: 38,  avgCost: 222.02 },
   BSRMSTEEL:  { qty: 21,  avgCost: 90.73  },
   BXPHARMA:   { qty: 18,  avgCost: 148.90 },
