@@ -142,7 +142,6 @@ def risk_agent(ticker, quant_signals, budget):
 
 def orchestrator_agent(all_narratives, budget):
     total_budget = budget.get("monthly_budget", 8000) + budget.get("carry_forward", 0)
-    
     prompt = f"""
 You are the Orchestrator (Chief Investment Officer) of a Multi-Agent system.
 Total Budget: ৳{total_budget}
@@ -166,6 +165,36 @@ OUTPUT STRICTLY IN JSON FORMAT:
     resp_text = call_llm(prompt).replace('```json', '').replace('```', '').strip()
     return json.loads(resp_text)
 
+def consolidated_agent(ticker, compiled_news, fundamentals_str, quant_signals, budget):
+    total_budget = budget.get("monthly_budget", 8000) + budget.get("carry_forward", 0)
+    prompt = f"""
+You are a panel of 4 expert AI Agents analyzing {ticker}.
+Data available:
+- News: {compiled_news}
+- Fundamentals: {fundamentals_str}
+- Quant Signals: {json.dumps(quant_signals)}
+- Total SIP Budget: {total_budget}
+
+Provide 4 distinct 2-sentence narratives.
+OUTPUT STRICTLY IN JSON FORMAT:
+{{
+  "news_narrative": "...",
+  "research_narrative": "...",
+  "technical_narrative": "...",
+  "risk_narrative": "..."
+}}
+"""
+    try:
+        resp_text = call_llm(prompt).replace('```json', '').replace('```', '').strip()
+        return json.loads(resp_text)
+    except Exception:
+        return {
+            "news_narrative": "Agent failed to analyze news.",
+            "research_narrative": "Agent failed to analyze fundamentals.",
+            "technical_narrative": "Agent failed to analyze technicals.",
+            "risk_narrative": "Agent failed to analyze risk."
+        }
+
 def generate_report():
     watchlist, prices, logs, budget, fundamentals_str = load_data()
     total_budget = budget.get("monthly_budget", 8000) + budget.get("carry_forward", 0)
@@ -178,28 +207,41 @@ def generate_report():
     all_narratives = {}
     frontend_json = []
 
-    print("Starting Multi-Agent evaluation...")
+    print("Pre-screening stocks using Quant Engine...")
+    screened_stocks = []
     for ticker in watchlist:
+        try:
+            q = quant_signal_engine(ticker, prices)
+            screened_stocks.append({"ticker": ticker, "quant": q, "rsi": q.get("rsi14", 50)})
+        except:
+            pass
+            
+    # Sort by RSI ascending (most oversold first) and take top 10 to save LLM tokens
+    screened_stocks = sorted(screened_stocks, key=lambda x: x["rsi"])[:10]
+    top_tickers = [s["ticker"] for s in screened_stocks]
+    print(f"Top 10 candidates selected for deep AI analysis: {top_tickers}")
+
+    print("Starting Multi-Agent evaluation on top 10 candidates...")
+    for item in screened_stocks:
+        ticker = item["ticker"]
+        quant_signals = item["quant"]
         print(f"\nEvaluating {ticker}...")
         try:
-            # 1. Quant Signal Engine (Deterministic)
-            quant_signals = quant_signal_engine(ticker, prices)
+            # Prepare News
+            ticker_news = []
+            for date_str, daily_logs in logs.items():
+                if ticker in daily_logs:
+                    ticker_news.append(f"[{date_str}]: {daily_logs[ticker]}")
+            compiled_news = "\n".join(ticker_news) if ticker_news else "No recent news."
             
-            # 2. News Agent
-            print(f"  -> News Agent...")
-            news_narr = news_agent(ticker, logs)
+            # Consolidated AI Call (1 call per stock instead of 4)
+            print("  -> Running Consolidated AI Panel...")
+            agents_resp = consolidated_agent(ticker, compiled_news, fundamentals_str, quant_signals, budget)
             
-            # 3. Research Agent
-            print(f"  -> Research Agent...")
-            research_narr = research_agent(ticker, fundamentals_str)
-            
-            # 4. Technical/Quant Agent
-            print(f"  -> Technical Agent...")
-            tech_narr = technical_agent(ticker, quant_signals)
-            
-            # 5. Risk Agent
-            print(f"  -> Risk Agent...")
-            risk_narr = risk_agent(ticker, quant_signals, budget)
+            news_narr = agents_resp.get("news_narrative", "")
+            research_narr = agents_resp.get("research_narrative", "")
+            tech_narr = agents_resp.get("technical_narrative", "")
+            risk_narr = agents_resp.get("risk_narrative", "")
             
             all_narratives[ticker] = {
                 "ltp": quant_signals["ltp"],
@@ -216,7 +258,6 @@ def generate_report():
             markdown_report += f"**🛡️ Risk Agent:** {risk_narr}\n\n"
             markdown_report += "---\n\n"
             
-            # Temporarily store for frontend JSON
             frontend_json.append({
                 "ticker": ticker,
                 "ltp": quant_signals["ltp"],
