@@ -68,10 +68,10 @@ export default function App() {
     const fetchLiveData = async () => {
       try {
         const [pricesRes, watchlistRes, dsesRes, sparklinesRes] = await Promise.all([
-          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/prices.json"),
-          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/watchlist.json"),
-          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/index-dses.json"),
-          fetch("https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/sparklines.json")
+          fetch(`https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/prices.json?v=${Date.now()}`),
+          fetch(`https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/watchlist.json?v=${Date.now()}`),
+          fetch(`https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/index-dses.json?v=${Date.now()}`),
+          fetch(`https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/sparklines.json?v=${Date.now()}`)
         ]);
         
         const prices = await pricesRes.json();
