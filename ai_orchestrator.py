@@ -216,13 +216,27 @@ def generate_report():
     all_narratives = {}
     frontend_json = []
 
-    print("Pre-screening stocks using Quant Engine...")
+    try:
+        fund_dict = json.loads(fundamentals_str)
+    except Exception:
+        fund_dict = {}
+
+    print("Pre-screening stocks using Fundamental & Quant Engine...")
     screened_stocks = []
     for ticker in watchlist:
         try:
+            # Warren Buffett Fundamental Screen
+            fund_data = fund_dict.get(ticker, {})
+            tier = fund_data.get("tier", 3)
+            roe = fund_data.get("roe", 0)
+            
+            if tier > 2 or roe < 10:
+                print(f"Skipping {ticker} (Failed Fundamental Screen: Tier {tier}, ROE {roe})")
+                continue
+                
             q = quant_signal_engine(ticker, prices)
             screened_stocks.append({"ticker": ticker, "quant": q, "rsi": q.get("rsi14", 50)})
-        except:
+        except Exception:
             pass
             
     # Sort by RSI ascending (most oversold first) and take top 10 to save LLM tokens
