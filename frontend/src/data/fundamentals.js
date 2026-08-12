@@ -9,6 +9,7 @@ export const FUNDAMENTALS = {
   "MPETROLEUM": { name: "Meghna Petroleum", sector: "Energy", tier: 1, roe: 18.6, de: 0.35, epsGrowth: 40, nocfps: 70 },
   "BERGERPBL": { name: "Berger Paints BD", sector: "Consumer Staples", tier: 1, roe: 28.9, de: 0.19, epsGrowth: 65, nocfps: 84 },
   "MARICO": { name: "Marico Bangladesh", sector: "Consumer Staples", tier: 1, roe: 65.5, de: 0.12, epsGrowth: 28, nocfps: 90 },
+  "IBNSINA": { name: "The IBN SINA", sector: "Pharma", tier: 1, roe: 24.5, de: 0.15, epsGrowth: 22, nocfps: 55 },
   "ISLAMIBANK": { name: "Islami Bank BD", sector: "Banking", tier: 1, roe: 11.2, de: 0.88, epsGrowth: 35, nocfps: 40 },
   "ACMELAB": { name: "The ACME Laboratories", sector: "Pharma", tier: 1, roe: 14.5, de: 0.45, epsGrowth: 30, nocfps: 45 },
   "BEACONPHAR": { name: "Beacon Pharmaceuticals", sector: "Pharma", tier: 1, roe: 16.2, de: 0.50, epsGrowth: 45, nocfps: 38 },

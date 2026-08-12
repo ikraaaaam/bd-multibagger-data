@@ -1,4 +1,4 @@
-﻿import { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import {
   TrendingUp, TrendingDown, Plus, Trash2, Bot, ChevronDown, ChevronUp,
   Wallet, CalendarDays, ListChecks, Sparkles, CheckCircle2, XCircle, Pause,
@@ -467,7 +467,7 @@ function WatchlistTab({ watchlist, addToWatchlist, removeFromWatchlist, livePric
                 <td className="px-4 py-3 font-bold text-white">{r.ticker}</td>
                 <td className="px-4 py-3 text-right mono text-white">{r.ltp ? `৳${fmt(r.ltp)}` : "—"}</td>
                 <td className={`px-4 py-3 text-right mono font-bold ${r.changePct >= 0 ? "text-[#2fd888]" : "text-[#ff7176]"}`}>
-                  {r.changePct ? `${sign(r.changePct)}${r.changePct.toFixed(2)}%` : "—"}
+                  {r.ltp ? `${sign(r.changePct)}${r.changePct.toFixed(2)}%` : "—"}
                 </td>
                 <td className="px-4 py-3 text-right">
                   {r.score != null ? (

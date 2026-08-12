@@ -42,6 +42,7 @@ HISTORY_DIR = DATA_DIR / "history"
 WATCHLIST_TIER1_LARGECAP = [
     "BERGERPBL",   # Berger Paints BD
     "MARICO",      # Marico Bangladesh
+    "IBNSINA",     # IBN SINA
 ]
 
 WATCHLIST_TIER2_MIDCAP = [
