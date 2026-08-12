@@ -108,12 +108,12 @@ def load_data():
     obj_str = match.group(1) if match else "No fundamentals found."
 
     shariah_tickers = set()
-    try:
+    if os.path.exists("Tradeable Stock List at IBSL.md"):
         with open("Tradeable Stock List at IBSL.md", "r", encoding="utf-8") as f:
             shariah_text = f.read()
             shariah_tickers = set(re.findall(r'\|(?:[0-9]+)\|([A-Z0-9]+)\(', shariah_text))
-    except Exception:
-        pass
+    else:
+        print("WARNING: 'Tradeable Stock List at IBSL.md' not found. Ensure it is committed to git! Skipping Shariah filter.")
 
     return watchlist, prices, logs, budget, obj_str, shariah_tickers
 
@@ -293,9 +293,13 @@ def generate_report():
                     ticker_news.append(f"[{date_str}]: {daily_logs[ticker]}")
             compiled_news = "\n".join(ticker_news) if ticker_news else "No recent news."
             
+            # Extract only this ticker's fundamental block to save LLM tokens
+            f_match = re.search(rf'("{ticker}":\s*{{[^}}]*}})', fundamentals_str)
+            single_fund_str = f"{{\n  {f_match.group(1)}\n}}" if f_match else "{}"
+
             # Consolidated AI Call (1 call per stock instead of 4)
             print("  -> Running Consolidated AI Panel...")
-            agents_resp = consolidated_agent(ticker, compiled_news, fundamentals_str, quant_signals, budget)
+            agents_resp = consolidated_agent(ticker, compiled_news, single_fund_str, quant_signals, budget)
             
             news_narr = agents_resp.get("news_narrative", "")
             research_narr = agents_resp.get("research_narrative", "")
