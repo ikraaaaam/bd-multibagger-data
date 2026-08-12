@@ -209,6 +209,8 @@ export default function App() {
         ticker,
         tier,
         price: live.LTP || 0,
+        LTP: live.LTP || 0,
+        YCP: live.YCP || 0,
         changePct: changePct,
         dsex: true,
         dses,
@@ -372,7 +374,11 @@ export default function App() {
         </div>
 
         {globalNavTab === "portfolio" && <Portfolio livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []} onSelectTicker={setSelectedTicker} />}
-        {globalNavTab === "sip" && <SIPTracker livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []} />}
+        {globalNavTab === "sip" && <SIPTracker
+          livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []}
+          allStocks={rows}
+          onSelectTicker={(t) => { setSelectedTicker(t); setGlobalNavTab("screener"); }}
+        />}
         {globalNavTab === "compare" && (
           <CompareView 
             compareList={compareList} 
