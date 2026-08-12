@@ -140,6 +140,14 @@ def risk_agent(ticker, quant_signals, budget):
     prompt = f"You are a Risk Agent. {ticker} LTP is {quant_signals['ltp']}. Our total SIP budget is {budget['monthly_budget'] + budget['carry_forward']}. Provide a 2-sentence volatility-adjusted position sizing context. Should we buy in bulk, accumulate slowly, or avoid due to volatility?"
     return call_llm(prompt).strip()
 
+import re
+
+def extract_json(text):
+    match = re.search(r'\{.*\}', text, re.DOTALL)
+    if match:
+        return json.loads(match.group(0))
+    return json.loads(text)
+
 def orchestrator_agent(all_narratives, budget):
     total_budget = budget.get("monthly_budget", 8000) + budget.get("carry_forward", 0)
     prompt = f"""
@@ -162,8 +170,8 @@ OUTPUT STRICTLY IN JSON FORMAT:
   "summary": "Short 2 sentence reasoning for the entire portfolio allocation."
 }}
 """
-    resp_text = call_llm(prompt).replace('```json', '').replace('```', '').strip()
-    return json.loads(resp_text)
+    resp_text = call_llm(prompt).strip()
+    return extract_json(resp_text)
 
 def consolidated_agent(ticker, compiled_news, fundamentals_str, quant_signals, budget):
     total_budget = budget.get("monthly_budget", 8000) + budget.get("carry_forward", 0)
@@ -185,9 +193,10 @@ OUTPUT STRICTLY IN JSON FORMAT:
 }}
 """
     try:
-        resp_text = call_llm(prompt).replace('```json', '').replace('```', '').strip()
-        return json.loads(resp_text)
-    except Exception:
+        resp_text = call_llm(prompt).strip()
+        return extract_json(resp_text)
+    except Exception as e:
+        print(f"Error parsing JSON from consolidated_agent for {ticker}: {e}")
         return {
             "news_narrative": "Agent failed to analyze news.",
             "research_narrative": "Agent failed to analyze fundamentals.",
