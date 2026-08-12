@@ -51,7 +51,16 @@ def call_llm(prompt):
         try:
             genai.configure(api_key=GEMINI_API_KEY)
             model = genai.GenerativeModel("gemini-1.5-flash")
-            response = model.generate_content(prompt)
+            response = model.generate_content(
+                prompt,
+                generation_config={"response_mime_type": "application/json"},
+                safety_settings={
+                    'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                    'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                    'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
+                    'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE'
+                }
+            )
             return response.text
         except Exception as e:
             print(f"Gemini failed: {e}.. falling back to Groq...")
@@ -62,7 +71,8 @@ def call_llm(prompt):
             client = groq.Groq(api_key=GROQ_API_KEY)
             response = client.chat.completions.create(
                 messages=[{"role": "user", "content": prompt}],
-                model="llama-3.3-70b-versatile"
+                model="llama-3.3-70b-versatile",
+                response_format={"type": "json_object"}
             )
             return response.choices[0].message.content
         except Exception as e:
