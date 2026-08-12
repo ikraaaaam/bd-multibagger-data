@@ -1,4 +1,4 @@
-﻿import os
+import os
 import json
 import re
 import datetime
@@ -15,6 +15,12 @@ try:
     has_gemini = True
 except ImportError:
     has_gemini = False
+
+try:
+    import groq
+    has_groq = True
+except ImportError:
+    has_groq = False
 
 from dotenv import load_dotenv
 
@@ -58,18 +64,34 @@ def load_data():
 
     return watchlist, prices, obj_str
 
+def call_llm(prompt):
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    groq_key = os.environ.get("GROQ_API_KEY")
+
+    if has_gemini and gemini_key and gemini_key != "your_gemini_api_key_here":
+        try:
+            genai.configure(api_key=gemini_key)
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as e:
+            print(f"Gemini failed: {e}. Falling back to Groq...")
+
+    if has_groq and groq_key and groq_key != "your_groq_api_key_here":
+        try:
+            client = groq.Groq(api_key=groq_key)
+            chat_completion = client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model="llama3-70b-8192",
+            )
+            return chat_completion.choices[0].message.content
+        except Exception as e:
+            print(f"Groq failed: {e}")
+            raise Exception("Both Gemini and Groq failed or keys are missing.")
+
+    raise Exception("No valid API keys found for Gemini or Groq.")
+
 def generate_report(watchlist, prices, fundamentals_str):
-    if not has_gemini:
-        print("google-generativeai not installed. Cannot run LLM.")
-        return
-
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key or api_key == "your_gemini_api_key_here":
-        print("GEMINI_API_KEY not found in environment or .env file.")
-        return
-
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
 
     results_json = []
     markdown_report = f"# SIP Portfolio AI Monthly Report - {datetime.date.today().strftime('%B %Y')}\n\n"
@@ -116,9 +138,9 @@ Respond EXACTLY in this JSON format, no extra markdown around it:
 """
         print(f"Running LLM analysis for {ticker}...")
         try:
-            response = model.generate_content(prompt)
+            response_text = call_llm(prompt)
             # clean up markdown if any
-            resp_text = response.text.replace('```json', '').replace('```', '').strip()
+            resp_text = response_text.replace('```json', '').replace('```', '').strip()
             data = json.loads(resp_text)
             
             # Save to JSON array for frontend

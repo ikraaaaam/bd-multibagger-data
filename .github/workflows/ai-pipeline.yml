@@ -1,4 +1,4 @@
-﻿name: BD Multibagger AI - AI Orchestrator
+name: BD Multibagger AI - AI Orchestrator
 
 # Run twice a week: Wednesday and Saturday at 20:00 BDT (14:00 UTC)
 # This gives the agent time to digest weekly news and market closes.
@@ -29,6 +29,7 @@ jobs:
       - name: Run AI Pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python ai_pipeline.py
 
       - name: Commit and push AI picks
