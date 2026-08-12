@@ -167,7 +167,12 @@ Total Budget: ৳{total_budget}
 Here are the distinct agent narratives for the watchlist:
 {json.dumps(all_narratives, indent=2)}
 
-Decide EXACTLY how many shares of which stocks to buy this month to maximize long-term compounding, keeping total cost under ৳{total_budget}. Unspent money becomes carry forward.
+Decide EXACTLY how many shares of which stocks to buy this month to maximize long-term compounding. 
+CRITICAL RULES:
+1. DIVERSIFICATION: You MUST spread the budget across at least 4 to 6 different high-conviction stocks. 
+2. MAX ALLOCATION: Do NOT allocate more than 30% of the total budget to any single stock.
+3. Keep total cost under ৳{total_budget}. Unspent money becomes carry forward.
+
 Provide a final, reasoned JSON output.
 
 OUTPUT STRICTLY IN JSON FORMAT:
