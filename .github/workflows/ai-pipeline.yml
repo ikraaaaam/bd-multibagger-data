@@ -1,0 +1,41 @@
+﻿name: BD Multibagger AI - AI Orchestrator
+
+# Run twice a week: Wednesday and Saturday at 20:00 BDT (14:00 UTC)
+# This gives the agent time to digest weekly news and market closes.
+
+on:
+  schedule:
+    - cron: '0 14 * * 3,6'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  ai-orchestrator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run AI Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python ai_pipeline.py
+
+      - name: Commit and push AI picks
+        run: |
+          git config user.name "bd-multibagger-bot"
+          git config user.email "actions@github.com"
+          git add data/latest_picks.json data/latest_picks.md
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "docs(ai): weekly orchestrator run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
