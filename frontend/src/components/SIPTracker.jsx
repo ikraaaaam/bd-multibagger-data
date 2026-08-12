@@ -138,8 +138,14 @@ export default function SIPTracker({ livePrices }) {
               <input 
                 placeholder="Ticker (e.g. BATBC)" 
                 value={newTicker} onChange={e => setNewTicker(e.target.value)}
+                list="sip-tickers"
                 className="flex-1 bg-[#0a0f0c] border border-[#22302a] rounded px-3 outline-none font-bold font-['IBM_Plex_Mono'] uppercase" 
               />
+              <datalist id="sip-tickers">
+                {livePrices?.map((s) => (
+                  <option key={s.ticker} value={s.ticker} />
+                ))}
+              </datalist>
               <input 
                 type="number" placeholder="%" 
                 value={newPct} onChange={e => setNewPct(e.target.value)}
