@@ -1,0 +1,36 @@
+﻿name: BD Multibagger AI - Researcher
+
+on:
+  schedule:
+    - cron: '0 14 * * 3,6' # Wed and Sat
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  ai-researcher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Researcher
+        run: python ai_researcher.py
+
+      - name: Commit and push research
+        run: |
+          git config user.name "bd-multibagger-bot"
+          git config user.email "actions@github.com"
+          git add data/research_log.json
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "docs(ai): weekly research log appended"
+          git push
