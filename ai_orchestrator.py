@@ -216,19 +216,18 @@ def generate_report():
     all_narratives = {}
     frontend_json = []
 
-    try:
-        fund_dict = json.loads(fundamentals_str)
-    except Exception:
-        fund_dict = {}
-
     print("Pre-screening stocks using Fundamental & Quant Engine...")
     screened_stocks = []
     for ticker in watchlist:
         try:
-            # Warren Buffett Fundamental Screen
-            fund_data = fund_dict.get(ticker, {})
-            tier = fund_data.get("tier", 3)
-            roe = fund_data.get("roe", 0)
+            # Warren Buffett Fundamental Screen (Parse JS string with regex)
+            match = re.search(rf'"{ticker}":\s*{{[^}}]*tier:\s*(\d+)[^}}]*roe:\s*([\d\.-]+)', fundamentals_str)
+            if match:
+                tier = int(match.group(1))
+                roe = float(match.group(2))
+            else:
+                tier = 3
+                roe = 0
             
             if tier > 2 or roe < 10:
                 print(f"Skipping {ticker} (Failed Fundamental Screen: Tier {tier}, ROE {roe})")
