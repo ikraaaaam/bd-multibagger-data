@@ -331,11 +331,19 @@ function AIPicksTab({ months, watchlist, holdings, livePrices, allStocks, setAge
             Technical · Research · Risk agents collaborate → Orchestrator decides
           </p>
         </div>
-        <button onClick={handleRun} disabled={running}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${running ? "bg-[#1a2420] text-[#5f6b65] cursor-not-allowed" : "bg-[#c9a24b] text-black hover:bg-[#d4b264]"}`}>
-          {running ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
-          {running ? "Running..." : hasPicks ? "Re-run This Month" : "Run for This Month"}
-        </button>
+        <div className="flex items-center gap-2">
+          {hasPicks && (
+            <a href="https://github.com/ikraaaaam/bd-multibagger-data/blob/main/data/latest_picks.md" target="_blank" rel="noreferrer"
+               className="flex items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-sm bg-[#1a2420] text-[#9aa6a0] hover:text-white border border-[#22302a] transition-all">
+              View Detailed Report
+            </a>
+          )}
+          <button onClick={handleRun} disabled={running}
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${running ? "bg-[#1a2420] text-[#5f6b65] cursor-not-allowed" : "bg-[#c9a24b] text-black hover:bg-[#d4b264]"}`}>
+            {running ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+            {running ? "Running..." : hasPicks ? "Re-run This Month" : "Run for This Month"}
+          </button>
+        </div>
       </div>
 
       {/* Progress bar */}
