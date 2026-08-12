@@ -31,7 +31,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "ALIF",
@@ -65,7 +69,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "ALIF has the lowest price per share, allowing for the purchase of the largest number of shares, which can lead to higher potential long-term compounding.",
+    "totalScore": 10
   },
   {
     "ticker": "BATBC",
@@ -99,7 +107,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BEACONPHAR",
@@ -133,7 +145,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BERGERPBL",
@@ -167,7 +183,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BRACBANK",
@@ -201,7 +221,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BSC",
@@ -235,7 +259,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BSCPLC",
@@ -269,7 +297,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BSRMLTD",
@@ -303,7 +335,11 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BSRMSTEEL",
@@ -337,6 +373,10 @@
         ],
         "points": 0
       }
-    ]
+    ],
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   }
 ]
