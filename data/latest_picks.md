@@ -1,12 +1,17 @@
 # 🎯 Orchestrator Final Allocation
 
-> This portfolio allocation prioritizes a single stock, BATBC, due to its high ltp and potential for long-term growth, while staying within the budget of ৳8161.2. The remaining amount will be carried forward for future investments.
+> The allocation aims to diversify the portfolio across 6 high-conviction stocks, maximizing long-term compounding while keeping the total cost under the budget. The chosen stocks offer a balance of stability, growth, and moderate risk.
 
 ### Purchases:
-- **BATBC**: 32 shares @ ৳250.0 = ৳8000.0 *(Reason: BATBC has a high ltp, indicating potential for long-term growth, and its high price allows for a significant allocation within the budget.)*
+- **BERGERPBL**: 2 shares @ ৳1495 = ৳2989.99 *(Reason: High conviction stock with strong fundamentals and moderate price.)*
+- **BATBC**: 6 shares @ ৳250 = ৳1500 *(Reason: Stable company with strong brand value and relatively low price.)*
+- **BSCPLC**: 9 shares @ ৳157.6 = ৳1418.4 *(Reason: Growing industry with decent returns and moderate risk.)*
+- **BXPHARMA**: 10 shares @ ৳145.1 = ৳1451 *(Reason: Pharmaceutical sector has potential for long-term growth.)*
+- **BEACONPHAR**: 13 shares @ ৳108.2 = ৳1406.6 *(Reason: Decent returns with relatively low risk and stable industry.)*
+- **BSRMLTD**: 14 shares @ ৳99.8 = ৳1395.2 *(Reason: Moderate risk with potential for long-term growth.)*
 
-**Total Spent:** ৳8000.0
-**New Carry Forward:** ৳161.2
+**Total Spent:** ৳8149.99
+**New Carry Forward:** ৳11.21
 
 ---
 

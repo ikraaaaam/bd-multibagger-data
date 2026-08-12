@@ -72,7 +72,7 @@
     ],
     "pick": true,
     "recommendation": "PICK",
-    "orchestratorReason": "BATBC has a high ltp, indicating potential for long-term growth, and its high price allows for a significant allocation within the budget.",
+    "orchestratorReason": "Stable company with strong brand value and relatively low price.",
     "totalScore": 10
   },
   {
@@ -108,10 +108,10 @@
         "points": 0
       }
     ],
-    "pick": false,
-    "recommendation": "SKIP",
-    "orchestratorReason": "Not selected by Orchestrator.",
-    "totalScore": 0
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "Decent returns with relatively low risk and stable industry.",
+    "totalScore": 10
   },
   {
     "ticker": "BERGERPBL",
@@ -146,10 +146,10 @@
         "points": 0
       }
     ],
-    "pick": false,
-    "recommendation": "SKIP",
-    "orchestratorReason": "Not selected by Orchestrator.",
-    "totalScore": 0
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "High conviction stock with strong fundamentals and moderate price.",
+    "totalScore": 10
   },
   {
     "ticker": "BRACBANK",
@@ -260,10 +260,10 @@
         "points": 0
       }
     ],
-    "pick": false,
-    "recommendation": "SKIP",
-    "orchestratorReason": "Not selected by Orchestrator.",
-    "totalScore": 0
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "Growing industry with decent returns and moderate risk.",
+    "totalScore": 10
   },
   {
     "ticker": "BSRMLTD",
@@ -298,10 +298,10 @@
         "points": 0
       }
     ],
-    "pick": false,
-    "recommendation": "SKIP",
-    "orchestratorReason": "Not selected by Orchestrator.",
-    "totalScore": 0
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "Moderate risk with potential for long-term growth.",
+    "totalScore": 10
   },
   {
     "ticker": "BSRMSTEEL",
@@ -374,9 +374,9 @@
         "points": 0
       }
     ],
-    "pick": false,
-    "recommendation": "SKIP",
-    "orchestratorReason": "Not selected by Orchestrator.",
-    "totalScore": 0
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "Pharmaceutical sector has potential for long-term growth.",
+    "totalScore": 10
   }
 ]
