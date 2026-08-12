@@ -107,7 +107,15 @@ def load_data():
     match = re.search(r'export const FUNDAMENTALS = (\{.*?\});', f_text, re.DOTALL)
     obj_str = match.group(1) if match else "No fundamentals found."
 
-    return watchlist, prices, logs, budget, obj_str
+    shariah_tickers = set()
+    try:
+        with open("Tradeable Stock List at IBSL.md", "r", encoding="utf-8") as f:
+            shariah_text = f.read()
+            shariah_tickers = set(re.findall(r'\|(?:[0-9]+)\|([A-Z0-9]+)\(', shariah_text))
+    except Exception:
+        pass
+
+    return watchlist, prices, logs, budget, obj_str, shariah_tickers
 
 def quant_signal_engine(ticker, prices):
     """Pure deterministic code, no LLM. Outputs math signals."""
@@ -220,7 +228,7 @@ OUTPUT STRICTLY IN JSON FORMAT:
         }
 
 def generate_report():
-    watchlist, prices, logs, budget, fundamentals_str = load_data()
+    watchlist, prices, logs, budget, fundamentals_str, shariah_tickers = load_data()
     total_budget = budget.get("monthly_budget", 8000) + budget.get("carry_forward", 0)
     
     markdown_report = f"# SIP Portfolio AI Monthly Report - {datetime.date.today().strftime('%B %Y')}\n\n"
@@ -231,10 +239,24 @@ def generate_report():
     all_narratives = {}
     frontend_json = []
 
-    print("Pre-screening stocks using Fundamental & Quant Engine...")
+    print("Pre-screening stocks using Fundamental, Shariah & Quant Engine...")
     screened_stocks = []
     for ticker in watchlist:
         try:
+            # Shariah Compliance Filter
+            if shariah_tickers:
+                is_shariah = False
+                if ticker in shariah_tickers:
+                    is_shariah = True
+                elif f"{ticker}L" in shariah_tickers:
+                    is_shariah = True
+                elif ticker.replace("PLC", "") in shariah_tickers:
+                    is_shariah = True
+                    
+                if not is_shariah:
+                    print(f"Skipping {ticker} (Not Shariah Compliant)")
+                    continue
+
             # Warren Buffett Fundamental Screen (Parse JS string with regex)
             match = re.search(rf'"{ticker}":\s*{{[^}}]*tier:\s*(\d+)[^}}]*roe:\s*([\d\.-]+)', fundamentals_str)
             if match:
