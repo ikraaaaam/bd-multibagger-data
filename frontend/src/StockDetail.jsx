@@ -2,8 +2,13 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import { 
   Search, ChevronDown, Plus, Shield, Activity, BarChart3, TrendingUp, TrendingDown, 
   AlertCircle, Crosshair, PenLine, Ruler, MousePointer2, EyeOff, Trash2, Settings, 
-  FlaskConical, ArrowLeft, Maximize2, LayoutGrid, Clock, ListFilter
+  FlaskConical, ArrowLeft, Maximize2, LayoutGrid, Clock, ListFilter, Scale
 } from "lucide-react";
+import TVChart from "./components/TVChart";
+import { ErrorBoundary } from "./ErrorBoundary";
+import { usePortfolioState } from "./utils/usePortfolioState";
+import { usePaperTrading } from "./utils/usePaperTrading";
+import AIPanel from "./components/AIPanel";
 
 function useFonts() {
   useEffect(() => {
@@ -22,7 +27,9 @@ const DAMANI_SECTORS = new Set(["Pharma", "Engineering", "Consumer Staples", "St
 // ---------------------------------------------------------------------------
 async function fetchRealHistory(ticker) {
   try {
-    const res = await fetch(`https://raw.githubusercontent.com/ikraaaaam/bd-multibagger-data/main/data/history/${ticker}.json`);
+    // Use /@fs/ to serve directly from source data dir - no copy step needed
+    const res = await fetch(`/@fs/D:/Business/Auto Trading/multibagger BD/data/history/${ticker}.json?t=${Date.now()}`);
+
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     return data;
@@ -238,181 +245,72 @@ function runBacktest(bars, ind) {
 }
 
 // ---------------------------------------------------------------------------
-// CHART COMPONENTS
-// ---------------------------------------------------------------------------
-function useChartGeometry(bars, width) {
-  return useMemo(() => {
-    const n = bars.length;
-    const padL = 52, padR = 12;
-    const step = (width - padL - padR) / (n - 1 || 1);
-    const x = (i) => padL + i * step;
-    return { n, padL, padR, step, x };
-  }, [bars, width]);
-}
-
-function PricePane({ bars, ind, showMA, showBB, width, height, hoverIdx, setHoverIdx }) {
-  const geo = useChartGeometry(bars, width);
-  const highs = bars.map((b) => b.high), lows = bars.map((b) => b.low);
-  const vals = [...highs, ...lows, ...ind.bbUpper.filter((v) => v != null), ...ind.bbLower.filter((v) => v != null)];
-  const max = Math.max(...vals), min = Math.min(...vals);
-  const padTop = 15, padBot = 10;
-  const y = (v) => padTop + (1 - (v - min) / (max - min || 1)) * (height - padTop - padBot);
-
-  const linePath = (series) => {
-    let d = "";
-    series.forEach((v, i) => {
-      if (v == null) return;
-      d += `${d ? "L" : "M"}${geo.x(i).toFixed(1)},${y(v).toFixed(1)} `;
-    });
-    return d;
-  };
-
-  const onMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const idx = Math.round((mx - geo.padL) / geo.step);
-    setHoverIdx(Math.max(0, Math.min(bars.length - 1, idx)));
-  };
-
-  const candleW = Math.max(1.5, Math.min(9, geo.step * 0.7));
-
-  return (
-    <svg width={width} height={height} onMouseMove={onMove} onMouseLeave={() => setHoverIdx(null)} className="block">
-      {[0, 0.25, 0.5, 0.75, 1].map((f) => (
-        <line key={f} x1={geo.padL} x2={width - geo.padR} y1={padTop + f * (height - padTop - padBot)} y2={padTop + f * (height - padTop - padBot)} stroke="#1a2420" strokeWidth="1" />
-      ))}
-      {[0, 0.25, 0.5, 0.75, 1].map((f) => (
-        <text key={f} x={6} y={padTop + f * (height - padTop - padBot) + 4} fontSize="11" fill="#5f6b65" fontFamily="'IBM Plex Mono',monospace">
-          {(max - f * (max - min)).toFixed(1)}
-        </text>
-      ))}
-
-      {showBB && ind.bbUpper.some((v) => v != null) && (
-        <>
-          <path d={linePath(ind.bbUpper)} fill="none" stroke="#c9a24b" strokeWidth="1" strokeDasharray="2,2" opacity="0.6" />
-          <path d={linePath(ind.bbLower)} fill="none" stroke="#c9a24b" strokeWidth="1" strokeDasharray="2,2" opacity="0.6" />
-        </>
-      )}
-      {showMA && (
-        <>
-          <path d={linePath(ind.sma20)} fill="none" stroke="#2fd888" strokeWidth="1.5" />
-          <path d={linePath(ind.sma50)} fill="none" stroke="#e08a3e" strokeWidth="1.5" />
-        </>
-      )}
-
-      {bars.map((b, i) => {
-        const up = b.close >= b.open;
-        const color = up ? "#2fd888" : "#e5555a";
-        return (
-          <g key={i}>
-            <line x1={geo.x(i)} x2={geo.x(i)} y1={y(b.high)} y2={y(b.low)} stroke={color} strokeWidth="1" />
-            <rect x={geo.x(i) - candleW / 2} y={y(Math.max(b.open, b.close))} width={candleW} height={Math.max(1, Math.abs(y(b.open) - y(b.close)))} fill={color} />
-          </g>
-        );
-      })}
-
-      {hoverIdx != null && (
-        <line x1={geo.x(hoverIdx)} x2={geo.x(hoverIdx)} y1={0} y2={height} stroke="#7d8a83" strokeWidth="1" strokeDasharray="3,3" opacity="0.7" />
-      )}
-    </svg>
-  );
-}
-
-function RSIPane({ bars, ind, width, height, hoverIdx, setHoverIdx }) {
-  const geo = useChartGeometry(bars, width);
-  const padTop = 14, padBot = 4;
-  const y = (v) => padTop + (1 - v / 100) * (height - padTop - padBot);
-  const path = () => {
-    let d = "";
-    ind.rsi.forEach((v, i) => {
-      if (v == null) return;
-      d += `${d ? "L" : "M"}${geo.x(i).toFixed(1)},${y(v).toFixed(1)} `;
-    });
-    return d;
-  };
-  const onMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const idx = Math.round((mx - geo.padL) / geo.step);
-    setHoverIdx(Math.max(0, Math.min(bars.length - 1, idx)));
-  };
-  return (
-    <svg width={width} height={height} onMouseMove={onMove} onMouseLeave={() => setHoverIdx(null)} className="block">
-      <line x1={geo.padL} x2={width - geo.padR} y1={y(70)} y2={y(70)} stroke="#22302a" strokeDasharray="2,2" />
-      <line x1={geo.padL} x2={width - geo.padR} y1={y(30)} y2={y(30)} stroke="#22302a" strokeDasharray="2,2" />
-      <text x={6} y={y(70) + 4} fontSize="11" fill="#5f6b65" fontFamily="'IBM Plex Mono',monospace">70</text>
-      <text x={6} y={y(30) + 4} fontSize="11" fill="#5f6b65" fontFamily="'IBM Plex Mono',monospace">30</text>
-      <path d={path()} fill="none" stroke="#c9a24b" strokeWidth="1.3" />
-      {hoverIdx != null && <line x1={geo.x(hoverIdx)} x2={geo.x(hoverIdx)} y1={0} y2={height} stroke="#7d8a83" strokeWidth="1" strokeDasharray="3,3" opacity="0.7" />}
-    </svg>
-  );
-}
-
-function MACDPane({ bars, ind, width, height, hoverIdx, setHoverIdx }) {
-  const geo = useChartGeometry(bars, width);
-  const vals = [...ind.macdLine, ...ind.signalLine, ...ind.histogram].filter((v) => v != null);
-  const max = Math.max(...vals, 0.001), min = Math.min(...vals, -0.001);
-  const padTop = 14, padBot = 4;
-  const y = (v) => padTop + (1 - (v - min) / (max - min)) * (height - padTop - padBot);
-  const path = (series) => {
-    let d = "";
-    series.forEach((v, i) => {
-      if (v == null) return;
-      d += `${d ? "L" : "M"}${geo.x(i).toFixed(1)},${y(v).toFixed(1)} `;
-    });
-    return d;
-  };
-  const onMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const idx = Math.round((mx - geo.padL) / geo.step);
-    setHoverIdx(Math.max(0, Math.min(bars.length - 1, idx)));
-  };
-  return (
-    <svg width={width} height={height} onMouseMove={onMove} onMouseLeave={() => setHoverIdx(null)} className="block">
-      <line x1={geo.padL} x2={width - geo.padR} y1={y(0)} y2={y(0)} stroke="#22302a" />
-      {ind.histogram.map((v, i) => v == null ? null : (
-        <rect key={i} x={geo.x(i) - 1.5} y={Math.min(y(0), y(v))} width={3} height={Math.max(1, Math.abs(y(0) - y(v)))} fill={v >= 0 ? "#1fae6b55" : "#e5555a55"} />
-      ))}
-      <path d={path(ind.macdLine)} fill="none" stroke="#2fd888" strokeWidth="1.2" />
-      <path d={path(ind.signalLine)} fill="none" stroke="#e08a3e" strokeWidth="1.2" />
-      {hoverIdx != null && <line x1={geo.x(hoverIdx)} x2={geo.x(hoverIdx)} y1={0} y2={height} stroke="#7d8a83" strokeWidth="1" strokeDasharray="3,3" opacity="0.7" />}
-    </svg>
-  );
-}
-
-function VolumePane({ bars, ind, width, height, hoverIdx, setHoverIdx }) {
-  const geo = useChartGeometry(bars, width);
-  const max = Math.max(...bars.map((b) => b.volume));
-  const padTop = 14, padBot = 4;
-  const y = (v) => padTop + (1 - v / max) * (height - padTop - padBot);
-  const barW = Math.max(1.5, Math.min(9, geo.step * 0.7));
-  const onMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const idx = Math.round((mx - geo.padL) / geo.step);
-    setHoverIdx(Math.max(0, Math.min(bars.length - 1, idx)));
-  };
-  return (
-    <svg width={width} height={height} onMouseMove={onMove} onMouseLeave={() => setHoverIdx(null)} className="block">
-      {bars.map((b, i) => {
-        const up = i === 0 || b.close >= bars[i - 1].close;
-        return <rect key={i} x={geo.x(i) - barW / 2} y={y(b.volume)} width={barW} height={height - padBot - y(b.volume)} fill={up ? "#1fae6b66" : "#e5555a66"} />;
-      })}
-      {hoverIdx != null && <line x1={geo.x(hoverIdx)} x2={geo.x(hoverIdx)} y1={0} y2={height} stroke="#7d8a83" strokeWidth="1" strokeDasharray="3,3" opacity="0.7" />}
-    </svg>
-  );
-}
-
-// ---------------------------------------------------------------------------
 // MAIN LAYOUT
 // ---------------------------------------------------------------------------
 export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }) {
   useFonts();
   const ticker = stock?.ticker || "SQURPHARMA";
+  const { addManualTrade, sipConfig, updateSipConfig, compareList, updateCompareList } = usePortfolioState();
+  const { processMarketOrder, processLimitOrder } = usePaperTrading();
   const [query, setQuery] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [indicatorsOpen, setIndicatorsOpen] = useState(false);
+  const [showOrderTicket, setShowOrderTicket] = useState(false);
+  const [tradeMode, setTradeMode] = useState("PAPER");
+  const [orderType, setOrderType] = useState("MARKET");
+  const [orderSide, setOrderSide] = useState("BUY");
+  const [orderQty, setOrderQty] = useState("");
+  const [orderPrice, setOrderPrice] = useState(stock?.price || "");
+  const [orderNote, setOrderNote] = useState("");
+  const handleAddToPortfolio = () => {
+    const qtyStr = window.prompt(`How many shares of ${ticker} do you want to add?`);
+    if (!qtyStr) return;
+    const qty = parseInt(qtyStr, 10);
+    if (isNaN(qty) || qty <= 0) return alert("Invalid quantity");
+    
+    const priceStr = window.prompt(`What was the average purchase price for ${ticker}?`, stock.price || 0);
+    if (!priceStr) return;
+    const price = parseFloat(priceStr);
+    if (isNaN(price) || price <= 0) return alert("Invalid price");
+
+    addManualTrade(ticker, qty, price);
+    alert(`Added ${qty} shares of ${ticker} to your portfolio!`);
+  };
+
+  const handleTradeSubmit = () => {
+    if (tradeMode === "REAL") {
+      alert("Real execution is not connected. Use Add to Portfolio for manual entry.");
+      return;
+    }
+    
+    let res;
+    if (orderType === "MARKET") {
+      // For market orders, we simulate fill at the latest scraped price
+      res = processMarketOrder(orderSide, ticker, orderQty, stock?.price || orderPrice, orderNote);
+    } else {
+      res = processLimitOrder(orderSide, ticker, orderQty, orderPrice, orderNote);
+    }
+
+    if (res.success) {
+      alert(res.msg);
+      setShowOrderTicket(false);
+      setOrderQty("");
+      setOrderNote("");
+    } else {
+      alert(`Error: ${res.msg}`);
+    }
+  };
+
+  const handleAddToSIP = () => {
+    const pctStr = window.prompt(`What percentage of your monthly SIP budget should go to ${ticker}? (0-100)`);
+    if (!pctStr) return;
+    const pct = parseFloat(pctStr);
+    if (isNaN(pct) || pct <= 0 || pct > 100) return alert("Invalid percentage");
+
+    const newTargets = { ...sipConfig.targets, [ticker]: pct };
+    updateSipConfig({ ...sipConfig, targets: newTargets });
+    alert(`Added ${ticker} to SIP with ${pct}% allocation!`);
+  };
   
   // Chart Configuration State
   const [timeRange, setTimeRange] = useState(180); // 6M default
@@ -420,7 +318,7 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
   const [showBacktester, setShowBacktester] = useState(false);
   const [visiblePanes, setVisiblePanes] = useState({ rsi: true, macd: true, vol: true, ma: true, bb: true });
 
-  const [hoverIdx, setHoverIdx] = useState(null);
+  const [tvHoverBar, setTvHoverBar] = useState(null);
   const containerRef = useRef(null);
   const [width, setWidth] = useState(800);
   const [chartHeight, setChartHeight] = useState(400);
@@ -463,31 +361,15 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
   // 2. Compute indicators on FULL history to avoid start-of-chart artifacts (like MA needing 50 days)
   const fullInd = useMemo(() => computeIndicators(fullBars), [fullBars]);
   
-  // 3. Slice arrays based on timeRange
+  // 3. Slice arrays based on timeRange (No longer slice for TVChart, we pass full data)
   const { bars, ind } = useMemo(() => {
     if (!fullBars.length) return { bars: [], ind: {} };
-    let sliceLen = timeRange === 'ALL' ? fullBars.length : timeRange;
-    sliceLen = Math.min(sliceLen, fullBars.length);
-    const start = fullBars.length - sliceLen;
-    
+    // TVChart handles its own panning and zooming, so we pass all data!
     return {
-      bars: fullBars.slice(start),
-      ind: {
-        sma20: fullInd.sma20?.slice(start) || [],
-        sma50: fullInd.sma50?.slice(start) || [],
-        macdLine: fullInd.macdLine?.slice(start) || [],
-        signalLine: fullInd.signalLine?.slice(start) || [],
-        histogram: fullInd.histogram?.slice(start) || [],
-        rsi: fullInd.rsi?.slice(start) || [],
-        bbMid: fullInd.bbMid?.slice(start) || [],
-        bbUpper: fullInd.bbUpper?.slice(start) || [],
-        bbLower: fullInd.bbLower?.slice(start) || [],
-        atr: fullInd.atr?.slice(start) || [],
-        obv: fullInd.obv?.slice(start) || [],
-        volAvg20: fullInd.volAvg20?.slice(start) || [],
-      }
-    }
-  }, [fullBars, fullInd, timeRange]);
+      bars: fullBars,
+      ind: fullInd
+    };
+  }, [fullBars, fullInd]);
 
   const signal = useMemo(() => tradingSignal(bars, ind), [bars, ind]);
   const hScore = healthScore(stock);
@@ -496,7 +378,7 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
   const last = bars[bars.length - 1] || fullBars[fullBars.length - 1] || { close: 0, open: 0, high: 0, low: 0, volume: 0, date: "" };
   const prev = bars[bars.length - 2] || fullBars[fullBars.length - 2] || { close: 0 };
   const changePct = prev.close ? ((last.close - prev.close) / prev.close) * 100 : 0;
-  const hoverBar = hoverIdx != null ? bars[hoverIdx] : last;
+  const hoverBar = tvHoverBar || last;
   
   const filtered = allStocks?.filter((s) => s.ticker.includes(query.toUpperCase()) || s.name.toUpperCase().includes(query.toUpperCase())) || [];
 
@@ -539,7 +421,14 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
       .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
       .custom-scrollbar::-webkit-scrollbar-thumb { background: #22302a; border-radius: 10px; }
       .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #5f6b65; }
+      .paper-strip { background: repeating-linear-gradient(45deg, #c9a24b, #c9a24b 10px, #000 10px, #000 20px); }
       `}</style>
+
+      {tradeMode === "PAPER" && (
+        <div className="w-full h-8 flex items-center justify-center font-bold text-black paper-strip tracking-[0.2em] text-xs">
+          <span className="bg-black text-[#c9a24b] px-4 py-1 rounded font-['Instrument_Serif'] italic text-sm border border-[#c9a24b]">PAPER TRADING MODE ACTIVE</span>
+        </div>
+      )}
 
       {/* ================= TOP TOOLBAR ================= */}
       <div className="h-16 border-b border-[#22302a] bg-[#0a0f0c] shrink-0 flex items-center justify-between px-5">
@@ -643,6 +532,27 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
             </span>
           </div>
 
+          <button onClick={handleAddToSIP} className="flex items-center gap-2 px-4 py-2 border-2 rounded-lg font-bold transition-all text-[15px] border-[#22302a] text-[#9aa6a0] hover:text-[#e9ede8] hover:border-[#5f6b65]">
+            <Plus size={18} /> Add to SIP
+          </button>
+          <button onClick={() => setShowOrderTicket(true)} className={`flex items-center gap-2 px-6 py-2 rounded-lg font-bold transition-all text-[15px] ${tradeMode === 'PAPER' ? 'bg-[#c9a24b] text-black hover:bg-[#d4b264]' : 'bg-[#1fae6b] text-[#0a0f0c] hover:bg-[#2fd888]'}`}>
+            <LayoutGrid size={18} /> Trade
+          </button>
+          <button 
+            onClick={() => {
+              if (compareList?.includes(ticker)) {
+                updateCompareList(compareList.filter(t => t !== ticker));
+              } else if ((compareList?.length || 0) < 4) {
+                updateCompareList([...(compareList || []), ticker]);
+              } else {
+                alert("You can only compare up to 4 stocks at once.");
+              }
+            }} 
+            className={`flex items-center gap-2 px-4 py-2 border-2 rounded-lg font-bold transition-all text-[15px] ${compareList?.includes(ticker) ? 'border-[#c9a24b] text-[#c9a24b] bg-[#c9a24b22]' : 'border-[#22302a] text-[#9aa6a0] hover:text-[#e9ede8] hover:border-[#5f6b65]'}`}
+          >
+            <Scale size={18} /> {compareList?.includes(ticker) ? 'Comparing' : 'Compare'}
+          </button>
+          <div className="h-8 w-px bg-[#22302a] mx-2"></div>
           <button 
             onClick={() => setShowBacktester(b => !b)}
             className={`flex items-center gap-2 px-4 py-2 border-2 rounded-lg font-bold transition-all text-[15px] ${showBacktester ? 'border-[#1fae6b] bg-[#1fae6b22] text-[#2fd888]' : 'border-[#22302a] text-[#9aa6a0] hover:text-[#e9ede8] hover:border-[#5f6b65]'}`}
@@ -670,33 +580,24 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
           
           {/* Chart Area */}
           <div className="flex-1 p-2 flex flex-col relative overflow-hidden" ref={containerRef}>
-            <div className="absolute top-4 left-4 z-10 mono text-[13px] text-[#5f6b65] flex gap-4 bg-[#0a0f0c]/90 px-3 py-1.5 rounded shadow-lg font-bold">
-              <span>O <span className="text-[#9aa6a0]">{hoverBar.open.toFixed(2)}</span></span>
-              <span>H <span className="text-[#9aa6a0]">{hoverBar.high.toFixed(2)}</span></span>
-              <span>L <span className="text-[#9aa6a0]">{hoverBar.low.toFixed(2)}</span></span>
-              <span>C <span className="text-[#9aa6a0]">{hoverBar.close.toFixed(2)}</span></span>
-              <span>V <span className="text-[#9aa6a0]">{hoverBar.volume.toLocaleString()}</span></span>
+            <div className="absolute top-4 left-4 z-10 mono text-[13px] text-[#5f6b65] flex gap-4 bg-[#0a0f0c]/90 px-3 py-1.5 rounded shadow-lg font-bold pointer-events-none">
+              <span>O <span className="text-[#9aa6a0]">{hoverBar.open?.toFixed(2)}</span></span>
+              <span>H <span className="text-[#9aa6a0]">{hoverBar.high?.toFixed(2)}</span></span>
+              <span>L <span className="text-[#9aa6a0]">{hoverBar.low?.toFixed(2)}</span></span>
+              <span>C <span className="text-[#9aa6a0]">{hoverBar.close?.toFixed(2)}</span></span>
+              <span>V <span className="text-[#9aa6a0]">{hoverBar.volume?.toLocaleString()}</span></span>
             </div>
 
-            <PricePane bars={bars} ind={ind} showMA={visiblePanes.ma} showBB={visiblePanes.bb} width={width} height={priceHeight} hoverIdx={hoverIdx} setHoverIdx={setHoverIdx} />
-            
-            {visiblePanes.vol && (
-              <div className="relative border-t border-[#22302a]">
-                <div className="absolute left-3 top-2 mono text-[11px] text-[#5f6b65] font-bold uppercase z-10">Volume</div>
-                <VolumePane bars={bars} ind={ind} width={width} height={secondaryHeight} hoverIdx={hoverIdx} setHoverIdx={setHoverIdx} />
-              </div>
-            )}
-            {visiblePanes.rsi && (
-              <div className="relative border-t border-[#22302a]">
-                <div className="absolute left-3 top-2 mono text-[11px] text-[#5f6b65] font-bold uppercase z-10">RSI (14)</div>
-                <RSIPane bars={bars} ind={ind} width={width} height={secondaryHeight} hoverIdx={hoverIdx} setHoverIdx={setHoverIdx} />
-              </div>
-            )}
-            {visiblePanes.macd && (
-              <div className="relative border-t border-[#22302a]">
-                <div className="absolute left-3 top-2 mono text-[11px] text-[#5f6b65] font-bold uppercase z-10">MACD (12,26,9)</div>
-                <MACDPane bars={bars} ind={ind} width={width} height={secondaryHeight} hoverIdx={hoverIdx} setHoverIdx={setHoverIdx} />
-              </div>
+            {width > 0 && chartHeight > 40 && (
+              <ErrorBoundary>
+                <TVChart 
+                  data={bars} 
+                  width={width} 
+                  height={chartHeight - 40} // subtract 40 for paddings/timeframes
+                  setHoveredBar={setTvHoverBar} 
+                  timeRange={timeRange}
+                />
+              </ErrorBoundary>
             )}
           </div>
 
@@ -786,6 +687,8 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
         {/* RIGHT SIDEBAR (Data Window / Signals) */}
         <div className="w-[360px] border-l border-[#22302a] bg-[#0a0f0c] shrink-0 overflow-y-auto flex flex-col p-6 gap-8 custom-scrollbar">
           
+          <AIPanel ticker={stock?.ticker} fundamentalData={stock} technicalData={signal} />
+
           {/* Trading Signal Score */}
           <div>
             <div className="flex items-center gap-2 mono text-[13px] uppercase tracking-widest text-[#7d8a83] font-bold mb-4 border-b border-[#22302a] pb-3">
@@ -842,9 +745,15 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
             </div>
             <div className="bg-[#121a16] border border-[#22302a] rounded-xl p-5 relative overflow-hidden shadow-lg">
               <div className="absolute top-0 right-0 w-20 h-20 opacity-[0.15] rounded-bl-full" style={{ backgroundColor: scoreColor(hScore) }}></div>
-              <div className="flex items-end gap-3 mb-5">
-                <div className="text-5xl font-bold mono tracking-tight" style={{ color: scoreColor(hScore) }}>{hScore}</div>
-                <div className="text-[12px] text-[#5f6b65] mb-2 font-bold uppercase tracking-widest">Long Term</div>
+              <div className="flex justify-between items-start mb-5">
+                <div className="flex items-end gap-3">
+                  <div className="text-5xl font-bold mono tracking-tight" style={{ color: scoreColor(hScore) }}>{hScore}</div>
+                  <div className="text-[12px] text-[#5f6b65] mb-2 font-bold uppercase tracking-widest">Long Term</div>
+                </div>
+                <div className="flex flex-col gap-2 items-end mt-1 relative z-10">
+                  <div className="bg-[#1a2420] text-[#9aa6a0] px-2 py-1 rounded text-[11px] font-bold uppercase tracking-wider border border-[#22302a]">{stock?.sector || "N/A"}</div>
+                  {stock?.isShariah !== false && <div className="bg-[#2fd88815] text-[#2fd888] px-2 py-1 rounded text-[11px] font-bold uppercase tracking-wider border border-[#1fae6b44]">DSES / IBSL</div>}
+                </div>
               </div>
               <div className="flex flex-col gap-3 mono text-[13px]">
                 {[
@@ -869,6 +778,113 @@ export default function StockDetail({ stock, allStocks, onSelectTicker, onBack }
 
         </div>
       </div>
+
+      {/* ================= ORDER TICKET MODAL ================= */}
+      {showOrderTicket && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="bg-[#121a16] border border-[#22302a] w-full max-w-md rounded-xl shadow-2xl overflow-hidden flex flex-col">
+            <div className="flex justify-between items-center p-4 border-b border-[#22302a] bg-[#0a0f0c]">
+              <h2 className="text-lg font-bold flex items-center gap-2">
+                <LayoutGrid size={20} /> Order Ticket
+              </h2>
+              <button onClick={() => setShowOrderTicket(false)} className="text-[#9aa6a0] hover:text-[#e9ede8]">
+                <X size={20} />
+              </button>
+            </div>
+            
+            <div className="p-5 flex flex-col gap-5">
+              {/* Mode Toggle */}
+              <div className="flex bg-[#0a0f0c] p-1 rounded-lg border border-[#22302a]">
+                <button
+                  onClick={() => setTradeMode("REAL")}
+                  className={`flex-1 py-2 font-bold text-sm rounded-md transition-all ${tradeMode === "REAL" ? 'bg-[#22302a] text-white shadow' : 'text-[#7d8a83] hover:text-[#9aa6a0]'}`}
+                >
+                  Real Portfolio
+                </button>
+                <button
+                  onClick={() => setTradeMode("PAPER")}
+                  className={`flex-1 py-2 font-bold text-sm rounded-md transition-all flex items-center justify-center gap-2 ${tradeMode === "PAPER" ? 'bg-[#c9a24b] text-black shadow' : 'text-[#7d8a83] hover:text-[#9aa6a0]'}`}
+                >
+                  <FlaskConical size={14} /> Paper Trading
+                </button>
+              </div>
+
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setOrderSide("BUY")}
+                  className={`flex-1 py-2.5 rounded font-bold text-[15px] border-2 transition-all ${orderSide === "BUY" ? 'border-[#1fae6b] bg-[#1fae6b22] text-[#2fd888]' : 'border-[#22302a] text-[#5f6b65] hover:border-[#5f6b65]'}`}
+                >BUY</button>
+                <button
+                  onClick={() => setOrderSide("SELL")}
+                  className={`flex-1 py-2.5 rounded font-bold text-[15px] border-2 transition-all ${orderSide === "SELL" ? 'border-[#e5555a] bg-[#e5555a22] text-[#ff7176]' : 'border-[#22302a] text-[#5f6b65] hover:border-[#5f6b65]'}`}
+                >SELL</button>
+              </div>
+
+              <div className="flex bg-[#0a0f0c] p-1 rounded-lg border border-[#22302a]">
+                <button
+                  onClick={() => setOrderType("MARKET")}
+                  className={`flex-1 py-1.5 font-bold text-xs rounded-md transition-all ${orderType === "MARKET" ? 'bg-[#22302a] text-white' : 'text-[#7d8a83]'}`}
+                >MARKET</button>
+                <button
+                  onClick={() => setOrderType("LIMIT")}
+                  className={`flex-1 py-1.5 font-bold text-xs rounded-md transition-all ${orderType === "LIMIT" ? 'bg-[#22302a] text-white' : 'text-[#7d8a83]'}`}
+                >LIMIT</button>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-[#7d8a83] uppercase tracking-wider mb-1">Quantity</label>
+                  <input
+                    type="number"
+                    value={orderQty}
+                    onChange={(e) => setOrderQty(e.target.value)}
+                    className="w-full bg-[#0a0f0c] border border-[#22302a] rounded-lg px-3 py-2 text-white outline-none focus:border-[#1fae6b] mono text-lg"
+                    placeholder="0"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-xs font-bold text-[#7d8a83] uppercase tracking-wider mb-1 flex justify-between">
+                    <span>{orderType === "MARKET" ? "Est. Price" : "Limit Price"}</span>
+                    <span className="text-[#9aa6a0]">LTP: ৳{stock?.price?.toFixed(1) || '-'}</span>
+                  </label>
+                  <input
+                    type="number"
+                    value={orderType === "MARKET" ? (stock?.price || "") : orderPrice}
+                    onChange={(e) => orderType === "LIMIT" && setOrderPrice(e.target.value)}
+                    disabled={orderType === "MARKET"}
+                    className={`w-full border rounded-lg px-3 py-2 text-white outline-none focus:border-[#1fae6b] mono text-lg ${orderType === "MARKET" ? 'bg-[#1a2420] border-[#22302a] text-[#7d8a83]' : 'bg-[#0a0f0c] border-[#22302a]'}`}
+                    placeholder="0.0"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-[#7d8a83] uppercase tracking-wider mb-1">Trade Journal Note (Optional)</label>
+                  <input
+                    type="text"
+                    value={orderNote}
+                    onChange={(e) => setOrderNote(e.target.value)}
+                    className="w-full bg-[#0a0f0c] border border-[#22302a] rounded-lg px-3 py-2 text-white outline-none focus:border-[#1fae6b] text-sm"
+                    placeholder="Why are you taking this trade?"
+                  />
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <button
+                  onClick={handleTradeSubmit}
+                  disabled={!orderQty || (orderType === "LIMIT" && !orderPrice)}
+                  className={`w-full py-3 rounded-lg font-bold text-lg transition-all ${!orderQty || (orderType === "LIMIT" && !orderPrice) ? 'bg-[#1a2420] text-[#5f6b65] cursor-not-allowed' : orderSide === "BUY" ? 'bg-[#1fae6b] text-[#0a0f0c] hover:bg-[#2fd888]' : 'bg-[#e5555a] text-white hover:bg-[#ff7176]'}`}
+                >
+                  {orderSide} {ticker}
+                </button>
+                {tradeMode === "PAPER" && <div className="text-center mt-2 text-xs font-bold text-[#c9a24b] uppercase tracking-widest">Simulated Execution</div>}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
-import { Search, SlidersHorizontal, LayoutGrid, List, Save, ChevronDown, X, Check, TrendingUp, TrendingDown, Moon, Sun } from "lucide-react";
+import { Search, SlidersHorizontal, LayoutGrid, List, Save, ChevronDown, X, Check, TrendingUp, TrendingDown, Moon, Sun, Briefcase, Calculator, Scale, FlaskConical } from "lucide-react";
 import { FUNDAMENTALS, DAMANI_SECTORS, seededSpark, healthScore, scoreColor } from "./data/fundamentals";
 import StockDetail from "./StockDetail";
+import Portfolio from "./components/Portfolio";
+import SIPTracker from "./components/SIPTracker";
+import CompareView from "./components/CompareView";
+import PaperDashboard from "./components/PaperDashboard";
+import { usePortfolioState } from "./utils/usePortfolioState";
+import { usePaperTrading } from "./utils/usePaperTrading";
 
 function useFonts() {
   useEffect(() => {
@@ -53,6 +59,9 @@ export default function App() {
   useFonts();
 
   const [darkMode, setDarkMode] = useState(true);
+  const [globalNavTab, setGlobalNavTab] = useState("screener");
+  const { compareList, updateCompareList } = usePortfolioState();
+  const { checkLimitFills } = usePaperTrading();
   const [liveData, setLiveData] = useState({ prices: null, watchlist: null, dses: null, loading: true });
   
   useEffect(() => {
@@ -100,6 +109,13 @@ export default function App() {
   const tableRef = useRef(null);
   const colPanelRef = useRef(null);
   const presetPanelRef = useRef(null);
+
+  useEffect(() => {
+    if (liveData.prices) {
+      const priceArray = Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP }));
+      checkLimitFills(priceArray);
+    }
+  }, [liveData.prices, checkLimitFills]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -299,11 +315,46 @@ export default function App() {
         `}</style>
 
         {/* ================= HEADER ================= */}
-        <div className="border-b border-slate-200 dark:border-[#22302a] px-8 py-5 sticky top-0 bg-white dark:bg-[#0a0f0c] z-20 shadow-md dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-colors duration-300">
+        <div className="border-b border-slate-200 dark:border-[#22302a] px-8 py-5 sticky top-0 bg-white dark:bg-[#0a0f0c] z-20 shadow-md dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-colors duration-300 flex-shrink-0">
           <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-3 h-3 rounded-full bg-[#2fd888]" style={{ boxShadow: "0 0 10px #2fd888" }} />
-              <span className="mono text-sm font-bold tracking-widest uppercase text-[#c9a24b]">BD Multibagger AI — Screener</span>
+            <div className="flex items-center gap-8">
+              <div className="flex items-center gap-4 border-r border-[#22302a] pr-8">
+                <div className="w-3 h-3 rounded-full bg-[#2fd888]" style={{ boxShadow: "0 0 10px #2fd888" }} />
+                <span className="mono text-sm font-bold tracking-widest uppercase text-[#c9a24b]">BD Multibagger AI</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <button 
+                  onClick={() => { setGlobalNavTab("screener"); setSelectedTicker(null); }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-[15px] ${globalNavTab === "screener" ? 'bg-[#1fae6b22] text-[#2fd888]' : 'text-slate-600 dark:text-[#9aa6a0] hover:text-[#e9ede8]'}`}
+                >
+                  <Search size={18} /> Screener
+                </button>
+                <button 
+                  onClick={() => { setGlobalNavTab("portfolio"); setSelectedTicker(null); }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-[15px] ${globalNavTab === "portfolio" ? 'bg-[#1fae6b22] text-[#2fd888]' : 'text-slate-600 dark:text-[#9aa6a0] hover:text-[#e9ede8]'}`}
+                >
+                  <Briefcase size={18} /> Portfolio
+                </button>
+                <button 
+                  onClick={() => { setGlobalNavTab("sip"); setSelectedTicker(null); }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-[15px] ${globalNavTab === "sip" ? 'bg-[#1fae6b22] text-[#2fd888]' : 'text-slate-600 dark:text-[#9aa6a0] hover:text-[#e9ede8]'}`}
+                >
+                  <Calculator size={18} /> SIP Engine
+                </button>
+                <button
+                  onClick={() => { setGlobalNavTab("compare"); setSelectedTicker(null); }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-[15px] ${globalNavTab === "compare" ? 'bg-[#1fae6b22] text-[#2fd888]' : 'text-slate-600 dark:text-[#9aa6a0] hover:text-[#e9ede8]'}`}
+                >
+                  <Scale size={18} /> Compare
+                </button>
+                <div className="h-6 w-px bg-slate-300 dark:bg-[#22302a] mx-1"></div>
+                <button
+                  onClick={() => { setGlobalNavTab("paper"); setSelectedTicker(null); }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-[15px] ${globalNavTab === "paper" ? 'bg-[#c9a24b22] text-[#c9a24b] border border-[#c9a24b44]' : 'text-slate-600 dark:text-[#9aa6a0] hover:text-[#c9a24b] hover:bg-[#c9a24b11]'}`}
+                >
+                  <FlaskConical size={18} /> Paper Trade
+                </button>
+              </div>
             </div>
             <div className="flex items-center gap-6">
               <div className="mono text-sm font-semibold text-slate-600 dark:text-[#5f6b65]">
@@ -320,7 +371,24 @@ export default function App() {
           </div>
         </div>
 
-        <div className="px-8 py-6 flex flex-col gap-6 max-w-[1600px] mx-auto">
+        {globalNavTab === "portfolio" && <Portfolio livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []} onSelectTicker={setSelectedTicker} />}
+        {globalNavTab === "sip" && <SIPTracker livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []} />}
+        {globalNavTab === "compare" && (
+          <CompareView 
+            compareList={compareList} 
+            allRows={rows} 
+            livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []}
+            onRemove={(t) => updateCompareList(compareList.filter(item => item !== t))} 
+          />
+        )}
+        {globalNavTab === "paper" && (
+          <PaperDashboard
+            livePrices={liveData.prices ? Object.keys(liveData.prices).map(t => ({ ticker: t, price: liveData.prices[t].LTP })) : []}
+            onSelectTicker={setSelectedTicker}
+          />
+        )}
+        
+        <div className={`px-8 py-6 flex flex-col gap-6 max-w-[1600px] mx-auto ${globalNavTab !== 'screener' ? 'hidden' : ''}`}>
           {/* ================= INDEX SELECTOR + SEARCH ================= */}
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex rounded-md border border-slate-300 dark:border-[#22302a] overflow-hidden shadow-sm">
@@ -520,9 +588,31 @@ export default function App() {
                         {orderedVisibleCols.map((c) => (
                           <td key={c.key} className="px-6 py-4 mono text-sm font-semibold">
                             {c.key === "ticker" && (
-                              <div>
-                                <div className="text-slate-900 dark:text-[#e9ede8] font-bold tracking-wide text-base">{s.ticker}</div>
-                                <div className="text-xs text-slate-500 dark:text-[#5f6b65] font-sans font-medium mt-1">{s.name}</div>
+                              <div className="flex justify-between items-center group">
+                                <div>
+                                  <div className="text-slate-900 dark:text-[#e9ede8] font-bold tracking-wide text-base">{s.ticker}</div>
+                                  <div className="text-xs text-slate-500 dark:text-[#5f6b65] font-sans font-medium mt-1">{s.name}</div>
+                                </div>
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    if (compareList.includes(s.ticker)) {
+                                      updateCompareList(compareList.filter(t => t !== s.ticker));
+                                    } else if (compareList.length < 4) {
+                                      updateCompareList([...compareList, s.ticker]);
+                                    } else {
+                                      alert("You can only compare up to 4 stocks at once.");
+                                    }
+                                  }}
+                                  className={`p-2 rounded-full transition-all ${
+                                    compareList.includes(s.ticker) 
+                                      ? "text-[#c9a24b] bg-[#c9a24b22] opacity-100" 
+                                      : "text-slate-400 opacity-0 group-hover:opacity-100 hover:text-[#e9ede8] hover:bg-[#1a2420]"
+                                  }`}
+                                  title={compareList.includes(s.ticker) ? "Remove from Compare" : "Add to Compare"}
+                                >
+                                  <Scale size={16} />
+                                </button>
                               </div>
                             )}
                             {c.key === "sector" && <span className="text-slate-500 dark:text-[#9aa6a0] font-medium">{s.sector}</span>}
