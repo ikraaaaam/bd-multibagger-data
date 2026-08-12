@@ -32,10 +32,10 @@
         "points": 0
       }
     ],
-    "pick": true,
-    "recommendation": "PICK",
-    "orchestratorReason": "Second lowest LTP in the watchlist after BRACBANK, providing a balance to the portfolio and maximizing the number of shares purchased.",
-    "totalScore": 10
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BATBC",
@@ -70,10 +70,10 @@
         "points": 0
       }
     ],
-    "pick": false,
-    "recommendation": "SKIP",
-    "orchestratorReason": "Not selected by Orchestrator.",
-    "totalScore": 0
+    "pick": true,
+    "recommendation": "PICK",
+    "orchestratorReason": "BATBC has a high ltp, indicating potential for long-term growth, and its high price allows for a significant allocation within the budget.",
+    "totalScore": 10
   },
   {
     "ticker": "BEACONPHAR",
@@ -184,10 +184,10 @@
         "points": 0
       }
     ],
-    "pick": true,
-    "recommendation": "PICK",
-    "orchestratorReason": "Lowest LTP in the watchlist, allowing for the highest number of shares to be purchased within the budget, providing a foundation for long-term compounding.",
-    "totalScore": 10
+    "pick": false,
+    "recommendation": "SKIP",
+    "orchestratorReason": "Not selected by Orchestrator.",
+    "totalScore": 0
   },
   {
     "ticker": "BSC",
