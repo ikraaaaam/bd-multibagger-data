@@ -1,245 +1,7 @@
 [
   {
-    "ticker": "ACMELAB",
-    "ltp": 79.6,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
-    "ticker": "BEACONPHAR",
-    "ltp": 104.5,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
     "ticker": "BERGERPBL",
-    "ltp": 1494.1,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
-    "ticker": "BSC",
-    "ltp": 112.5,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
-    "ticker": "BSCPLC",
-    "ltp": 152.6,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
-    "ticker": "BSRMLTD",
-    "ltp": 100.0,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
-    "ticker": "BSRMSTEEL",
-    "ltp": 91.0,
-    "agents": [
-      {
-        "agent": "News Agent",
-        "reasons": [
-          "Agent failed to analyze news."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Research Agent",
-        "reasons": [
-          "Agent failed to analyze fundamentals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Technical Agent",
-        "reasons": [
-          "Agent failed to analyze technicals."
-        ],
-        "points": 0
-      },
-      {
-        "agent": "Risk Agent",
-        "reasons": [
-          "Agent failed to analyze risk."
-        ],
-        "points": 0
-      }
-    ]
-  },
-  {
-    "ticker": "BXPHARMA",
-    "ltp": 143.8,
+    "ltp": 0,
     "agents": [
       {
         "agent": "News Agent",
@@ -273,7 +35,7 @@
   },
   {
     "ticker": "GENEXIL",
-    "ltp": 36.0,
+    "ltp": 0,
     "agents": [
       {
         "agent": "News Agent",
@@ -306,8 +68,42 @@
     ]
   },
   {
-    "ticker": "GP",
-    "ltp": 244.1,
+    "ticker": "IBNSINA",
+    "ltp": 0,
+    "agents": [
+      {
+        "agent": "News Agent",
+        "reasons": [
+          "Agent failed to analyze news."
+        ],
+        "points": 0
+      },
+      {
+        "agent": "Research Agent",
+        "reasons": [
+          "Agent failed to analyze fundamentals."
+        ],
+        "points": 0
+      },
+      {
+        "agent": "Technical Agent",
+        "reasons": [
+          "Agent failed to analyze technicals."
+        ],
+        "points": 0
+      },
+      {
+        "agent": "Risk Agent",
+        "reasons": [
+          "Agent failed to analyze risk."
+        ],
+        "points": 0
+      }
+    ]
+  },
+  {
+    "ticker": "MARICO",
+    "ltp": 0,
     "agents": [
       {
         "agent": "News Agent",

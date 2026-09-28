@@ -1,4 +1,4 @@
-# SIP Portfolio AI Monthly Report - August 2026
+# SIP Portfolio AI Monthly Report - September 2026
 
 **Total Budget Available:** ৳8011.21
 
@@ -6,7 +6,7 @@
 
 > *Not financial advice, verify independently.*
 
-## ACMELAB (LTP: ৳79.6)
+## BERGERPBL (LTP: ৳0)
 **📰 News Agent:** Agent failed to analyze news.
 
 **📊 Research Agent:** Agent failed to analyze fundamentals.
@@ -17,7 +17,7 @@
 
 ---
 
-## BEACONPHAR (LTP: ৳104.5)
+## GENEXIL (LTP: ৳0)
 **📰 News Agent:** Agent failed to analyze news.
 
 **📊 Research Agent:** Agent failed to analyze fundamentals.
@@ -28,7 +28,7 @@
 
 ---
 
-## BERGERPBL (LTP: ৳1494.1)
+## IBNSINA (LTP: ৳0)
 **📰 News Agent:** Agent failed to analyze news.
 
 **📊 Research Agent:** Agent failed to analyze fundamentals.
@@ -39,73 +39,7 @@
 
 ---
 
-## BSC (LTP: ৳112.5)
-**📰 News Agent:** Agent failed to analyze news.
-
-**📊 Research Agent:** Agent failed to analyze fundamentals.
-
-**📈 Technical Agent:** Agent failed to analyze technicals.
-
-**🛡️ Risk Agent:** Agent failed to analyze risk.
-
----
-
-## BSCPLC (LTP: ৳152.6)
-**📰 News Agent:** Agent failed to analyze news.
-
-**📊 Research Agent:** Agent failed to analyze fundamentals.
-
-**📈 Technical Agent:** Agent failed to analyze technicals.
-
-**🛡️ Risk Agent:** Agent failed to analyze risk.
-
----
-
-## BSRMLTD (LTP: ৳100.0)
-**📰 News Agent:** Agent failed to analyze news.
-
-**📊 Research Agent:** Agent failed to analyze fundamentals.
-
-**📈 Technical Agent:** Agent failed to analyze technicals.
-
-**🛡️ Risk Agent:** Agent failed to analyze risk.
-
----
-
-## BSRMSTEEL (LTP: ৳91.0)
-**📰 News Agent:** Agent failed to analyze news.
-
-**📊 Research Agent:** Agent failed to analyze fundamentals.
-
-**📈 Technical Agent:** Agent failed to analyze technicals.
-
-**🛡️ Risk Agent:** Agent failed to analyze risk.
-
----
-
-## BXPHARMA (LTP: ৳143.8)
-**📰 News Agent:** Agent failed to analyze news.
-
-**📊 Research Agent:** Agent failed to analyze fundamentals.
-
-**📈 Technical Agent:** Agent failed to analyze technicals.
-
-**🛡️ Risk Agent:** Agent failed to analyze risk.
-
----
-
-## GENEXIL (LTP: ৳36.0)
-**📰 News Agent:** Agent failed to analyze news.
-
-**📊 Research Agent:** Agent failed to analyze fundamentals.
-
-**📈 Technical Agent:** Agent failed to analyze technicals.
-
-**🛡️ Risk Agent:** Agent failed to analyze risk.
-
----
-
-## GP (LTP: ৳244.1)
+## MARICO (LTP: ৳0)
 **📰 News Agent:** Agent failed to analyze news.
 
 **📊 Research Agent:** Agent failed to analyze fundamentals.
