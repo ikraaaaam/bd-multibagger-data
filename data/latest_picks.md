@@ -1,4 +1,4 @@
-# SIP Portfolio AI Monthly Report - September 2026
+# SIP Portfolio AI Monthly Report - October 2026
 
 **Total Budget Available:** ৳8011.21
 
