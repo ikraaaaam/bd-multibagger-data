@@ -1,4 +1,173 @@
 {
-  "updated_at": "2026-09-24T14:18:18.679029+00:00",
-  "prices": {}
+  "updated_at": "2026-11-05T11:58:44.517709+00:00",
+  "prices": {
+    "ALIF": {
+      "SYMBOL": "ALIF",
+      "LTP": 4.4,
+      "HIGH": 4.4,
+      "LOW": 4.3,
+      "CLOSE": 4.3,
+      "YCP": 4.3,
+      "CHANGE": 0.1,
+      "TRADE": 70,
+      "VALUE": 0.612,
+      "VOLUME": 141076
+    },
+    "BERGERPBL": {
+      "SYMBOL": "BERGERPBL",
+      "LTP": 1452.0,
+      "HIGH": 1455.0,
+      "LOW": 1437.2,
+      "CLOSE": 1452.0,
+      "YCP": 1440.0,
+      "CHANGE": 12.0,
+      "TRADE": 306,
+      "VALUE": 21.133,
+      "VOLUME": 14605
+    },
+    "CITYGENINS": {
+      "SYMBOL": "CITYGENINS",
+      "LTP": 139.0,
+      "HIGH": 139.9,
+      "LOW": 130.3,
+      "CLOSE": 137.2,
+      "YCP": 132.7,
+      "CHANGE": 6.3,
+      "TRADE": 247,
+      "VALUE": 12.189,
+      "VOLUME": 90933
+    },
+    "DOMINAGE": {
+      "SYMBOL": "DOMINAGE",
+      "LTP": 63.1,
+      "HIGH": 63.8,
+      "LOW": 61.8,
+      "CLOSE": 63.1,
+      "YCP": 61.9,
+      "CHANGE": 1.2,
+      "TRADE": 843,
+      "VALUE": 42.858,
+      "VOLUME": 684564
+    },
+    "GENEXIL": {
+      "SYMBOL": "GENEXIL",
+      "LTP": 28.7,
+      "HIGH": 29.1,
+      "LOW": 28.0,
+      "CLOSE": 28.7,
+      "YCP": 28.3,
+      "CHANGE": 0.4,
+      "TRADE": 578,
+      "VALUE": 9.919,
+      "VOLUME": 346071
+    },
+    "GQBALLPEN": {
+      "SYMBOL": "GQBALLPEN",
+      "LTP": 613.4,
+      "HIGH": 619.5,
+      "LOW": 591.5,
+      "CLOSE": 613.4,
+      "YCP": 591.6,
+      "CHANGE": 21.8,
+      "TRADE": 1068,
+      "VALUE": 39.632,
+      "VOLUME": 65110
+    },
+    "IBNSINA": {
+      "SYMBOL": "IBNSINA",
+      "LTP": 298.7,
+      "HIGH": 303.0,
+      "LOW": 297.1,
+      "CLOSE": 298.7,
+      "YCP": 297.2,
+      "CHANGE": 1.5,
+      "TRADE": 107,
+      "VALUE": 1.886,
+      "VOLUME": 6332
+    },
+    "IPDC": {
+      "SYMBOL": "IPDC",
+      "LTP": 29.6,
+      "HIGH": 29.8,
+      "LOW": 29.1,
+      "CLOSE": 29.6,
+      "YCP": 29.1,
+      "CHANGE": 0.5,
+      "TRADE": 1256,
+      "VALUE": 131.947,
+      "VOLUME": 4473509
+    },
+    "LOVELLO": {
+      "SYMBOL": "LOVELLO",
+      "LTP": 47.7,
+      "HIGH": 48.7,
+      "LOW": 47.6,
+      "CLOSE": 47.7,
+      "YCP": 48.1,
+      "CHANGE": -0.4,
+      "TRADE": 1155,
+      "VALUE": 29.766,
+      "VOLUME": 620291
+    },
+    "MARICO": {
+      "SYMBOL": "MARICO",
+      "LTP": 2625.3,
+      "HIGH": 2634.8,
+      "LOW": 2590.0,
+      "CLOSE": 2625.3,
+      "YCP": 2589.7,
+      "CHANGE": 35.6,
+      "TRADE": 195,
+      "VALUE": 3.267,
+      "VOLUME": 1249
+    },
+    "PEOPLESINS": {
+      "SYMBOL": "PEOPLESINS",
+      "LTP": 60.9,
+      "HIGH": 61.0,
+      "LOW": 58.8,
+      "CLOSE": 60.9,
+      "YCP": 59.3,
+      "CHANGE": 1.6,
+      "TRADE": 754,
+      "VALUE": 19.566,
+      "VOLUME": 324115
+    },
+    "PUBALIBANK": {
+      "SYMBOL": "PUBALIBANK",
+      "LTP": 43.4,
+      "HIGH": 44.2,
+      "LOW": 41.0,
+      "CLOSE": 43.4,
+      "YCP": 41.6,
+      "CHANGE": 1.8,
+      "TRADE": 1452,
+      "VALUE": 88.389,
+      "VOLUME": 2100687
+    },
+    "RUPALILIFE": {
+      "SYMBOL": "RUPALILIFE",
+      "LTP": 73.4,
+      "HIGH": 73.8,
+      "LOW": 71.8,
+      "CLOSE": 73.4,
+      "YCP": 71.8,
+      "CHANGE": 1.6,
+      "TRADE": 305,
+      "VALUE": 6.966,
+      "VOLUME": 95643
+    },
+    "SUNLIFEINS": {
+      "SYMBOL": "SUNLIFEINS",
+      "LTP": 48.0,
+      "HIGH": 48.8,
+      "LOW": 47.5,
+      "CLOSE": 48.0,
+      "YCP": 48.2,
+      "CHANGE": -0.2,
+      "TRADE": 452,
+      "VALUE": 12.585,
+      "VOLUME": 261983
+    }
+  }
 }
